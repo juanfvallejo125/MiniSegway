@@ -42,46 +42,63 @@ void RFInterface::pollrfReceiver(){
 
     if(mode == 1){
         //setPWM(PWM_increase_A, PWM_increase_B); //Motor testing
-        if(A){// Button A
-            //move forward
-//            if(tiltController.setpoint<3){
-//                tiltController.setpoint += 1;
-//            }else{
-//                tiltController.setpoint = 3;
-//            }
-            LPF(250, filteredVelocitySetpoint, alphaVelocitySetpoint);
-            velocityController.setpoint = filteredVelocitySetpoint[0];
-            //pwmOffsetA_throt = 40;
-            //pwmOffsetB_throt = 40;
-        }if(C){// Button C
-            //Move backward
-//            if(tiltController.setpoint>-3){
-//                tiltController.setpoint += -1;
-//            }else{
-//                tiltController.setpoint = -3;
-//            }
-            LPF(-250, filteredVelocitySetpoint, alphaVelocitySetpoint);
-            velocityController.setpoint = filteredVelocitySetpoint[0];
-            //pwmOffsetA_throt = -40;
-            //pwmOffsetB_throt = -40;
+        if(A){// Button A: Move forward
+            if(selectedMode == angleMode){
+                if(tiltController.setpoint<3){
+                    tiltController.setpoint += 1;
+                }else{
+                    tiltController.setpoint = 3;
+                }
+            }
+            else if(selectedMode == velocityMode){
+                if(rawVelocitySetpoint >= 400) rawVelocitySetpoint = 400;
+                else rawVelocitySetpoint += 20;
+            }
+        }if(C){// Button C: Move backward
+            if(selectedMode == angleMode){
+                if(tiltController.setpoint<3){
+                    tiltController.setpoint += -1;
+                }else{
+                    tiltController.setpoint = -3;
+                }
+            }
+            else if(selectedMode == velocityMode){
+                if(rawVelocitySetpoint <= -400) rawVelocitySetpoint = -400;
+                else rawVelocitySetpoint -= 20;
+            }
         }if(B){// Button B
             //Right turn
-            LPF(-1.5, filteredOrientationSetpoint, alphaOrientationSetpoint);
-            turningController.setpoint = filteredOrientationSetpoint[0];
+            if(rawOrientationSetpoint <= -2) rawOrientationSetpoint = -2;
+            else rawOrientationSetpoint -= 0.25;
         }if(D){// Button D
             //Left turn
-            LPF(1.5, filteredOrientationSetpoint, alphaOrientationSetpoint);
-            turningController.setpoint = filteredOrientationSetpoint[0];
+            if(rawOrientationSetpoint >= 2) rawOrientationSetpoint = 2;
+            else rawOrientationSetpoint += 0.25;
         }if(!(A||C)){// Nor A or C
-//            if(tiltController.setpoint>0){
-//                tiltController.setpoint -= 0.5;
-//            }else if(tiltController.setpoint<0){
-//                tiltController.setpoint += 0.5;
-//            }
-            velocityController.setpoint = 0;
+            if(selectedMode == angleMode){
+                if(tiltController.setpoint>0){
+                    tiltController.setpoint -= 0.5;
+                }else if(tiltController.setpoint<0){
+                    tiltController.setpoint += 0.5;
+                }
+            }else if(selectedMode == velocityMode){
+                if(rawVelocitySetpoint>0){
+                    rawVelocitySetpoint -= 10;
+                }else if(rawVelocitySetpoint<0){
+                    rawVelocitySetpoint += 10;
+                }
+            }
         }if(!(B||D)){// Nor B or D
-            turningController.setpoint = 0;
+            if(rawOrientationSetpoint>0){
+                rawOrientationSetpoint -= 0.25;
+            }else if(rawOrientationSetpoint<0){
+                rawOrientationSetpoint += 0.25;
+            }
         }
+        LPF(rawVelocitySetpoint, filteredVelocitySetpoint, alphaVelocitySetpoint);
+        velocityController.setpoint = filteredVelocitySetpoint[0];
+        LPF(rawOrientationSetpoint, filteredOrientationSetpoint, alphaOrientationSetpoint);
+        turningController.setpoint = filteredOrientationSetpoint[0];
    }
 }
 

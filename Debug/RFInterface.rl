@@ -42436,22 +42436,25 @@ S#define DCO_Freq 16E+6
 S#define MAX_PWM 225
 Sconst double dt = 0.01;
 S
-Sconst double Kp_tilt = 15;//18
-Sconst double Kd_tilt = 0.03;//0.05
-Sconst double Ki_tilt = 0.1;//0.1;
+Senum ControlMode {velocityMode, angleMode};
+Sconst ControlMode selectedMode = velocityMode;
+S
+Sconst double Kp_tilt = 38;//18//35
+Sconst double Kd_tilt = 0.02;//0.05//0.02
+Sconst double Ki_tilt = 0.015;//0.002;//0.1 // 0.02
 Sconst double windup_tilt = 225;
-Sconst double alpha_PWM = 1;
+Sconst double alpha_PWM = 0.4;
 S
 Sconst double Kp_turning = 20;//17;
 Sconst double Kd_turning = 0.03;
 Sconst double Ki_turning = 0;
 Sconst double windup_turning = 225;
 S
-Sconst double Kp_velocity = 0.006;//0.006;
-Sconst double Kd_velocity = 0;//0;
-Sconst double Ki_velocity = 0.003;//0.001;
+Sconst double Kp_velocity = 0.015;//0.015;
+Sconst double Kd_velocity = 0.00;//0.005;
+Sconst double Ki_velocity = 0.015;//0.005;
 Sconst double windup_velocity = 225;
-Sconst double alpha_velocity = 0.4;
+Sconst double alpha_velocity = 0.2;//0.3; // 0.4
 S
 Sconst double odom_velocity_alpha = 0.2;
 Sconst double wheelRadius = 50.25;
@@ -54534,8 +54537,10 @@ S
 S    double filteredVelocitySetpoint[2] = {};
 S    double filteredOrientationSetpoint[2] = {};
 S
-S    double alphaVelocitySetpoint = 0.05;
-S    double alphaOrientationSetpoint = 0.05;
+S    double alphaVelocitySetpoint = 0.3;
+S    double alphaOrientationSetpoint = 1;
+S    double rawVelocitySetpoint = 0;
+S    double rawOrientationSetpoint = 0;
 S
 S    void pollrfReceiver();
 S};
@@ -54550,22 +54555,25 @@ N#define DCO_Freq 16E+6
 N#define MAX_PWM 225
 Nconst double dt = 0.01;
 N
-Nconst double Kp_tilt = 15;//18
-Nconst double Kd_tilt = 0.03;//0.05
-Nconst double Ki_tilt = 0.1;//0.1;
+Nenum ControlMode {velocityMode, angleMode};
+Nconst ControlMode selectedMode = velocityMode;
+N
+Nconst double Kp_tilt = 38;//18//35
+Nconst double Kd_tilt = 0.02;//0.05//0.02
+Nconst double Ki_tilt = 0.015;//0.002;//0.1 // 0.02
 Nconst double windup_tilt = 225;
-Nconst double alpha_PWM = 1;
+Nconst double alpha_PWM = 0.4;
 N
 Nconst double Kp_turning = 20;//17;
 Nconst double Kd_turning = 0.03;
 Nconst double Ki_turning = 0;
 Nconst double windup_turning = 225;
 N
-Nconst double Kp_velocity = 0.006;//0.006;
-Nconst double Kd_velocity = 0;//0;
-Nconst double Ki_velocity = 0.003;//0.001;
+Nconst double Kp_velocity = 0.015;//0.015;
+Nconst double Kd_velocity = 0.00;//0.005;
+Nconst double Ki_velocity = 0.015;//0.005;
 Nconst double windup_velocity = 225;
-Nconst double alpha_velocity = 0.4;
+Nconst double alpha_velocity = 0.2;//0.3; // 0.4
 N
 Nconst double odom_velocity_alpha = 0.2;
 Nconst double wheelRadius = 50.25;
@@ -54626,8 +54634,10 @@ N
 N    double filteredVelocitySetpoint[2] = {};
 N    double filteredOrientationSetpoint[2] = {};
 N
-N    double alphaVelocitySetpoint = 0.05;
-N    double alphaOrientationSetpoint = 0.05;
+N    double alphaVelocitySetpoint = 0.3;
+N    double alphaOrientationSetpoint = 1;
+N    double rawVelocitySetpoint = 0;
+N    double rawOrientationSetpoint = 0;
 N
 N    void pollrfReceiver();
 N};
@@ -54676,65 +54686,103 @@ N    }
 N
 N    if(mode == 1){
 N        //setPWM(PWM_increase_A, PWM_increase_B); //Motor testing
-N        if(A){// Button A
-N            //move forward
-N//            if(tiltController.setpoint<3){
-N//                tiltController.setpoint += 1;
-N//            }else{
-N//                tiltController.setpoint = 3;
-N//            }
-N            LPF(250, filteredVelocitySetpoint, alphaVelocitySetpoint);
-N            velocityController.setpoint = filteredVelocitySetpoint[0];
-N            //pwmOffsetA_throt = 40;
-N            //pwmOffsetB_throt = 40;
-N        }if(C){// Button C
-N            //Move backward
-N//            if(tiltController.setpoint>-3){
-N//                tiltController.setpoint += -1;
-N//            }else{
-N//                tiltController.setpoint = -3;
-N//            }
-N            LPF(-250, filteredVelocitySetpoint, alphaVelocitySetpoint);
-N            velocityController.setpoint = filteredVelocitySetpoint[0];
-N            //pwmOffsetA_throt = -40;
-N            //pwmOffsetB_throt = -40;
+N        if(A){// Button A: Move forward
+N            if(selectedMode == angleMode){
+N                if(tiltController.setpoint<3){
+N                    tiltController.setpoint += 1;
+N                }else{
+N                    tiltController.setpoint = 3;
+N                }
+N            }
+N            else if(selectedMode == velocityMode){
+N                if(rawVelocitySetpoint >= 400) rawVelocitySetpoint = 400;
+N                else rawVelocitySetpoint += 20;
+N            }
+N        }if(C){// Button C: Move backward
+N            if(selectedMode == angleMode){
+N                if(tiltController.setpoint<3){
+N                    tiltController.setpoint += -1;
+N                }else{
+N                    tiltController.setpoint = -3;
+N                }
+N            }
+N            else if(selectedMode == velocityMode){
+N                if(rawVelocitySetpoint <= -400) rawVelocitySetpoint = -400;
+N                else rawVelocitySetpoint -= 20;
+N            }
 N        }if(B){// Button B
 N            //Right turn
-N            LPF(-1.5, filteredOrientationSetpoint, alphaOrientationSetpoint);
-N            turningController.setpoint = filteredOrientationSetpoint[0];
+N            if(rawOrientationSetpoint <= -2) rawOrientationSetpoint = -2;
+N            else rawOrientationSetpoint -= 0.25;
 N        }if(D){// Button D
 N            //Left turn
-N            LPF(1.5, filteredOrientationSetpoint, alphaOrientationSetpoint);
-N            turningController.setpoint = filteredOrientationSetpoint[0];
+N            if(rawOrientationSetpoint >= 2) rawOrientationSetpoint = 2;
+N            else rawOrientationSetpoint += 0.25;
 N        }if(!(A||C)){// Nor A or C
-N//            if(tiltController.setpoint>0){
-N//                tiltController.setpoint -= 0.5;
-N//            }else if(tiltController.setpoint<0){
-N//                tiltController.setpoint += 0.5;
-N//            }
-N            velocityController.setpoint = 0;
+N            if(selectedMode == angleMode){
+N                if(tiltController.setpoint>0){
+N                    tiltController.setpoint -= 0.5;
+N                }else if(tiltController.setpoint<0){
+N                    tiltController.setpoint += 0.5;
+N                }
+N            }else if(selectedMode == velocityMode){
+N                if(rawVelocitySetpoint>0){
+N                    rawVelocitySetpoint -= 10;
+N                }else if(rawVelocitySetpoint<0){
+N                    rawVelocitySetpoint += 10;
+N                }
+N            }
 N        }if(!(B||D)){// Nor B or D
-N            turningController.setpoint = 0;
+N            if(rawOrientationSetpoint>0){
+N                rawOrientationSetpoint -= 0.25;
+N            }else if(rawOrientationSetpoint<0){
+N                rawOrientationSetpoint += 0.25;
+N            }
 N        }
+N        LPF(rawVelocitySetpoint, filteredVelocitySetpoint, alphaVelocitySetpoint);
+N        velocityController.setpoint = filteredVelocitySetpoint[0];
+N        LPF(rawOrientationSetpoint, filteredOrientationSetpoint, alphaOrientationSetpoint);
+N        turningController.setpoint = filteredOrientationSetpoint[0];
 N   }
 N}
 N
-R "..\MiniSegway.h" 32 14 (ULP 7.1) Detected use of global variable "Ki_tilt" within one function "RFInterface::pollrfReceiver". Recommend placing variable in the function locally
-R "..\MiniSegway.h" 38 14 (ULP 7.1) Detected use of global variable "Ki_turning" within one function "RFInterface::pollrfReceiver". Recommend placing variable in the function locally
-R "..\MiniSegway.h" 43 14 (ULP 7.1) Detected use of global variable "Ki_velocity" within one function "RFInterface::pollrfReceiver". Recommend placing variable in the function locally
+R "..\MiniSegway.h" 31 19 (ULP 7.1) Detected use of global variable "selectedMode" within one function "RFInterface::pollrfReceiver". Recommend placing variable in the function locally
+R "..\MiniSegway.h" 35 14 (ULP 7.1) Detected use of global variable "Ki_tilt" within one function "RFInterface::pollrfReceiver". Recommend placing variable in the function locally
+R "..\MiniSegway.h" 41 14 (ULP 7.1) Detected use of global variable "Ki_turning" within one function "RFInterface::pollrfReceiver". Recommend placing variable in the function locally
+R "..\MiniSegway.h" 46 14 (ULP 7.1) Detected use of global variable "Ki_velocity" within one function "RFInterface::pollrfReceiver". Recommend placing variable in the function locally
 R "../RFInterface.cpp" 28 30 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
 R "../RFInterface.cpp" 29 38 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
 R "../RFInterface.cpp" 30 34 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
 R "../RFInterface.cpp" 31 42 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
 R "../RFInterface.cpp" 32 34 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
 R "../RFInterface.cpp" 33 41 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-R "../RFInterface.cpp" 52 16 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-R "../RFInterface.cpp" 53 41 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-R "../RFInterface.cpp" 63 16 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-R "../RFInterface.cpp" 64 41 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-R "../RFInterface.cpp" 69 16 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-R "../RFInterface.cpp" 70 40 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-R "../RFInterface.cpp" 73 16 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-R "../RFInterface.cpp" 74 40 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-R "../RFInterface.cpp" 81 41 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-R "../RFInterface.cpp" 83 40 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 47 43 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 48 45 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 50 45 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 54 40 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 55 42 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 59 43 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 60 45 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 62 45 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 66 40 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 67 42 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 71 39 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 72 41 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 75 39 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 76 41 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 79 43 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 80 45 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 81 49 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 82 45 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 85 39 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 86 41 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 87 45 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 88 41 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 92 38 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 93 40 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 94 44 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 95 40 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 98 12 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 99 37 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 100 12 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../RFInterface.cpp" 101 36 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive

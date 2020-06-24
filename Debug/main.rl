@@ -42417,22 +42417,25 @@ S#define DCO_Freq 16E+6
 S#define MAX_PWM 225
 Sconst double dt = 0.01;
 S
-Sconst double Kp_tilt = 15;//18
-Sconst double Kd_tilt = 0.03;//0.05
-Sconst double Ki_tilt = 0.1;//0.1;
+Senum ControlMode {velocityMode, angleMode};
+Sconst ControlMode selectedMode = velocityMode;
+S
+Sconst double Kp_tilt = 38;//18//35
+Sconst double Kd_tilt = 0.02;//0.05//0.02
+Sconst double Ki_tilt = 0.015;//0.002;//0.1 // 0.02
 Sconst double windup_tilt = 225;
-Sconst double alpha_PWM = 1;
+Sconst double alpha_PWM = 0.4;
 S
 Sconst double Kp_turning = 20;//17;
 Sconst double Kd_turning = 0.03;
 Sconst double Ki_turning = 0;
 Sconst double windup_turning = 225;
 S
-Sconst double Kp_velocity = 0.006;//0.006;
-Sconst double Kd_velocity = 0;//0;
-Sconst double Ki_velocity = 0.003;//0.001;
+Sconst double Kp_velocity = 0.015;//0.015;
+Sconst double Kd_velocity = 0.00;//0.005;
+Sconst double Ki_velocity = 0.015;//0.005;
 Sconst double windup_velocity = 225;
-Sconst double alpha_velocity = 0.4;
+Sconst double alpha_velocity = 0.2;//0.3; // 0.4
 S
 Sconst double odom_velocity_alpha = 0.2;
 Sconst double wheelRadius = 50.25;
@@ -54515,8 +54518,10 @@ N
 N    double filteredVelocitySetpoint[2] = {};
 N    double filteredOrientationSetpoint[2] = {};
 N
-N    double alphaVelocitySetpoint = 0.05;
-N    double alphaOrientationSetpoint = 0.05;
+N    double alphaVelocitySetpoint = 0.3;
+N    double alphaOrientationSetpoint = 1;
+N    double rawVelocitySetpoint = 0;
+N    double rawOrientationSetpoint = 0;
 N
 N    void pollrfReceiver();
 N};
@@ -54531,22 +54536,25 @@ N#define DCO_Freq 16E+6
 N#define MAX_PWM 225
 Nconst double dt = 0.01;
 N
-Nconst double Kp_tilt = 15;//18
-Nconst double Kd_tilt = 0.03;//0.05
-Nconst double Ki_tilt = 0.1;//0.1;
+Nenum ControlMode {velocityMode, angleMode};
+Nconst ControlMode selectedMode = velocityMode;
+N
+Nconst double Kp_tilt = 38;//18//35
+Nconst double Kd_tilt = 0.02;//0.05//0.02
+Nconst double Ki_tilt = 0.015;//0.002;//0.1 // 0.02
 Nconst double windup_tilt = 225;
-Nconst double alpha_PWM = 1;
+Nconst double alpha_PWM = 0.4;
 N
 Nconst double Kp_turning = 20;//17;
 Nconst double Kd_turning = 0.03;
 Nconst double Ki_turning = 0;
 Nconst double windup_turning = 225;
 N
-Nconst double Kp_velocity = 0.006;//0.006;
-Nconst double Kd_velocity = 0;//0;
-Nconst double Ki_velocity = 0.003;//0.001;
+Nconst double Kp_velocity = 0.015;//0.015;
+Nconst double Kd_velocity = 0.00;//0.005;
+Nconst double Ki_velocity = 0.015;//0.005;
 Nconst double windup_velocity = 225;
-Nconst double alpha_velocity = 0.4;
+Nconst double alpha_velocity = 0.2;//0.3; // 0.4
 N
 Nconst double odom_velocity_alpha = 0.2;
 Nconst double wheelRadius = 50.25;
@@ -54644,6 +54652,7 @@ NPID tiltController = PID(Kp_tilt, 0, Kd_tilt, dt, windup_tilt);
 NPID turningController = PID(Kp_turning, 0, Kd_turning, dt, windup_turning);
 NOuterPID velocityController = OuterPID(Kp_velocity, 0, Kd_velocity, dt, &tiltController, alpha_velocity);
 N
+N
 N// UART Initialization
 NUART UARTHandler = UART(UART_init, EUSCI_A0_BASE, &odom, &imu);
 XUART UARTHandler = UART(UART_init, (((uint32_t)0x40000000) +0x00001000), &odom, &imu);
@@ -54664,16 +54673,10 @@ N    setupSystick();
 N    setupEncoderInterrupts();
 N    configSPI();
 N    imu.configModule();
+N
 N    //Wait for user to press upper right corner on the remote to start the calibration
 N    while((bool)GPIO_getInputPinValue(GPIO_PORT_P6, GPIO_PIN0)==GPIO_INPUT_PIN_LOW);
 X    while((bool)GPIO_getInputPinValue(6, (0x0001))==(0x00));
-N//    double Command[] = {100,100};
-N//    motorController.commandMotors(Command);
-N//    __delay_cycles(100000);
-N//    while((bool)GPIO_getInputPinValue(GPIO_PORT_P6, GPIO_PIN0)==GPIO_INPUT_PIN_LOW);
-N//    Command[0] = Command[0]*-1;
-N//    Command[1] = Command[1]*-1;
-N//    motorController.commandMotors(Command);
 N    imu.calibrate();
 N
 N    UARTHandler.UARTSetup();
@@ -54688,20 +54691,27 @@ N    while(true){
 N        while(ms-last_ms < 10);
 N        last_ms = ms;
 N
+N        // Poll RF Receiver
+N        if(ms%100 == 0) commandInterface.pollrfReceiver();
+N
 N        //Read sensors
 N        odom.updateOdometry();
 N        imu.getFilteredAngle();
 N
 N        //Controllers
-N        //tiltController.updatePID(tiltController.setpoint, imu.angle, imu.angleRate);
-N        velocityController.updatePID(velocityController.setpoint, odom.speed, imu.angle, imu.angleRate);
+N        if(selectedMode == angleMode){
+N            tiltController.updatePID(tiltController.setpoint, imu.angle, imu.angleRate);
+N        }
+N        else if(selectedMode == velocityMode){
+N            velocityController.updatePID(velocityController.setpoint, odom.speed, imu.angle, imu.angleRate);
+N        }
 N        turningController.updatePID(turningController.setpoint, odom.turningRate);
 N
 N        //PWM commands
 N        LPF(tiltController.output - turningController.output, rightMotorFilteredPWM, alpha_PWM);
 N        LPF(tiltController.output + turningController.output, leftMotorFilteredPWM, alpha_PWM);
 N        motorCommands[0] = rightMotorFilteredPWM[0];
-N        motorCommands[1] = leftMotorFilteredPWM[1];
+N        motorCommands[1] = leftMotorFilteredPWM[0];
 N        if(commandInterface.mode==1){
 N            //Only command motors if the user has pressed B
 N            if(abs(imu.angle)<40){
@@ -54727,22 +54737,24 @@ N        UARTHandler.printOdometry();
 N        //UARTHandler.printIMU();
 N        //UARTHandler.printPID(velocityController);
 N    };
-R "../main.cpp" 56 5 (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
-R "../main.cpp" 75 9 (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
-R "../main.cpp" 75 9 (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+R "../main.cpp" 58 5 (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+R "../main.cpp" 70 9 (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+R "../main.cpp" 70 9 (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
 N}
 N
 N
-R "..\MiniSegway.h" 34 14 (ULP 7.1) Detected use of global variable "alpha_PWM" within one function "main". Recommend placing variable in the function locally
-R "../main.cpp" 80 29 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-R "../main.cpp" 84 37 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-R "../main.cpp" 85 36 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-R "../main.cpp" 88 12 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-R "../main.cpp" 89 12 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-R "../main.cpp" 90 26 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-R "../main.cpp" 91 26 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-R "../main.cpp" 94 30 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-R "../main.cpp" 103 21 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "..\MiniSegway.h" 31 19 (ULP 7.1) Detected use of global variable "selectedMode" within one function "main". Recommend placing variable in the function locally
+R "..\MiniSegway.h" 37 14 (ULP 7.1) Detected use of global variable "alpha_PWM" within one function "main". Recommend placing variable in the function locally
+R "../main.cpp" 78 29 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../main.cpp" 82 37 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../main.cpp" 85 41 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../main.cpp" 87 36 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../main.cpp" 90 12 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../main.cpp" 91 12 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../main.cpp" 92 26 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../main.cpp" 93 26 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../main.cpp" 96 30 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../main.cpp" 105 21 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
 R "../main.cpp" 29 10 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
 R "../main.cpp" 33 5 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
 R "../main.cpp" 34 5 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive

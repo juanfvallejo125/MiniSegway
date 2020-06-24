@@ -54227,22 +54227,25 @@ S#define DCO_Freq 16E+6
 S#define MAX_PWM 225
 Sconst double dt = 0.01;
 S
-Sconst double Kp_tilt = 15;//18
-Sconst double Kd_tilt = 0.03;//0.05
-Sconst double Ki_tilt = 0.1;//0.1;
+Senum ControlMode {velocityMode, angleMode};
+Sconst ControlMode selectedMode = velocityMode;
+S
+Sconst double Kp_tilt = 38;//18//35
+Sconst double Kd_tilt = 0.02;//0.05//0.02
+Sconst double Ki_tilt = 0.015;//0.002;//0.1 // 0.02
 Sconst double windup_tilt = 225;
-Sconst double alpha_PWM = 1;
+Sconst double alpha_PWM = 0.4;
 S
 Sconst double Kp_turning = 20;//17;
 Sconst double Kd_turning = 0.03;
 Sconst double Ki_turning = 0;
 Sconst double windup_turning = 225;
 S
-Sconst double Kp_velocity = 0.006;//0.006;
-Sconst double Kd_velocity = 0;//0;
-Sconst double Ki_velocity = 0.003;//0.001;
+Sconst double Kp_velocity = 0.015;//0.015;
+Sconst double Kd_velocity = 0.00;//0.005;
+Sconst double Ki_velocity = 0.015;//0.005;
 Sconst double windup_velocity = 225;
-Sconst double alpha_velocity = 0.4;
+Sconst double alpha_velocity = 0.2;//0.3; // 0.4
 S
 Sconst double odom_velocity_alpha = 0.2;
 Sconst double wheelRadius = 50.25;
@@ -54514,8 +54517,10 @@ N
 N    double filteredVelocitySetpoint[2] = {};
 N    double filteredOrientationSetpoint[2] = {};
 N
-N    double alphaVelocitySetpoint = 0.05;
-N    double alphaOrientationSetpoint = 0.05;
+N    double alphaVelocitySetpoint = 0.3;
+N    double alphaOrientationSetpoint = 1;
+N    double rawVelocitySetpoint = 0;
+N    double rawOrientationSetpoint = 0;
 N
 N    void pollrfReceiver();
 N};
@@ -54530,22 +54535,25 @@ N#define DCO_Freq 16E+6
 N#define MAX_PWM 225
 Nconst double dt = 0.01;
 N
-Nconst double Kp_tilt = 15;//18
-Nconst double Kd_tilt = 0.03;//0.05
-Nconst double Ki_tilt = 0.1;//0.1;
+Nenum ControlMode {velocityMode, angleMode};
+Nconst ControlMode selectedMode = velocityMode;
+N
+Nconst double Kp_tilt = 38;//18//35
+Nconst double Kd_tilt = 0.02;//0.05//0.02
+Nconst double Ki_tilt = 0.015;//0.002;//0.1 // 0.02
 Nconst double windup_tilt = 225;
-Nconst double alpha_PWM = 1;
+Nconst double alpha_PWM = 0.4;
 N
 Nconst double Kp_turning = 20;//17;
 Nconst double Kd_turning = 0.03;
 Nconst double Ki_turning = 0;
 Nconst double windup_turning = 225;
 N
-Nconst double Kp_velocity = 0.006;//0.006;
-Nconst double Kd_velocity = 0;//0;
-Nconst double Ki_velocity = 0.003;//0.001;
+Nconst double Kp_velocity = 0.015;//0.015;
+Nconst double Kd_velocity = 0.00;//0.005;
+Nconst double Ki_velocity = 0.015;//0.005;
 Nconst double windup_velocity = 225;
-Nconst double alpha_velocity = 0.4;
+Nconst double alpha_velocity = 0.2;//0.3; // 0.4
 N
 Nconst double odom_velocity_alpha = 0.2;
 Nconst double wheelRadius = 50.25;

@@ -39,15 +39,11 @@ extern "C" void PORT5_IRQHandler(){
 extern "C" void SysTick_Handler()
 {
     ms++;
-
-    if(ms%100 == 0) {
-        commandInterface.pollrfReceiver();
-    }
-    if(ms%500 == 0){
+//    if(ms%500 == 0){
         //printf("Right encoder count %i\n", right_enc_count);
         //printf("Left encoder count %i\n", left_enc_count);
         ///printf("Right velocity %f\n", velocity);
-    }
+//    }
 }
 
 extern "C" void EUSCIA0_IRQHandler(void){

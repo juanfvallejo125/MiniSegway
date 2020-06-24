@@ -34,6 +34,7 @@ PID tiltController = PID(Kp_tilt, 0, Kd_tilt, dt, windup_tilt);
 PID turningController = PID(Kp_turning, 0, Kd_turning, dt, windup_turning);
 OuterPID velocityController = OuterPID(Kp_velocity, 0, Kd_velocity, dt, &tiltController, alpha_velocity);
 
+
 // UART Initialization
 UART UARTHandler = UART(UART_init, EUSCI_A0_BASE, &odom, &imu);
 
@@ -52,15 +53,9 @@ void main(void)
     setupEncoderInterrupts();
     configSPI();
     imu.configModule();
+
     //Wait for user to press upper right corner on the remote to start the calibration
     while((bool)GPIO_getInputPinValue(GPIO_PORT_P6, GPIO_PIN0)==GPIO_INPUT_PIN_LOW);
-//    double Command[] = {100,100};
-//    motorController.commandMotors(Command);
-//    __delay_cycles(100000);
-//    while((bool)GPIO_getInputPinValue(GPIO_PORT_P6, GPIO_PIN0)==GPIO_INPUT_PIN_LOW);
-//    Command[0] = Command[0]*-1;
-//    Command[1] = Command[1]*-1;
-//    motorController.commandMotors(Command);
     imu.calibrate();
 
     UARTHandler.UARTSetup();
@@ -75,20 +70,27 @@ void main(void)
         while(ms-last_ms < 10);
         last_ms = ms;
 
+        // Poll RF Receiver
+        if(ms%100 == 0) commandInterface.pollrfReceiver();
+
         //Read sensors
         odom.updateOdometry();
         imu.getFilteredAngle();
 
         //Controllers
-        //tiltController.updatePID(tiltController.setpoint, imu.angle, imu.angleRate);
-        velocityController.updatePID(velocityController.setpoint, odom.speed, imu.angle, imu.angleRate);
+        if(selectedMode == angleMode){
+            tiltController.updatePID(tiltController.setpoint, imu.angle, imu.angleRate);
+        }
+        else if(selectedMode == velocityMode){
+            velocityController.updatePID(velocityController.setpoint, odom.speed, imu.angle, imu.angleRate);
+        }
         turningController.updatePID(turningController.setpoint, odom.turningRate);
 
         //PWM commands
         LPF(tiltController.output - turningController.output, rightMotorFilteredPWM, alpha_PWM);
         LPF(tiltController.output + turningController.output, leftMotorFilteredPWM, alpha_PWM);
         motorCommands[0] = rightMotorFilteredPWM[0];
-        motorCommands[1] = leftMotorFilteredPWM[1];
+        motorCommands[1] = leftMotorFilteredPWM[0];
         if(commandInterface.mode==1){
             //Only command motors if the user has pressed B
             if(abs(imu.angle)<40){

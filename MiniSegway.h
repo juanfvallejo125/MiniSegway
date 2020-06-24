@@ -27,22 +27,25 @@
 #define MAX_PWM 225
 const double dt = 0.01;
 
-const double Kp_tilt = 15;//18
-const double Kd_tilt = 0.03;//0.05
-const double Ki_tilt = 0.1;//0.1;
+enum ControlMode {velocityMode, angleMode};
+const ControlMode selectedMode = velocityMode;
+
+const double Kp_tilt = 38;//18//35
+const double Kd_tilt = 0.02;//0.05//0.02
+const double Ki_tilt = 0.015;//0.002;//0.1 // 0.02
 const double windup_tilt = 225;
-const double alpha_PWM = 1;
+const double alpha_PWM = 0.4;
 
 const double Kp_turning = 20;//17;
 const double Kd_turning = 0.03;
 const double Ki_turning = 0;
 const double windup_turning = 225;
 
-const double Kp_velocity = 0.006;//0.006;
-const double Kd_velocity = 0;//0;
-const double Ki_velocity = 0.003;//0.001;
+const double Kp_velocity = 0.015;//0.015;
+const double Kd_velocity = 0.00;//0.005;
+const double Ki_velocity = 0.015;//0.005;
 const double windup_velocity = 225;
-const double alpha_velocity = 0.4;
+const double alpha_velocity = 0.2;//0.3; // 0.4
 
 const double odom_velocity_alpha = 0.2;
 const double wheelRadius = 50.25;
