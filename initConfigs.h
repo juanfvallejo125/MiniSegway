@@ -15,6 +15,7 @@ void setupEncoderInterrupts();
 void setupClocks();
 void setupPins();
 void setupSystick();
+void configTimerCapture();
 
 
 #endif /* INITCONFIGS_H_ */

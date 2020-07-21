@@ -25,6 +25,45 @@ void configPWM() {
     // PWM signal will now be available
 }
 
+void configTimerCapture() {
+    // Pinout ch1: p2.7 ch2: p2.6 ch3: p2.4
+    P2->SEL0 |= BIT7; // Set bit 5 of P2SEL0 to enable TA0.2 functionality on P2.5
+    P2->DIR &= ~BIT7;
+    P2->SEL0 |= BIT6; // Set bit 5 of P2SEL0 to enable TA0.2 functionality on P2.5
+    P2->DIR &= ~BIT6;
+    P2->SEL0 |= BIT4; // Set bit 5 of P2SEL0 to enable TA0.2 functionality on P2.5
+    P2->DIR &= ~BIT4;
+
+    // Timer0_A4 Setup
+    TIMER_A0->CCTL[4] = TIMER_A_CCTLN_CM__BOTH | // Capture rising and falling edges,
+            TIMER_A_CCTLN_CCIS_0 |          // Use CCI2A,
+            TIMER_A_CCTLN_CCIE |            // Enable capture interrupt
+            TIMER_A_CCTLN_CAP |             // Enable capture mode,
+            TIMER_A_CCTLN_SCS;              // Synchronous capture
+
+    TIMER_A0->CCTL[3] = TIMER_A_CCTLN_CM__BOTH | // Capture rising and falling edges,
+                TIMER_A_CCTLN_CCIS_0 |          // Use CCI2A,
+                TIMER_A_CCTLN_CCIE |            // Enable capture interrupt
+                TIMER_A_CCTLN_CAP |             // Enable capture mode,
+                TIMER_A_CCTLN_SCS;              // Synchronous capture
+
+    TIMER_A0->CCTL[1] = TIMER_A_CCTLN_CM__BOTH | // Capture rising and falling edges,
+                TIMER_A_CCTLN_CCIS_0 |          // Use CCI2A,
+                TIMER_A_CCTLN_CCIE |            // Enable capture interrupt
+                TIMER_A_CCTLN_CAP |             // Enable capture mode,
+                TIMER_A_CCTLN_SCS;              // Synchronous capture
+
+    TIMER_A0->CTL |= TIMER_A_CTL_SSEL__SMCLK | // Use SMCLK as clock source,
+            TIMER_A_CTL_MC__CONTINUOUS |    // Start timer in continuous mode
+            TIMER_A_CTL_CLR |               // clear TA0R
+            TIMER_A_CTL_ID_2;               // Divide by 4 to tick every microsec
+
+    Interrupt_setPriority(INT_TA0_N, 1);
+    Interrupt_enableInterrupt(INT_TA0_N);
+
+
+}
+
 void setupClocks(){
     // Set the DCO to DCO_Freq MHZ and set the sub master clock
     CS_setDCOFrequency(DCO_Freq);

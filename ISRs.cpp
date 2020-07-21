@@ -60,5 +60,48 @@ extern "C" void EUSCIA0_IRQHandler(void){
     }
 }
 
+extern "C" void TA0_N_IRQHandler(void)
+{
+    int vector = TIMER_A0->IV;
+    int pulseIndex = 0;
+    int pulseArrIndex = 0;
+    if(vector == 0x02){
+        pulseIndex = 1;
+        pulseArrIndex = 2;
+        if(TIMER_A0->CCTL[pulseIndex] & TIMER_A_CCTLN_CCI){
+              commandInterface.pulseStart[pulseArrIndex] = TIMER_A0->CCR[pulseIndex];
+          }
+          else{
+              commandInterface.pulseEnd[pulseArrIndex] = TIMER_A0->CCR[pulseIndex];
+              commandInterface.pulseLength[pulseArrIndex] = commandInterface.pulseEnd[pulseArrIndex] - commandInterface.pulseStart[pulseArrIndex];
+              TIMER_A0->CCTL[pulseIndex] &= ~(TIMER_A_CCTLN_CCIFG);
+          }
+    }
+    if(vector == 0x06){
+        pulseIndex = 3;
+        pulseArrIndex = 1;
+        if(TIMER_A0->CCTL[pulseIndex] & TIMER_A_CCTLN_CCI){
+            commandInterface.pulseStart[pulseArrIndex] = TIMER_A0->CCR[pulseIndex];
+          }
+          else{
+              commandInterface.pulseEnd[pulseArrIndex] = TIMER_A0->CCR[pulseIndex];
+              commandInterface.pulseLength[pulseArrIndex] = commandInterface.pulseEnd[pulseArrIndex] - commandInterface.pulseStart[pulseArrIndex];
+              TIMER_A0->CCTL[pulseIndex] &= ~(TIMER_A_CCTLN_CCIFG);
+          }
+    }
+    if(vector == 0x08){
+        pulseIndex = 4;
+        pulseArrIndex = 0;
+        if(TIMER_A0->CCTL[pulseIndex] & TIMER_A_CCTLN_CCI){
+            commandInterface.pulseStart[pulseArrIndex] = TIMER_A0->CCR[pulseIndex];
+          }
+          else{
+              commandInterface.pulseEnd[pulseArrIndex] = TIMER_A0->CCR[pulseIndex];
+              commandInterface.pulseLength[pulseArrIndex] = commandInterface.pulseEnd[pulseArrIndex] - commandInterface.pulseStart[pulseArrIndex];
+              TIMER_A0->CCTL[pulseIndex] &= ~(TIMER_A_CCTLN_CCIFG);
+          }
+    }
+}
+
 
 

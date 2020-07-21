@@ -22,7 +22,14 @@ public:
     double rawVelocitySetpoint = 0;
     double rawOrientationSetpoint = 0;
 
+    // Use of 3 channels
+    uint16_t pulseStart[3] = {0};
+    uint16_t pulseEnd[3] = {0};
+    uint16_t pulseLength[3] = {0};
+    uint16_t zeroValue[3] = {0};
+
     void pollrfReceiver();
+    void calibrate();
 };
 
 

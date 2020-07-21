@@ -17,6 +17,7 @@
 class Odometry;
 class IMU;
 class PID;
+class RFInterface;
 
 class UART{
 private:
@@ -44,6 +45,8 @@ public:
     void printPWM();
 
     void printPID(PID& pid);
+
+    void printRF();
 
 };
 

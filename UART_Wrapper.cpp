@@ -54,3 +54,10 @@ void UART::printPID(PID& pid){
     finishedTransmission = 0;
     Interrupt_enableInterrupt(INT_EUSCIA0);// Automatically send everything
 }
+
+void UART::printRF(){
+    while(finishedTransmission==0);
+    messageSize = sprintf(buffer, "CH1: %i, CH2: %i, CH3: %i, mode: %i\r\n", commandInterface.pulseLength[0], commandInterface.pulseLength[1], commandInterface.pulseLength[2], commandInterface.mode);
+    finishedTransmission = 0;
+    Interrupt_enableInterrupt(INT_EUSCIA0);// Automatically send everything
+}

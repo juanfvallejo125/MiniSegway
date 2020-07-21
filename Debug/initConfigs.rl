@@ -42439,9 +42439,9 @@ S
 Senum ControlMode {velocityMode, angleMode};
 Sconst ControlMode selectedMode = velocityMode;
 S
-Sconst double Kp_tilt = 38;//18//35
+Sconst double Kp_tilt = 35;//18//35//38
 Sconst double Kd_tilt = 0.02;//0.05//0.02
-Sconst double Ki_tilt = 0.015;//0.002;//0.1 // 0.02
+Sconst double Ki_tilt = 0.00;//0.002;//0.1 // 0.02
 Sconst double windup_tilt = 225;
 Sconst double alpha_PWM = 0.4;
 S
@@ -42451,8 +42451,8 @@ Sconst double Ki_turning = 0;
 Sconst double windup_turning = 225;
 S
 Sconst double Kp_velocity = 0.015;//0.015;
-Sconst double Kd_velocity = 0.00;//0.005;
-Sconst double Ki_velocity = 0.015;//0.005;
+Sconst double Kd_velocity = 0.000;//0.005;
+Sconst double Ki_velocity = 0.015;//0.005;//0.015
 Sconst double windup_velocity = 225;
 Sconst double alpha_velocity = 0.2;//0.3; // 0.4
 S
@@ -54382,6 +54382,7 @@ N
 Nclass Odometry;
 Nclass IMU;
 Nclass PID;
+Nclass RFInterface;
 N
 Nclass UART{
 Nprivate:
@@ -54410,6 +54411,8 @@ N    void printPWM();
 N
 N    void printPID(PID& pid);
 N
+N    void printRF();
+N
 N};
 N
 N#endif /* UART_WRAPPER_H_ */
@@ -54433,6 +54436,7 @@ Svoid setupEncoderInterrupts();
 Svoid setupClocks();
 Svoid setupPins();
 Svoid setupSystick();
+Svoid configTimerCapture();
 S
 S
 N#endif /* INITCONFIGS_H_ */
@@ -54542,7 +54546,14 @@ N    double alphaOrientationSetpoint = 1;
 N    double rawVelocitySetpoint = 0;
 N    double rawOrientationSetpoint = 0;
 N
+N    // Use of 3 channels
+N    uint16_t pulseStart[3] = {0};
+N    uint16_t pulseEnd[3] = {0};
+N    uint16_t pulseLength[3] = {0};
+N    uint16_t zeroValue[3] = {0};
+N
 N    void pollrfReceiver();
+N    void calibrate();
 N};
 N
 N
@@ -54558,9 +54569,9 @@ N
 Nenum ControlMode {velocityMode, angleMode};
 Nconst ControlMode selectedMode = velocityMode;
 N
-Nconst double Kp_tilt = 38;//18//35
+Nconst double Kp_tilt = 35;//18//35//38
 Nconst double Kd_tilt = 0.02;//0.05//0.02
-Nconst double Ki_tilt = 0.015;//0.002;//0.1 // 0.02
+Nconst double Ki_tilt = 0.00;//0.002;//0.1 // 0.02
 Nconst double windup_tilt = 225;
 Nconst double alpha_PWM = 0.4;
 N
@@ -54570,8 +54581,8 @@ Nconst double Ki_turning = 0;
 Nconst double windup_turning = 225;
 N
 Nconst double Kp_velocity = 0.015;//0.015;
-Nconst double Kd_velocity = 0.00;//0.005;
-Nconst double Ki_velocity = 0.015;//0.005;
+Nconst double Kd_velocity = 0.000;//0.005;
+Nconst double Ki_velocity = 0.015;//0.005;//0.015
 Nconst double windup_velocity = 225;
 Nconst double alpha_velocity = 0.2;//0.3; // 0.4
 N
@@ -54632,6 +54643,7 @@ Nvoid setupEncoderInterrupts();
 Nvoid setupClocks();
 Nvoid setupPins();
 Nvoid setupSystick();
+Nvoid configTimerCapture();
 N
 N
 N#endif /* INITCONFIGS_H_ */
@@ -54662,6 +54674,72 @@ N    // Initialize Timer A
 N    TA2CTL = TASSEL__SMCLK | MC__UP | TACLR ; // Tie Timer A to SMCLK, use Up mode, and clear TA2R
 X    ((*((volatile uint16_t *)(0x40000800)))) = ((uint16_t)0x0200) | ((uint16_t)0x0010) | ((uint16_t)0x0004) ; 
 N    // PWM signal will now be available
+N}
+N
+Nvoid configTimerCapture() {
+N    // Pinout ch1: p2.7 ch2: p2.6 ch3: p2.4
+N    P2->SEL0 |= BIT7; // Set bit 5 of P2SEL0 to enable TA0.2 functionality on P2.5
+X    ((DIO_PORT_Even_Interruptable_Type*) ((((uint32_t)0x40000000) +0x00004C00) + 0x0000))->SEL0 |= (uint16_t)(0x0080); 
+N    P2->DIR &= ~BIT7;
+X    ((DIO_PORT_Even_Interruptable_Type*) ((((uint32_t)0x40000000) +0x00004C00) + 0x0000))->DIR &= ~(uint16_t)(0x0080);
+N    P2->SEL0 |= BIT6; // Set bit 5 of P2SEL0 to enable TA0.2 functionality on P2.5
+X    ((DIO_PORT_Even_Interruptable_Type*) ((((uint32_t)0x40000000) +0x00004C00) + 0x0000))->SEL0 |= (uint16_t)(0x0040); 
+N    P2->DIR &= ~BIT6;
+X    ((DIO_PORT_Even_Interruptable_Type*) ((((uint32_t)0x40000000) +0x00004C00) + 0x0000))->DIR &= ~(uint16_t)(0x0040);
+N    P2->SEL0 |= BIT4; // Set bit 5 of P2SEL0 to enable TA0.2 functionality on P2.5
+X    ((DIO_PORT_Even_Interruptable_Type*) ((((uint32_t)0x40000000) +0x00004C00) + 0x0000))->SEL0 |= (uint16_t)(0x0010); 
+N    P2->DIR &= ~BIT4;
+X    ((DIO_PORT_Even_Interruptable_Type*) ((((uint32_t)0x40000000) +0x00004C00) + 0x0000))->DIR &= ~(uint16_t)(0x0010);
+N
+N    // Timer0_A4 Setup
+N    TIMER_A0->CCTL[4] = TIMER_A_CCTLN_CM__BOTH | // Capture rising and falling edges,
+X    ((Timer_A_Type *) (((uint32_t)0x40000000) +0x00000000))->CCTL[4] = ((uint16_t)0xC000) | 
+N            TIMER_A_CCTLN_CCIS_0 |          // Use CCI2A,
+X            ((uint16_t)0x0000) |          
+N            TIMER_A_CCTLN_CCIE |            // Enable capture interrupt
+X            ((uint16_t)0x0010) |            
+N            TIMER_A_CCTLN_CAP |             // Enable capture mode,
+X            ((uint16_t)0x0100) |             
+N            TIMER_A_CCTLN_SCS;              // Synchronous capture
+X            ((uint16_t)0x0800);              
+N
+N    TIMER_A0->CCTL[3] = TIMER_A_CCTLN_CM__BOTH | // Capture rising and falling edges,
+X    ((Timer_A_Type *) (((uint32_t)0x40000000) +0x00000000))->CCTL[3] = ((uint16_t)0xC000) | 
+N                TIMER_A_CCTLN_CCIS_0 |          // Use CCI2A,
+X                ((uint16_t)0x0000) |          
+N                TIMER_A_CCTLN_CCIE |            // Enable capture interrupt
+X                ((uint16_t)0x0010) |            
+N                TIMER_A_CCTLN_CAP |             // Enable capture mode,
+X                ((uint16_t)0x0100) |             
+N                TIMER_A_CCTLN_SCS;              // Synchronous capture
+X                ((uint16_t)0x0800);              
+N
+N    TIMER_A0->CCTL[1] = TIMER_A_CCTLN_CM__BOTH | // Capture rising and falling edges,
+X    ((Timer_A_Type *) (((uint32_t)0x40000000) +0x00000000))->CCTL[1] = ((uint16_t)0xC000) | 
+N                TIMER_A_CCTLN_CCIS_0 |          // Use CCI2A,
+X                ((uint16_t)0x0000) |          
+N                TIMER_A_CCTLN_CCIE |            // Enable capture interrupt
+X                ((uint16_t)0x0010) |            
+N                TIMER_A_CCTLN_CAP |             // Enable capture mode,
+X                ((uint16_t)0x0100) |             
+N                TIMER_A_CCTLN_SCS;              // Synchronous capture
+X                ((uint16_t)0x0800);              
+N
+N    TIMER_A0->CTL |= TIMER_A_CTL_SSEL__SMCLK | // Use SMCLK as clock source,
+X    ((Timer_A_Type *) (((uint32_t)0x40000000) +0x00000000))->CTL |= ((uint16_t)0x0200) | 
+N            TIMER_A_CTL_MC__CONTINUOUS |    // Start timer in continuous mode
+X            ((uint16_t)0x0020) |    
+N            TIMER_A_CTL_CLR |               // clear TA0R
+X            ((uint16_t)0x0004) |               
+N            TIMER_A_CTL_ID_2;               // Divide by 4 to tick every microsec
+X            ((uint16_t)0x0080);               
+N
+N    Interrupt_setPriority(INT_TA0_N, 1);
+X    Interrupt_setPriority((25), 1);
+N    Interrupt_enableInterrupt(INT_TA0_N);
+X    Interrupt_enableInterrupt((25));
+N
+N
 N}
 N
 Nvoid setupClocks(){

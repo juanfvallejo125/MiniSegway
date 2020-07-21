@@ -51,15 +51,22 @@ void main(void)
     FPU_enableModule();
     setupSystick();
     setupEncoderInterrupts();
+    configTimerCapture();
     configSPI();
     imu.configModule();
 
-    //Wait for user to press upper right corner on the remote to start the calibration
-    while((bool)GPIO_getInputPinValue(GPIO_PORT_P6, GPIO_PIN0)==GPIO_INPUT_PIN_LOW);
-    imu.calibrate();
-
     UARTHandler.UARTSetup();
     Interrupt_enableMaster();
+
+    //Wait for user to press upper right corner on the remote to start the calibration
+    while(commandInterface.mode == 0) commandInterface.pollrfReceiver();
+    imu.calibrate();
+    commandInterface.calibrate();
+    while(commandInterface.mode == 1){
+        commandInterface.pollrfReceiver();
+    }
+
+
 
     double motorCommands[2] = {};
     double rightMotorFilteredPWM[2] = {};
@@ -71,7 +78,7 @@ void main(void)
         last_ms = ms;
 
         // Poll RF Receiver
-        if(ms%100 == 0) commandInterface.pollrfReceiver();
+        commandInterface.pollrfReceiver();
 
         //Read sensors
         odom.updateOdometry();
@@ -110,9 +117,10 @@ void main(void)
             }
         // Debugging Serial Transmissions
         //UARTHandler.printEncoders();
-        UARTHandler.printOdometry();
-        //UARTHandler.printIMU();
-        //UARTHandler.printPID(velocityController);
+        //UARTHandler.printOdometry();
+        ///UARTHandler.printIMU();
+        UARTHandler.printPID(velocityController);
+        //UARTHandler.printRF();
     };
 }
 

@@ -54340,9 +54340,9 @@ S
 Senum ControlMode {velocityMode, angleMode};
 Sconst ControlMode selectedMode = velocityMode;
 S
-Sconst double Kp_tilt = 38;//18//35
+Sconst double Kp_tilt = 35;//18//35//38
 Sconst double Kd_tilt = 0.02;//0.05//0.02
-Sconst double Ki_tilt = 0.015;//0.002;//0.1 // 0.02
+Sconst double Ki_tilt = 0.00;//0.002;//0.1 // 0.02
 Sconst double windup_tilt = 225;
 Sconst double alpha_PWM = 0.4;
 S
@@ -54352,8 +54352,8 @@ Sconst double Ki_turning = 0;
 Sconst double windup_turning = 225;
 S
 Sconst double Kp_velocity = 0.015;//0.015;
-Sconst double Kd_velocity = 0.00;//0.005;
-Sconst double Ki_velocity = 0.015;//0.005;
+Sconst double Kd_velocity = 0.000;//0.005;
+Sconst double Ki_velocity = 0.015;//0.005;//0.015
 Sconst double windup_velocity = 225;
 Sconst double alpha_velocity = 0.2;//0.3; // 0.4
 S
@@ -54439,6 +54439,7 @@ N
 Nclass Odometry;
 Nclass IMU;
 Nclass PID;
+Nclass RFInterface;
 N
 Nclass UART{
 Nprivate:
@@ -54467,6 +54468,8 @@ N    void printPWM();
 N
 N    void printPID(PID& pid);
 N
+N    void printRF();
+N
 N};
 N
 N#endif /* UART_WRAPPER_H_ */
@@ -54490,6 +54493,7 @@ Nvoid setupEncoderInterrupts();
 Nvoid setupClocks();
 Nvoid setupPins();
 Nvoid setupSystick();
+Nvoid configTimerCapture();
 N
 N
 N#endif /* INITCONFIGS_H_ */
@@ -54554,7 +54558,14 @@ N    double alphaOrientationSetpoint = 1;
 N    double rawVelocitySetpoint = 0;
 N    double rawOrientationSetpoint = 0;
 N
+N    // Use of 3 channels
+N    uint16_t pulseStart[3] = {0};
+N    uint16_t pulseEnd[3] = {0};
+N    uint16_t pulseLength[3] = {0};
+N    uint16_t zeroValue[3] = {0};
+N
 N    void pollrfReceiver();
+N    void calibrate();
 N};
 N
 N
@@ -54570,9 +54581,9 @@ N
 Nenum ControlMode {velocityMode, angleMode};
 Nconst ControlMode selectedMode = velocityMode;
 N
-Nconst double Kp_tilt = 38;//18//35
+Nconst double Kp_tilt = 35;//18//35//38
 Nconst double Kd_tilt = 0.02;//0.05//0.02
-Nconst double Ki_tilt = 0.015;//0.002;//0.1 // 0.02
+Nconst double Ki_tilt = 0.00;//0.002;//0.1 // 0.02
 Nconst double windup_tilt = 225;
 Nconst double alpha_PWM = 0.4;
 N
@@ -54582,8 +54593,8 @@ Nconst double Ki_turning = 0;
 Nconst double windup_turning = 225;
 N
 Nconst double Kp_velocity = 0.015;//0.015;
-Nconst double Kd_velocity = 0.00;//0.005;
-Nconst double Ki_velocity = 0.015;//0.005;
+Nconst double Kd_velocity = 0.000;//0.005;
+Nconst double Ki_velocity = 0.015;//0.005;//0.015
 Nconst double windup_velocity = 225;
 Nconst double alpha_velocity = 0.2;//0.3; // 0.4
 N
