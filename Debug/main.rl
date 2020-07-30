@@ -42420,9 +42420,9 @@ S
 Senum ControlMode {velocityMode, angleMode};
 Sconst ControlMode selectedMode = velocityMode;
 S
-Sconst double Kp_tilt = 35;//18//35//38
+Sconst double Kp_tilt = 38;//18//35//38
 Sconst double Kd_tilt = 0.02;//0.05//0.02
-Sconst double Ki_tilt = 0.00;//0.002;//0.1 // 0.02
+Sconst double Ki_tilt = 0.005;//0.002;//0.1 // 0.02
 Sconst double windup_tilt = 225;
 Sconst double alpha_PWM = 0.4;
 S
@@ -42431,9 +42431,9 @@ Sconst double Kd_turning = 0.03;
 Sconst double Ki_turning = 0;
 Sconst double windup_turning = 225;
 S
-Sconst double Kp_velocity = 0.015;//0.015;
-Sconst double Kd_velocity = 0.000;//0.005;
-Sconst double Ki_velocity = 0.015;//0.005;//0.015
+Sconst double Kp_velocity = 0.018;//0.015;
+Sconst double Kd_velocity = 0.00;//0.005;
+Sconst double Ki_velocity = 0.018;//0.005;//0.015
 Sconst double windup_velocity = 225;
 Sconst double alpha_velocity = 0.2;//0.3; // 0.4
 S
@@ -54522,7 +54522,7 @@ N
 N    double filteredVelocitySetpoint[2] = {};
 N    double filteredOrientationSetpoint[2] = {};
 N
-N    double alphaVelocitySetpoint = 0.3;
+N    double alphaVelocitySetpoint = 0.05;
 N    double alphaOrientationSetpoint = 1;
 N    double rawVelocitySetpoint = 0;
 N    double rawOrientationSetpoint = 0;
@@ -54550,9 +54550,9 @@ N
 Nenum ControlMode {velocityMode, angleMode};
 Nconst ControlMode selectedMode = velocityMode;
 N
-Nconst double Kp_tilt = 35;//18//35//38
+Nconst double Kp_tilt = 38;//18//35//38
 Nconst double Kd_tilt = 0.02;//0.05//0.02
-Nconst double Ki_tilt = 0.00;//0.002;//0.1 // 0.02
+Nconst double Ki_tilt = 0.005;//0.002;//0.1 // 0.02
 Nconst double windup_tilt = 225;
 Nconst double alpha_PWM = 0.4;
 N
@@ -54561,9 +54561,9 @@ Nconst double Kd_turning = 0.03;
 Nconst double Ki_turning = 0;
 Nconst double windup_turning = 225;
 N
-Nconst double Kp_velocity = 0.015;//0.015;
-Nconst double Kd_velocity = 0.000;//0.005;
-Nconst double Ki_velocity = 0.015;//0.005;//0.015
+Nconst double Kp_velocity = 0.018;//0.015;
+Nconst double Kd_velocity = 0.00;//0.005;
+Nconst double Ki_velocity = 0.018;//0.005;//0.015
 Nconst double windup_velocity = 225;
 Nconst double alpha_velocity = 0.2;//0.3; // 0.4
 N
@@ -54672,7 +54672,7 @@ N//User interface
 NRFInterface commandInterface;
 N
 Nvoid main(void)
-N{
+N {
 N	WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;		// stop watchdog timer
 X	((WDT_A_Type *) (((uint32_t)0x40000000) +0x00004800))->CTL = ((uint16_t)0x5A00) | ((uint16_t)0x0080);		
 N	//Initial Configs

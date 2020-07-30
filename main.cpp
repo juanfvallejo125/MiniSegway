@@ -42,7 +42,7 @@ UART UARTHandler = UART(UART_init, EUSCI_A0_BASE, &odom, &imu);
 RFInterface commandInterface;
 
 void main(void)
-{
+ {
 	WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;		// stop watchdog timer
 	//Initial Configs
 	setupClocks();

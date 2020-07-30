@@ -30,9 +30,9 @@ const double dt = 0.01;
 enum ControlMode {velocityMode, angleMode};
 const ControlMode selectedMode = velocityMode;
 
-const double Kp_tilt = 35;//18//35//38
+const double Kp_tilt = 38;//18//35//38
 const double Kd_tilt = 0.02;//0.05//0.02
-const double Ki_tilt = 0.00;//0.002;//0.1 // 0.02
+const double Ki_tilt = 0.005;//0.002;//0.1 // 0.02
 const double windup_tilt = 225;
 const double alpha_PWM = 0.4;
 
@@ -41,9 +41,9 @@ const double Kd_turning = 0.03;
 const double Ki_turning = 0;
 const double windup_turning = 225;
 
-const double Kp_velocity = 0.015;//0.015;
-const double Kd_velocity = 0.000;//0.005;
-const double Ki_velocity = 0.015;//0.005;//0.015
+const double Kp_velocity = 0.018;//0.015;
+const double Kd_velocity = 0.00;//0.005;
+const double Ki_velocity = 0.018;//0.005;//0.015
 const double windup_velocity = 225;
 const double alpha_velocity = 0.2;//0.3; // 0.4
 
