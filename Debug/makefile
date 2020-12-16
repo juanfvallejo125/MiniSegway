@@ -20,6 +20,7 @@ ORDERED_OBJS += \
 "./PID.obj" \
 "./RFInterface.obj" \
 "./SPI.obj" \
+"./SerialProtocol.obj" \
 "./UART_Wrapper.obj" \
 "./initConfigs.obj" \
 "./main.obj" \
@@ -135,43 +136,43 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-encoder_and_odometry_test.out \
+Mini_Segway.out \
 
 EXE_OUTPUTS__QUOTED += \
-"encoder_and_odometry_test.out" \
+"Mini_Segway.out" \
 
 BIN_OUTPUTS += \
-encoder_and_odometry_test.hex \
+Mini_Segway.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"encoder_and_odometry_test.hex" \
+"Mini_Segway.hex" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "encoder_and_odometry_test.out"
+	@$(MAKE) --no-print-directory -Onone "Mini_Segway.out"
 
 # Tool invocations
-encoder_and_odometry_test.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+Mini_Segway.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: ARM Linker'
-	"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power="all" --define=__MSP432P401R__ --define=ccs -g --rtti --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --gen_preprocessor_listing -z -m"encoder_and_odometry_test.map" --heap_size=1024 --stack_size=512 -i"C:/ti/ccs930/ccs/ccs_base/arm/include" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/lib" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="encoder_and_odometry_test_linkInfo.xml" --rom_model -o "encoder_and_odometry_test.out" $(ORDERED_OBJS)
+	"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -O2 --opt_for_speed=3 --advice:power="all" --define=__MSP432P401R__ --define=ccs -g --rtti --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --gen_preprocessor_listing -z -m"Mini_Segway.map" --heap_size=1024 --stack_size=512 -i"C:/ti/ccs930/ccs/ccs_base/arm/include" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/lib" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Mini_Segway_linkInfo.xml" --rom_model -o "Mini_Segway.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
-encoder_and_odometry_test.hex: $(EXE_OUTPUTS)
+Mini_Segway.hex: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: ARM Hex Utility'
-	"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/bin/armhex" --memwidth=8 --romwidth=8 -o "encoder_and_odometry_test.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/bin/armhex" --memwidth=8 --romwidth=8 -o "Mini_Segway.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "IMU.obj" "ISRs.obj" "LPF.obj" "Motor.obj" "MotorController.obj" "Odometry.obj" "OuterPID.obj" "PID.obj" "RFInterface.obj" "SPI.obj" "UART_Wrapper.obj" "initConfigs.obj" "main.obj" "startup_msp432p401r_ccs.obj" "system_msp432p401r.obj" 
+	-$(RM) "IMU.obj" "ISRs.obj" "LPF.obj" "Motor.obj" "MotorController.obj" "Odometry.obj" "OuterPID.obj" "PID.obj" "RFInterface.obj" "SPI.obj" "SerialProtocol.obj" "UART_Wrapper.obj" "initConfigs.obj" "main.obj" "startup_msp432p401r_ccs.obj" "system_msp432p401r.obj" 
 	-$(RM) "startup_msp432p401r_ccs.d" "system_msp432p401r.d" 
-	-$(RM) "IMU.d" "ISRs.d" "LPF.d" "Motor.d" "MotorController.d" "Odometry.d" "OuterPID.d" "PID.d" "RFInterface.d" "SPI.d" "UART_Wrapper.d" "initConfigs.d" "main.d" 
+	-$(RM) "IMU.d" "ISRs.d" "LPF.d" "Motor.d" "MotorController.d" "Odometry.d" "OuterPID.d" "PID.d" "RFInterface.d" "SPI.d" "SerialProtocol.d" "UART_Wrapper.d" "initConfigs.d" "main.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

@@ -3,6 +3,9 @@
 long last_ms = 0;
 long ms = 0;
 
+// Debug
+bool debugMode = true;
+
 //Motor initialization
 Motor rightMotor = Motor(MAX_PWM, CW_1_PORT, CW_1_PIN, CCW_1_PORT, CCW_1_PIN,  &TA2CCR3,
            RIGHT_ENC_PORT, RIGHT_ENC_PIN_A, RIGHT_ENC_PORT, RIGHT_ENC_PIN_B);
@@ -36,10 +39,13 @@ OuterPID velocityController = OuterPID(Kp_velocity, 0, Kd_velocity, dt, &tiltCon
 
 
 // UART Initialization
-UART UARTHandler = UART(UART_init, EUSCI_A0_BASE, &odom, &imu);
+UART UARTHandler = UART(UART_init, EUSCI_A2_BASE, &odom, &imu);
 
 //User interface
 RFInterface commandInterface;
+
+//Serial protocol
+SerialProtocol protocol = SerialProtocol(&UARTHandler, &velocityController, &tiltController);
 
 void main(void)
  {
@@ -58,15 +64,20 @@ void main(void)
     UARTHandler.UARTSetup();
     Interrupt_enableMaster();
 
-    //Wait for user to press upper right corner on the remote to start the calibration
+    //Skip this section if we are in debug mode
+    if(debugMode != true){
+    //Wait for user to press channel 3 to start calibration
     while(commandInterface.mode == 0) commandInterface.pollrfReceiver();
     imu.calibrate();
     commandInterface.calibrate();
     while(commandInterface.mode == 1){
         commandInterface.pollrfReceiver();
     }
-
-
+    }
+    else{
+        imu.calibrate();
+        commandInterface.calibrate();
+    }
 
     double motorCommands[2] = {};
     double rightMotorFilteredPWM[2] = {};
@@ -119,8 +130,14 @@ void main(void)
         //UARTHandler.printEncoders();
         //UARTHandler.printOdometry();
         ///UARTHandler.printIMU();
-        UARTHandler.printPID(velocityController);
+        //UARTHandler.printPID(velocityController);
         //UARTHandler.printRF();
+        if(debugMode){
+//            if(UARTHandler.serialGetBufferAvailable()>0){
+//                UARTHandler.echoRead();
+//            }
+            protocol.executeProtocol();
+        }
     };
 }
 

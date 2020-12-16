@@ -46,16 +46,35 @@ extern "C" void SysTick_Handler()
 //    }
 }
 
-extern "C" void EUSCIA0_IRQHandler(void){
+extern "C" void EUSCIA2_IRQHandler(void){
     // Transmit the data until the buffer is dry
     if(UART_getEnabledInterruptStatus(UARTHandler.UARTModule) == EUSCI_A_UART_TRANSMIT_INTERRUPT_FLAG){
-        if(UARTHandler.bufferIndex<UARTHandler.messageSize){
-            UART_transmitData(UARTHandler.UARTModule, UARTHandler.buffer[UARTHandler.bufferIndex]);
-            UARTHandler.bufferIndex++;
-        }else{
-            UARTHandler.bufferIndex = 0;
-            Interrupt_disableInterrupt(INT_EUSCIA0);
-            UARTHandler.finishedTransmission=1;
+        UART_transmitData(UARTHandler.UARTModule, UARTHandler.ringBufferTX[UARTHandler.bufferTXTail]);
+        UARTHandler.bufferTXTail++;
+        if(UARTHandler.bufferTXTail == TX_BUFFER_SIZE){
+            UARTHandler.bufferTXTail = 0;
+        }
+        if(UARTHandler.bufferTXTail == UARTHandler.bufferTXHead){
+            UART_disableInterrupt(UARTHandler.UARTModule, EUSCI_A_UART_TRANSMIT_INTERRUPT); // Disable the transmit interrupt
+        }
+//        if(UARTHandler.bufferIndex<UARTHandler.messageSize){
+//            UART_transmitData(UARTHandler.UARTModule, UARTHandler.buffer[UARTHandler.bufferIndex]);
+//            UARTHandler.bufferIndex++;
+//        }else{
+//            UARTHandler.bufferIndex = 0;
+//            UART_disableInterrupt(UARTHandler.UARTModule, EUSCI_A_UART_TRANSMIT_INTERRUPT); // Disable the transmit interrupt
+//            UARTHandler.finishedTransmission=1;
+//        }
+    }else if(UART_getEnabledInterruptStatus(UARTHandler.UARTModule) == EUSCI_A_UART_RECEIVE_INTERRUPT_FLAG){
+        // Read the data
+        uint8_t data = UART_receiveData(UARTHandler.UARTModule);
+        // Add it to the buffer if we aren't overwriting older data
+        if(UARTHandler.bufferRXTail != UARTHandler.bufferRXHead+1){
+            UARTHandler.ringBufferRX[UARTHandler.bufferRXHead] = data;
+            if(UARTHandler.bufferRXHead >= (RX_BUFFER_SIZE-1)) UARTHandler.bufferRXHead = 0;
+            else{
+                UARTHandler.bufferRXHead++;
+            }
         }
     }
 }

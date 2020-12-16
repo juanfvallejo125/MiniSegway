@@ -8,11 +8,13 @@
 #ifndef UART_WRAPPER_H_
 #define UART_WRAPPER_H_
 
+#include "MiniSegway.h"
 #include <stdint.h>
 #include <driverlib.h>
 #include "Odometry.h"
 #include "IMU.h"
-#include "MiniSegway.h"
+#include <string>
+#include <cstring>
 
 class Odometry;
 class IMU;
@@ -26,7 +28,12 @@ private:
     IMU* imu;
 
 public:
-    char buffer[200] = {};// Set to 200, should be large enough
+    char ringBufferRX[RX_BUFFER_SIZE] = {};// Ring buffer for data reception
+    volatile int bufferRXHead = 0;
+    volatile int bufferRXTail = 0;
+    char ringBufferTX[TX_BUFFER_SIZE] = {};// Buffer for data transmission
+    volatile int bufferTXHead = 0;
+    volatile int bufferTXTail = 0;
     int messageSize = 0;
     volatile int bufferIndex = 0;
     uint32_t UARTModule;
@@ -47,6 +54,21 @@ public:
     void printPID(PID& pid);
 
     void printRF();
+
+    char serialRead();
+
+    void serialWrite(const char* buffer, size_t len);
+
+    void serialWrite(char* buffer, size_t len);
+
+    int serialGetBufferAvailable();
+
+    void echoRead();
+
+    void printLine(std::string message);
+
+
+
 
 };
 

@@ -8,6 +8,9 @@
 #ifndef MINISEGWAY_H_
 #define MINISEGWAY_H_
 
+#define RX_BUFFER_SIZE 500
+#define TX_BUFFER_SIZE 500
+
 #include "driverlib.h"
 #include <stdint.h>
 #include "MotorController.h"
@@ -21,6 +24,7 @@
 #include "PID.h"
 #include "OuterPID.h"
 #include "RFInterface.h"
+#include "SerialProtocol.h"
 
 // Global definitions
 #define DCO_Freq 16E+6
@@ -81,6 +85,7 @@ class IMU;
 class PID;
 class OuterPID;
 class RFInterface;
+class SerialProtocol;
 
 // Global variables
 extern Motor rightMotor;
@@ -92,8 +97,11 @@ extern PID tiltController;
 extern PID turningController;
 extern OuterPID velocityController;
 extern RFInterface commandInterface;
+extern SerialProtocol protocol;
 
 extern long ms; // Counts number of ms since program started
 extern long last_ms;
+
+//Debug
 
 #endif /* MINISEGWAY_H_ */

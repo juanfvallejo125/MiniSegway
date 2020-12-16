@@ -22,10 +22,10 @@ void RFInterface::calibrate(){
 }
 
 void RFInterface::pollrfReceiver(){
-    if(this->pulseLength[2] >= 1500){
+    if(this->pulseLength[2] >= 1500){ // If the channel 3 is lit up, the system is in mode 1
         this->mode = 1;
     }
-    if(this->pulseLength[2] < 1500){
+    if(this->pulseLength[2] < 1500){ // If the channel 3 is off, the system is in mode 0
         this->mode = 0;
     }
     if(mode == 0){

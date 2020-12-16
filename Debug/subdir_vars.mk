@@ -16,6 +16,7 @@ CPP_SRCS += \
 ../PID.cpp \
 ../RFInterface.cpp \
 ../SPI.cpp \
+../SerialProtocol.cpp \
 ../UART_Wrapper.cpp \
 ../initConfigs.cpp \
 ../main.cpp 
@@ -42,6 +43,7 @@ OBJS += \
 ./PID.obj \
 ./RFInterface.obj \
 ./SPI.obj \
+./SerialProtocol.obj \
 ./UART_Wrapper.obj \
 ./initConfigs.obj \
 ./main.obj \
@@ -59,6 +61,7 @@ CPP_DEPS += \
 ./PID.d \
 ./RFInterface.d \
 ./SPI.d \
+./SerialProtocol.d \
 ./UART_Wrapper.d \
 ./initConfigs.d \
 ./main.d 
@@ -74,6 +77,7 @@ OBJS__QUOTED += \
 "PID.obj" \
 "RFInterface.obj" \
 "SPI.obj" \
+"SerialProtocol.obj" \
 "UART_Wrapper.obj" \
 "initConfigs.obj" \
 "main.obj" \
@@ -95,6 +99,7 @@ CPP_DEPS__QUOTED += \
 "PID.d" \
 "RFInterface.d" \
 "SPI.d" \
+"SerialProtocol.d" \
 "UART_Wrapper.d" \
 "initConfigs.d" \
 "main.d" 
@@ -110,6 +115,7 @@ CPP_SRCS__QUOTED += \
 "../PID.cpp" \
 "../RFInterface.cpp" \
 "../SPI.cpp" \
+"../SerialProtocol.cpp" \
 "../UART_Wrapper.cpp" \
 "../initConfigs.cpp" \
 "../main.cpp" 
