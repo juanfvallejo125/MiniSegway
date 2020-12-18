@@ -11,34 +11,18 @@
 #define RX_BUFFER_SIZE 500
 #define TX_BUFFER_SIZE 500
 
-#include "driverlib.h"
-#include <stdint.h>
-#include "MotorController.h"
-#include "LPF.h"
-#include "msp.h"
-#include <stdio.h>
-#include "UART_Wrapper.h"
-#include "initConfigs.h"
-#include "IMU.h"
-#include "SPI.h"
-#include "PID.h"
-#include "OuterPID.h"
-#include "RFInterface.h"
-#include "SerialProtocol.h"
+enum ControlMode {velocityMode, angleMode};
 
 // Global definitions
 #define DCO_Freq 16E+6
 #define MAX_PWM 225
 const double dt = 0.01;
 
-enum ControlMode {velocityMode, angleMode};
-const ControlMode selectedMode = velocityMode;
-
 const double Kp_tilt = 38;//18//35//38
 const double Kd_tilt = 0.02;//0.05//0.02
 const double Ki_tilt = 0.005;//0.002;//0.1 // 0.02
 const double windup_tilt = 225;
-const double alpha_PWM = 0.4;
+const double alpha_PWM = 1;//0.4;
 
 const double Kp_turning = 20;//17;
 const double Kd_turning = 0.03;
@@ -56,6 +40,20 @@ const double wheelRadius = 50.25;
 const double wheelBase = 167.5;
 const double ticksPerRev = 240;
 
+#include "driverlib.h"
+#include <stdint.h>
+#include "MotorController.h"
+#include "LPF.h"
+#include "msp.h"
+#include <stdio.h>
+#include "UART_Wrapper.h"
+#include "initConfigs.h"
+#include "IMU.h"
+#include "SPI.h"
+#include "PID.h"
+#include "OuterPID.h"
+#include "RFInterface.h"
+#include "SerialProtocol.h"
 
 // Motor pins
 #define CW_1_PORT GPIO_PORT_P3
@@ -98,6 +96,7 @@ extern PID turningController;
 extern OuterPID velocityController;
 extern RFInterface commandInterface;
 extern SerialProtocol protocol;
+extern ControlMode selectedMode;
 
 extern long ms; // Counts number of ms since program started
 extern long last_ms;

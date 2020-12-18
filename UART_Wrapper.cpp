@@ -21,47 +21,59 @@ void UART::UARTSetup(){
     Interrupt_enableInterrupt(INT_EUSCIA2);
     }
 
-//void UART::printOdometry(){
-//    messageSize = sprintf(buffer, "Speed: %.4f, Turning Rate: %.4f, Theta: %.4f, X: %.4f, Y: %.4f\r\n", odom->speed, odom->turningRate, odom->theta, odom->x, odom->y);
-//    finishedTransmission = 0;
-//    UART_enableInterrupt(UARTHandler.UARTModule, EUSCI_A_UART_TRANSMIT_INTERRUPT);// Automatically send everything
-//}
+void UART::printOdometry(){
+    std::string message;
+    std::ostringstream stream;
+    stream << std::setprecision(4) << "Speed: " << odom->speed << ", Turning Rate: " << odom->turningRate << " , Theta: " << odom->theta << ", X: " << odom->x << ", Y: " << odom->y;
+//    messageSize = sprintf(buffer, "Speed: %.4f, Turning Rate: %.4f, Theta: %.4f, X: %.4f, Y: %.4f\r\n", Speed:, odom->turningRate, odom->theta, odom->x, odom->y);
+    printLine(stream.str());
+}
 //
-//void UART::printEncoders(){
-//    while(finishedTransmission == 0);
+void UART::printEncoders(){
+    std::string message;
+    std::ostringstream stream;
+    stream << std::setprecision(4) << "Right encoder: " << odom->rightMotor->enc_count << ", velocity: " << odom->rightMotor->enc_velocity << " , Left encoder: " << odom->leftMotor->enc_count << ", velocity: " << odom->leftMotor->enc_velocity;
 //    messageSize = sprintf(buffer, "Right encoder: %i, velocity: %.4f, Left encoder: %i, velocity: %0.4f\r\n", odom->rightMotor->enc_count, odom->rightMotor->enc_velocity, odom->leftMotor->enc_count, odom->leftMotor->enc_velocity);
-//    finishedTransmission = 0;
-//    UART_enableInterrupt(UARTHandler.UARTModule, EUSCI_A_UART_TRANSMIT_INTERRUPT);// Automatically send everything
+    printLine(stream.str());
+}
 //
-//}
-//
-//void UART::printIMU(){
-//    while(finishedTransmission==0);
+void UART::printIMU(){
+    std::string message;
+    std::ostringstream stream;
+    stream << std::setprecision(4) << "Angle: " << imu->angle << ", Angular Rate: " << imu->angleRate << " , Angle Accel: " << imu->angleAccel;
 //    messageSize = sprintf(buffer, "Angle: %.4f, Angular Rate: %.4f, Angle Accel: %.4f\r\n", imu->angle, imu->angleRate, imu->angleAccel);
-//    finishedTransmission = 0;
-//    UART_enableInterrupt(UARTHandler.UARTModule, EUSCI_A_UART_TRANSMIT_INTERRUPT);// Automatically send everything
-//}
+    printLine(stream.str());
+}
 //
-//void UART::printPWM(){
-//    while(finishedTransmission==0);
+void UART::printPWM(){
+    std::string message;
+    std::ostringstream stream;
+    stream << std::setprecision(4) << "PWM Right: " << odom->rightMotor->currentPWM << ", PWM Left " << odom->rightMotor->currentPWM;
 //    messageSize = sprintf(buffer, "PWM Right: %i, PWM Left: %i\r\n", odom->rightMotor->currentPWM, odom->leftMotor->currentPWM);
-//    finishedTransmission = 0;
-//    UART_enableInterrupt(UARTHandler.UARTModule, EUSCI_A_UART_TRANSMIT_INTERRUPT);// Automatically send everything
+    printLine(stream.str());
+}
+
+void UART::printPID(PID& pid){
+    std::string message;
+    std::ostringstream stream;
+    stream << std::setprecision(4) << "Setpoint: " << pid.setpoint << ", PID Output: " << pid.output << " , Out P: " << pid.out_p << ", Out D: " << pid.out_d << ", Out I: " << pid.out_i;
+    //messageSize = sprintf(buffer, "Setpoint: %.2f, PID Output: %.2f, Out D: %.2f, Out I: %.2f, Out P: %.2f\r\n", pid.setpoint, pid.output, pid.out_d, pid.out_i, pid.out_p);
+    printLine(stream.str());
+}
+
+//void UART::printPIDconfig(PID& pid){
+//    std::ostringstream stream;
+//    stream << "P: " << pid.Kp << ", I: " << pid.Ki << " , D: " << pid.Kd;
+//    printLine(stream.str());
 //}
-//
-//void UART::printPID(PID& pid){
-//    while(finishedTransmission==0);
-//    messageSize = sprintf(buffer, "Setpoint: %.2f, PID Output: %.2f, Out D: %.2f, Out I: %.2f, Out P: %.2f\r\n", pid.setpoint, pid.output, pid.out_d, pid.out_i, pid.out_p);
-//    finishedTransmission = 0;
-//    UART_enableInterrupt(UARTHandler.UARTModule, EUSCI_A_UART_TRANSMIT_INTERRUPT);// Automatically send everything
-//}
-//
-//void UART::printRF(){
-//    while(finishedTransmission==0);
-//    messageSize = sprintf(buffer, "CH1: %i, CH2: %i, CH3: %i, mode: %i\r\n", commandInterface.pulseLength[0], commandInterface.pulseLength[1], commandInterface.pulseLength[2], commandInterface.mode);
-//    finishedTransmission = 0;
-//    UART_enableInterrupt(UARTHandler.UARTModule, EUSCI_A_UART_TRANSMIT_INTERRUPT);// Automatically send everything
-//}
+
+void UART::printRF(){
+    std::string message;
+    std::ostringstream stream;
+    stream << "CH1: " << commandInterface.pulseLength[0] << ", CH2: " << commandInterface.pulseLength[1] << ", CH3: " << commandInterface.pulseLength[2] << ", mode: " << commandInterface.mode;
+    //messageSize = sprintf(buffer, "CH1: %i, CH2: %i, CH3: %i, mode: %i\r\n", commandInterface.pulseLength[0], commandInterface.pulseLength[1], commandInterface.pulseLength[2], commandInterface.mode);
+    printLine(stream.str());
+}
 
 int UART::serialGetBufferAvailable(){
     if(bufferRXHead >= bufferRXTail){ return(bufferRXHead - bufferRXTail); }

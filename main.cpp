@@ -3,8 +3,10 @@
 long last_ms = 0;
 long ms = 0;
 
+ControlMode selectedMode = velocityMode;
+
 // Debug
-bool debugMode = true;
+bool debugMode = false;
 
 //Motor initialization
 Motor rightMotor = Motor(MAX_PWM, CW_1_PORT, CW_1_PIN, CCW_1_PORT, CCW_1_PIN,  &TA2CCR3,
@@ -33,9 +35,9 @@ Odometry odom = Odometry(wheelBase, wheelRadius, ticksPerRev, &rightMotor, &left
 IMU imu = IMU();
 
 // Controllers
-PID tiltController = PID(Kp_tilt, 0, Kd_tilt, dt, windup_tilt);
-PID turningController = PID(Kp_turning, 0, Kd_turning, dt, windup_turning);
-OuterPID velocityController = OuterPID(Kp_velocity, 0, Kd_velocity, dt, &tiltController, alpha_velocity);
+PID tiltController = PID(Kp_tilt, Ki_tilt, Kd_tilt, dt, windup_tilt);
+PID turningController = PID(Kp_turning, Ki_turning, Kd_turning, dt, windup_turning);
+OuterPID velocityController = OuterPID(Kp_velocity, Ki_velocity, Kd_velocity, dt, &tiltController, alpha_velocity);
 
 
 // UART Initialization
@@ -45,7 +47,7 @@ UART UARTHandler = UART(UART_init, EUSCI_A2_BASE, &odom, &imu);
 RFInterface commandInterface;
 
 //Serial protocol
-SerialProtocol protocol = SerialProtocol(&UARTHandler, &velocityController, &tiltController);
+SerialProtocol protocol = SerialProtocol(&UARTHandler, &velocityController, &tiltController, &imu);
 
 void main(void)
  {
@@ -91,6 +93,9 @@ void main(void)
         // Poll RF Receiver
         commandInterface.pollrfReceiver();
 
+        //Poll Serial Commands
+        protocol.executeProtocol();
+
         //Read sensors
         odom.updateOdometry();
         imu.getFilteredAngle();
@@ -109,34 +114,36 @@ void main(void)
         LPF(tiltController.output + turningController.output, leftMotorFilteredPWM, alpha_PWM);
         motorCommands[0] = rightMotorFilteredPWM[0];
         motorCommands[1] = leftMotorFilteredPWM[0];
+        double zeroCommand[] = {0,0};
         if(commandInterface.mode==1){
             //Only command motors if the user has pressed B
             if(abs(imu.angle)<40){
                 motorController.commandMotors(motorCommands);
             }else{
-                double zeroCommand[] = {0,0};
                 motorController.commandMotors(zeroCommand);
             }
 
         }
+        else{
+            motorController.commandMotors(zeroCommand);
+        }
         //Blue LED on if we are past setpoint
-        if(imu.angle>=abs(tiltController.setpoint)){
+        if(imu.angle>=tiltController.setpoint){
                 GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN2);
             }
             else{
                 GPIO_setOutputLowOnPin(GPIO_PORT_P2, GPIO_PIN2);
             }
         // Debugging Serial Transmissions
-        //UARTHandler.printEncoders();
-        //UARTHandler.printOdometry();
-        ///UARTHandler.printIMU();
-        //UARTHandler.printPID(velocityController);
-        //UARTHandler.printRF();
+//        UARTHandler.printEncoders();
+//        UARTHandler.printOdometry();
+//        UARTHandler.printIMU();
+//        UARTHandler.printPID(velocityController);
+//        UARTHandler.printRF();
         if(debugMode){
 //            if(UARTHandler.serialGetBufferAvailable()>0){
 //                UARTHandler.echoRead();
 //            }
-            protocol.executeProtocol();
         }
     };
 }

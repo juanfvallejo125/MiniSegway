@@ -29,22 +29,20 @@ void RFInterface::pollrfReceiver(){
         this->mode = 0;
     }
     if(mode == 0){
-        tiltController.Ki=Ki_tilt;
+        //tiltController.Ki=Ki_tilt;
         tiltController.acumError = 0;
-        velocityController.Ki=Ki_velocity;
+        //velocityController.Ki=Ki_velocity;
         velocityController.acumError = 0;
-        turningController.Ki = Ki_turning;
+        //turningController.Ki = Ki_turning;
         turningController.acumError = 0;
     }
 
         //setPWM(PWM_increase_A, PWM_increase_B); //Motor testing
         if(selectedMode == angleMode){
-            if(tiltController.setpoint<3){
-                tiltController.setpoint = 0.005*(commandInterface.pulseLength[1]-commandInterface.zeroValue[1]);
-            }else{
+            tiltController.setpoint = 0.003*(commandInterface.pulseLength[1]-commandInterface.zeroValue[1]);
+            if(tiltController.setpoint>3){
                 tiltController.setpoint = 3;
-            }
-            if(tiltController.setpoint < -3){
+            }else if(tiltController.setpoint < -3){
                 tiltController.setpoint = -3;
             }
         }

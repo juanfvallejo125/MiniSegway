@@ -8,6 +8,10 @@
 #ifndef PID_H_
 #define PID_H_
 
+#include <string>
+#include <sstream>
+#include <iomanip>
+
 class PID{
 public:
     double Kp = 0;
@@ -33,6 +37,10 @@ public:
     double updatePID(double setpoint, double input);
 
     double updatePID(double setpoint, double input, double inputRate);
+
+    std::string getPIDconfig();
+
+
 
 
 };

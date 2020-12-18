@@ -9,7 +9,7 @@
 
 
 
-SerialProtocol::SerialProtocol(UART* uart, OuterPID* outerPID, PID* innerPID) : uart(uart), outerPID(outerPID), innerPID(innerPID){
+SerialProtocol::SerialProtocol(UART* uart, OuterPID* outerPID, PID* innerPID, IMU* imu) : uart(uart), outerPID(outerPID), innerPID(innerPID), imu(imu){
     pid = outerPID; // Default the outer PID
 }
 
@@ -28,7 +28,6 @@ void SerialProtocol::executeProtocol(){
 }
 
 void SerialProtocol::parseLine(){
-    std::string errormsg = "";
     std::string argument = "";
     std::string variable = "";
     std::string valueStr = "";
@@ -41,30 +40,51 @@ void SerialProtocol::parseLine(){
 
         std::istringstream argumentStream(argument);
 
-        if(argument.compare("OUTER") == 0){
-            uart->printLine(std::string("Pushed Back OUTER"));
+        if(argument == "OUTER"){
+//            uart->printLine(std::string("Pushed Back OUTER"));
             commandVector.push_back(0);
-            valueVector.push_back(1);
+            valueVector.push_back(0);
         }
-        else if(argument.compare("INNER") == 0){
-            uart->printLine(std::string("Pushed Back INNER"));
+        else if(argument == "INNER"){
+//            uart->printLine(std::string("Pushed Back INNER"));
             commandVector.push_back(1);
-            valueVector.push_back(1);
+            valueVector.push_back(0);
         }
-        else if(std::getline(argumentStream, variable, '=')){
+        else if(argument == "SHOW-PID-CONFIG"){
+            commandVector.push_back(5);
+            valueVector.push_back(0);
+        }
+        else if(argument == "ANGLE-MODE"){
+            commandVector.push_back(6);
+            valueVector.push_back(0);
+        }
+        else if(argument == "VEL-MODE"){
+            commandVector.push_back(7);
+            valueVector.push_back(0);
+        }
+        else if(argument == "SHOW-ACCEL-ANGLE"){
+            commandVector.push_back(8);
+            valueVector.push_back(0);
+        }
+        else if(argument == "SHOW-SETPOINT"){
+            commandVector.push_back(9);
+            valueVector.push_back(0);
+        }
+        else if(argument.find('=') != std::string::npos){// Check for an assignment command
+            std::getline(argumentStream, variable, '=');
             validVariable = false;
             if(variable.compare("P") == 0){
-                uart->printLine(std::string("Pushed Back P"));
+//                uart->printLine(std::string("Pushed Back P"));
                 commandVector.push_back(2);
                 validVariable = true;
             }
             else if(variable.compare("I") == 0){
-                uart->printLine(std::string("Pushed Back I"));
+//                uart->printLine(std::string("Pushed Back I"));
                 commandVector.push_back(3);
                 validVariable = true;
             }
             else if(variable.compare("D") == 0){
-                uart->printLine(std::string("Pushed Back D"));
+//                uart->printLine(std::string("Pushed Back D"));
                 commandVector.push_back(4);
                 validVariable = true;
             }
@@ -76,7 +96,9 @@ void SerialProtocol::parseLine(){
             }
         }
         else{
-            // Probably throw an exception to handle what would happen with wrong input
+            // Other unknown command
+            commandVector.push_back(99); // Unknown command
+            valueVector.push_back(0);
         }
     }
 
@@ -84,9 +106,12 @@ void SerialProtocol::parseLine(){
 
 void SerialProtocol::processCommand(){
     std::ostringstream os;
+    os << std::setprecision(4);
     while(commandVector.size()>0){
         uint8_t command = commandVector.front();
+        double value = valueVector.front();
         commandVector.erase(commandVector.begin());
+        valueVector.erase(valueVector.begin());
         switch(command){
             case 0: // User typed in Outer must go into outer PID mode
                 pid = outerPID;
@@ -97,21 +122,43 @@ void SerialProtocol::processCommand(){
                 acknowledgeMessage.append("Inner PID Mode ");
                 break;
             case 2:
-                pid->Kp = valueVector.at(2);
+                pid->Kp = value;
                 os << "Kp: " << pid->Kp << " ";
                 break;
             case 3:
-                pid->Ki = valueVector.at(3);
+                pid->Ki = value;
                 os << "Ki: " << pid->Ki << " ";
                 break;
             case 4:
-                pid->Kd = valueVector.at(4);
+                pid->Kd = value;
                 os << "Kd: " << pid->Kd << " ";
+                break;
+            case 5:
+                os << pid->getPIDconfig() << " ";
+                break;
+            case 6:
+                selectedMode = angleMode;
+                os << "Angle Mode Selected ";
+                break;
+            case 7:
+                selectedMode = velocityMode;
+                os << "Velocity Mode Selected ";
+                break;
+            case 8:
+                os << "Accel Angle: " << imu->angleAccel << " ";
+                break;
+            case 9:
+                os << "Setpoint: " << pid->setpoint << " ";
+                break;
+            case 99:
+                os << "Unknown command ";
                 break;
         }
     }
     acknowledgeMessage.append(os.str());
-    uart->printLine(acknowledgeMessage);
+    if(!acknowledgeMessage.empty()){
+        uart->printLine(acknowledgeMessage);
+    }
     acknowledgeMessage.clear();
 }
 

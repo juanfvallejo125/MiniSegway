@@ -39,5 +39,11 @@ double PID::updatePID(double setpoint, double input, double inputRate){
     return output;
 }
 
+std::string PID::getPIDconfig(){
+    std::ostringstream stream;
+    stream << std::setprecision(4) << "P: " << this->Kp << ", I: " << this->Ki << " , D: " << this->Kd;
+    return stream.str();
+}
+
 
 

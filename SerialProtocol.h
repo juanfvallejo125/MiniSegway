@@ -14,11 +14,13 @@
 #include <vector>
 #include <sstream>
 #include <ctype.h>
+#include <iomanip>
 
 
 class UART;
 class PID;
 class OuterPID;
+class IMU;
 
 class SerialProtocol
 {
@@ -29,10 +31,11 @@ public:
     PID* pid = NULL;
     OuterPID* outerPID = NULL;
     PID* innerPID = NULL;
+    IMU* imu = NULL;
     std::string acknowledgeMessage = "";
     std::vector <uint8_t> commandVector;
     std::vector <double> valueVector;
-    SerialProtocol(UART* uart, OuterPID* outerPID, PID* innerPID);
+    SerialProtocol(UART* uart, OuterPID* outerPID, PID* innerPID, IMU* imu);
     void executeProtocol();
     void parseLine();
     void processCommand();

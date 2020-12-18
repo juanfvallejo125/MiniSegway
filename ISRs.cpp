@@ -79,7 +79,7 @@ extern "C" void EUSCIA2_IRQHandler(void){
     }
 }
 
-extern "C" void TA0_N_IRQHandler(void)
+extern "C" void TA0_N_IRQHandler(void)// Capture pulse lengths of RC channels
 {
     int vector = TIMER_A0->IV;
     int pulseIndex = 0;

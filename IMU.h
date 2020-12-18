@@ -26,7 +26,7 @@ public:
     double angleAccel = 0;
     double alpha = 0.98;
     double dt = 0.01;
-    double accelOffset = 4.5;
+    double accelOffset = 3;
     uint8_t TXDataBuffer[10];
     uint8_t RXDataBuffer[10];
 
