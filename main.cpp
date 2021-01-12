@@ -8,6 +8,10 @@ ControlMode selectedMode = velocityMode;
 // Debug
 bool debugMode = false;
 
+// Send all data through serial
+bool sendData = false;
+bool ten_hz = false;
+
 //Motor initialization
 Motor rightMotor = Motor(MAX_PWM, CW_1_PORT, CW_1_PIN, CCW_1_PORT, CCW_1_PIN,  &TA2CCR3,
            RIGHT_ENC_PORT, RIGHT_ENC_PIN_A, RIGHT_ENC_PORT, RIGHT_ENC_PIN_B);
@@ -50,19 +54,24 @@ RFInterface commandInterface;
 SerialProtocol protocol = SerialProtocol(&UARTHandler, &velocityController, &tiltController, &imu);
 
 void main(void)
- {
+   {
 	WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;		// stop watchdog timer
+	// Set to Vcore1
+    PCM_setCoreVoltageLevel(PCM_VCORE1);
+    // Set to use DCDC
+    PCM_setPowerMode(PCM_DCDC_MODE);
+	FlashCtl_setWaitState( FLASH_BANK0, 2);
+    FlashCtl_setWaitState( FLASH_BANK1, 2);
 	//Initial Configs
+    FPU_enableModule();
 	setupClocks();
 	setupPins();
     configPWM();
-    FPU_enableModule();
     setupSystick();
     setupEncoderInterrupts();
     configTimerCapture();
     configSPI();
     imu.configModule();
-
     UARTHandler.UARTSetup();
     Interrupt_enableMaster();
 
@@ -131,9 +140,13 @@ void main(void)
         if(imu.angle>=tiltController.setpoint){
                 GPIO_setOutputHighOnPin(GPIO_PORT_P2, GPIO_PIN2);
             }
-            else{
+        else{
                 GPIO_setOutputLowOnPin(GPIO_PORT_P2, GPIO_PIN2);
             }
+        if(sendData && ten_hz){
+            UARTHandler.dataLogTransfer(tiltController, velocityController);
+            ten_hz = false;
+        }
         // Debugging Serial Transmissions
 //        UARTHandler.printEncoders();
 //        UARTHandler.printOdometry();

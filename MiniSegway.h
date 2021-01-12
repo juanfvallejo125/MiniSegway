@@ -8,19 +8,19 @@
 #ifndef MINISEGWAY_H_
 #define MINISEGWAY_H_
 
-#define RX_BUFFER_SIZE 500
-#define TX_BUFFER_SIZE 500
+#define RX_BUFFER_SIZE 2000
+#define TX_BUFFER_SIZE 2000
 
 enum ControlMode {velocityMode, angleMode};
 
 // Global definitions
-#define DCO_Freq 16E+6
+#define DCO_Freq 32E+6
 #define MAX_PWM 225
 const double dt = 0.01;
 
 const double Kp_tilt = 38;//18//35//38
 const double Kd_tilt = 0.02;//0.05//0.02
-const double Ki_tilt = 0.005;//0.002;//0.1 // 0.02
+const double Ki_tilt = 0;//0.005;//0.002;//0.1 // 0.02
 const double windup_tilt = 225;
 const double alpha_PWM = 1;//0.4;
 
@@ -31,11 +31,11 @@ const double windup_turning = 225;
 
 const double Kp_velocity = 0.018;//0.015;
 const double Kd_velocity = 0.00;//0.005;
-const double Ki_velocity = 0.018;//0.005;//0.015
+const double Ki_velocity = 0;// 0.018//0.005;//0.015
 const double windup_velocity = 225;
-const double alpha_velocity = 0.2;//0.3; // 0.4
+const double alpha_velocity = 0;// 0.2//0.3; // 0.4
 
-const double odom_velocity_alpha = 0.2;
+const double odom_velocity_alpha = 0.1;// 0.2
 const double wheelRadius = 50.25;
 const double wheelBase = 167.5;
 const double ticksPerRev = 240;
@@ -98,8 +98,10 @@ extern RFInterface commandInterface;
 extern SerialProtocol protocol;
 extern ControlMode selectedMode;
 
+extern bool sendData;
 extern long ms; // Counts number of ms since program started
 extern long last_ms;
+extern bool ten_hz;
 
 //Debug
 

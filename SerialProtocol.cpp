@@ -70,22 +70,34 @@ void SerialProtocol::parseLine(){
             commandVector.push_back(9);
             valueVector.push_back(0);
         }
+        else if(argument == "SEND-DATA"){
+            commandVector.push_back(11);
+            valueVector.push_back(0);
+        }
+        else if(argument == "STOP-DATA"){
+            commandVector.push_back(12);
+            valueVector.push_back(0);
+        }
         else if(argument.find('=') != std::string::npos){// Check for an assignment command
             std::getline(argumentStream, variable, '=');
             validVariable = false;
-            if(variable.compare("P") == 0){
+            if(variable == "P"){
 //                uart->printLine(std::string("Pushed Back P"));
                 commandVector.push_back(2);
                 validVariable = true;
             }
-            else if(variable.compare("I") == 0){
+            else if(variable == "I"){
 //                uart->printLine(std::string("Pushed Back I"));
                 commandVector.push_back(3);
                 validVariable = true;
             }
-            else if(variable.compare("D") == 0){
+            else if(variable == "D"){
 //                uart->printLine(std::string("Pushed Back D"));
                 commandVector.push_back(4);
+                validVariable = true;
+            }
+            else if(variable == "VEL-ALPHA"){
+                commandVector.push_back(10);
                 validVariable = true;
             }
             if(validVariable){
@@ -149,6 +161,18 @@ void SerialProtocol::processCommand(){
                 break;
             case 9:
                 os << "Setpoint: " << pid->setpoint << " ";
+                break;
+            case 10:
+                outerPID->alpha = value;
+                os << "Alpha Vel: " << outerPID->alpha << " ";
+                break;
+            case 11:
+                sendData = true;
+                os << "Sending data... " ;
+                break;
+            case 12:
+                sendData = false;
+                os << "Stopped sending data " ;
                 break;
             case 99:
                 os << "Unknown command ";

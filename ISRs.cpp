@@ -39,11 +39,9 @@ extern "C" void PORT5_IRQHandler(){
 extern "C" void SysTick_Handler()
 {
     ms++;
-//    if(ms%500 == 0){
-        //printf("Right encoder count %i\n", right_enc_count);
-        //printf("Left encoder count %i\n", left_enc_count);
-        ///printf("Right velocity %f\n", velocity);
-//    }
+    if(ms%100 == 0){
+        ten_hz = true;
+    }
 }
 
 extern "C" void EUSCIA2_IRQHandler(void){

@@ -16,6 +16,7 @@
 #include <string>
 #include <cstring>
 #include <iomanip>
+#include <sstream>
 
 class Odometry;
 class IMU;
@@ -27,6 +28,7 @@ private:
     eUSCI_UART_Config UART_init;
     Odometry* odom;
     IMU* imu;
+    std::ostringstream ostream;
 
 public:
     char ringBufferRX[RX_BUFFER_SIZE] = {};// Ring buffer for data reception
@@ -58,6 +60,20 @@ public:
 
     void printRF();
 
+    void encodersToStream();
+
+    void odometrytoStream();
+
+    void IMUToStream();
+
+    void PWMToStream();
+
+    void PIDToStream(PID& pid);
+
+    void RFToStream();
+
+    void dataLogTransfer(PID& innerPID, PID& outerPID);
+
     char serialRead();
 
     void serialWrite(const char* buffer, size_t len);
@@ -69,6 +85,18 @@ public:
     void echoRead();
 
     void printLine(std::string message);
+
+    void printLine(char* str, int length);
+
+    void print(std::string message);
+
+    void clearStream();
+
+    void printStream(std::ostringstream stream);
+
+    void printStream();
+
+
 
 
 

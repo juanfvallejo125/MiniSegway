@@ -19,7 +19,7 @@ N#ifndef PID_H_
 N#define PID_H_
 N
 N#include <string>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/string" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/string" 1
 N// -*- C++ -*-
 N//===--------------------------- string -----------------------------------===//
 N//
@@ -489,7 +489,7 @@ N
 N*/
 N
 N#include <__config>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__config" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__config" 1
 N/* -*- C++ -*- */
 N/*===--------------------------- complex.h --------------------------------===*/
 N/*                                                                            */
@@ -527,7 +527,7 @@ N#if defined(__TI_COMPILER_VERSION__) && !defined(_LIBCPP_BUILDING_LIBRARY) && \
 N    __has_include("__config_site")
 X#if 1L && !0L &&     1
 N#include "__config_site"
-L 1 "C:\ti\ccs930\ccs\tools\compiler\ti-cgt-arm_18.12.5.LTS\include\libcxx\__config_site" 1
+L 1 "C:\ti\ccs1011\ccs\tools\compiler\ti-cgt-arm_20.2.1.LTS\include\libcxx\__config_site" 1
 N//===----------------------------------------------------------------------===//
 N//
 N//                     The LLVM Compiler Infrastructure
@@ -555,7 +555,7 @@ N/* #undef _LIBCPP_HAS_THREAD_LIBRARY_EXTERNAL */
 N#define _LIBCPP_DISABLE_VISIBILITY_ANNOTATIONS
 N
 N#include "__libcxx_extra.h"
-L 1 "C:\ti\ccs930\ccs\tools\compiler\ti-cgt-arm_18.12.5.LTS\include\libcxx\__libcxx_extra.h" 1
+L 1 "C:\ti\ccs1011\ccs\tools\compiler\ti-cgt-arm_20.2.1.LTS\include\libcxx\__libcxx_extra.h" 1
 N/*****************************************************************************/
 N/* LIBCXX_EXTRA.H                                                            */
 N/*                                                                           */
@@ -608,10 +608,10 @@ N
 N/* #pragma diag_suppress 1585,2866 */
 N
 N#endif /* __LIBCXX_EXTRA_H__ */
-L 28 "C:\ti\ccs930\ccs\tools\compiler\ti-cgt-arm_18.12.5.LTS\include\libcxx\__config_site" 2
+L 28 "C:\ti\ccs1011\ccs\tools\compiler\ti-cgt-arm_20.2.1.LTS\include\libcxx\__config_site" 2
 N
 N#endif // _LIBCPP_CONFIG_SITE
-L 37 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__config" 2
+L 37 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__config" 2
 N#endif
 N
 N#if defined(_MSC_VER) && !defined(__clang__)
@@ -2130,9 +2130,9 @@ N
 N#pragma diag_pop
 N
 N#endif // _LIBCPP_CONFIG
-L 470 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/string" 2
+L 470 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/string" 2
 N#include <string_view>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/string_view" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/string_view" 1
 N// -*- C++ -*-
 N//===------------------------ string_view ---------------------------------===//
 N//
@@ -2302,7 +2302,7 @@ N*/
 N
 N#include <__config>
 N#include <__string>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__string" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__string" 1
 N// -*- C++ -*-
 N//===-------------------------- __string ----------------------------------===//
 N//
@@ -2337,7 +2337,7 @@ N    static constexpr bool lt(char_type c1, char_type c2) noexcept;
 N
 N    static constexpr int    compare(const char_type* s1, const char_type* s2, size_t n);
 N    static constexpr size_t length(const char_type* s);
-N    static constexpr const char_type* 
+N    static constexpr const char_type*
 N                            find(const char_type* s, size_t n, const char_type& a);
 N    static char_type*       move(char_type* s1, const char_type* s2, size_t n);
 N    static char_type*       copy(char_type* s1, const char_type* s2, size_t n);
@@ -2359,7 +2359,7 @@ N*/
 N
 N#include <__config>
 N#include <algorithm>  // for search and min
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/algorithm" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/algorithm" 1
 N// -*- C++ -*-
 N//===-------------------------- algorithm ---------------------------------===//
 N//
@@ -2999,7 +2999,7 @@ N*/
 N
 N#include <__config>
 N#include <initializer_list>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/initializer_list" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/initializer_list" 1
 N// -*- C++ -*-
 N//===----------------------- initializer_list -----------------------------===//
 N//
@@ -3047,7 +3047,7 @@ N*/
 N
 N#include <__config>
 N#include <cstddef>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cstddef" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cstddef" 1
 N// -*- C++ -*-
 N//===--------------------------- cstddef ----------------------------------===//
 N//
@@ -3093,7 +3093,7 @@ N#endif
 N
 N// Don't include our own <stddef.h>; we don't want to declare ::nullptr_t.
 N#include_next <stddef.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/stddef.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/stddef.h" 1
 N/*****************************************************************************/
 N/* stddef.h                                                                  */
 N/*                                                                           */
@@ -3135,7 +3135,7 @@ N#ifndef _STDDEF
 N#define _STDDEF
 N
 N#include <_ti_config.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/_ti_config.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/_ti_config.h" 1
 N/*****************************************************************************/
 N/* _ti_config.h                                                              */
 N/*                                                                           */
@@ -3176,9 +3176,54 @@ N
 N#ifndef __TI_CONFIG_H
 N#define __TI_CONFIG_H
 N
-N#pragma diag_push
-N#pragma CHECK_MISRA("-19.4")
-N#pragma CHECK_MISRA("-19.1")
+N/*Unsupported pragmas are omitted */
+N#ifdef __TI_COMPILER_VERSION__
+N# pragma diag_push
+N# pragma CHECK_MISRA("-19.7")
+N# pragma CHECK_MISRA("-19.4")
+N# pragma CHECK_MISRA("-19.1")
+N# pragma CHECK_MISRA("-19.15")
+N# define _TI_PROPRIETARY_PRAGMA(arg) _Pragma(arg)
+N# pragma diag_pop
+N#else
+S# define _TI_PROPRIETARY_PRAGMA(arg)
+N#endif
+N
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.4\")")
+X_Pragma("CHECK_MISRA(\"-19.4\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.1\")")
+X_Pragma("CHECK_MISRA(\"-19.1\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.6\")")
+X_Pragma("CHECK_MISRA(\"-19.6\")")
+N
+N/* Hide uses of the TI proprietary macros behind other macros.
+N    Implementations that don't implement these features should leave
+N    these macros undefined. */
+N#ifdef __TI_COMPILER_VERSION__
+N# ifdef __TI_STRICT_ANSI_MODE__
+N#  define __TI_PROPRIETARY_STRICT_ANSI_MACRO __TI_STRICT_ANSI_MODE__
+N# else
+S#  undef __TI_PROPRIETARY_STRICT_ANSI_MACRO
+N# endif
+N
+N# ifdef __TI_STRICT_FP_MODE__
+N#  define __TI_PROPRIETARY_STRICT_FP_MACRO __TI_STRICT_FP_MODE__
+N# else
+S#  undef __TI_PROPRIETARY_STRICT_FP_MACRO
+N# endif
+N
+N# ifdef __unsigned_chars__
+N#  define __TI_PROPRIETARY_UNSIGNED_CHARS__ __unsigned_chars__
+N# else
+S#  undef __TI_PROPRIETARY_UNSIGNED_CHARS__
+N# endif
+N#else
+S# undef __TI_PROPRIETARY_UNSIGNED_CHARS__
+S# undef __TI_PROPRIETARY_STRICT_ANSI_MACRO
+S# undef __TI_PROPRIETARY_STRICT_FP_MACRO
+N#endif
 N
 N/* Common definitions */
 N
@@ -3238,9 +3283,11 @@ N#else
 S# define _TI_NOEXCEPT_CPP14
 N#endif
 N
+N
+N
 N/* Target-specific definitions */
 N#include <linkage.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/linkage.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/linkage.h" 1
 N/*****************************************************************************/
 N/* linkage.h                                                                 */
 N/*                                                                           */
@@ -3304,17 +3351,22 @@ N
 N#pragma diag_pop
 N
 N#endif /* ifndef _LINKAGE */
-L 99 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/_ti_config.h" 2
+L 142 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/_ti_config.h" 2
 N
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N
 N#endif /* ifndef __TI_CONFIG_H */
-L 42 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/stddef.h" 2
+L 42 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/stddef.h" 2
 N
-N#pragma diag_push
-N#pragma CHECK_MISRA("-19.7") /* macros required for implementation */
-N#pragma CHECK_MISRA("-20.1") /* standard headers must define standard names */
-N#pragma CHECK_MISRA("-20.2") /* standard headers must define standard names */
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.7\")") /* macros required for implementation */
+X_Pragma("CHECK_MISRA(\"-19.7\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-20.1\")") /* standard headers must define standard names */
+X_Pragma("CHECK_MISRA(\"-20.1\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-20.2\")") /* standard headers must define standard names */
+X_Pragma("CHECK_MISRA(\"-20.2\")")  
 N
 N#ifdef __cplusplus
 Nextern "C" {
@@ -3355,16 +3407,18 @@ N/* header expects the macro __DEFINED_max_align_t to be defined if it is to   *
 N/* use the definintion of max_align_t from stddef.h. Only define it if        */
 N/* compiling for C11 or we're in non strict ansi mode.                        */
 N/*----------------------------------------------------------------------------*/
-N#if defined(_TI_C11LIB) || __TI_STRICT_ANSI_MODE__ == 0
+N#if defined(_TI_C11LIB) || __TI_PROPRIETARY_STRICT_ANSI_MACRO == 0
 X#if 1L || 0 == 0
 N#ifndef __DEFINED_max_align_t
 N#define __DEFINED_max_align_t
 Ntypedef long double max_align_t;
 N#endif /*__DEFINED_max_align_t */
-N#endif /* defined(_TI_C11LIB) || __TI_STRICT_ANSI_MODE__ == 0 */
+N#endif /* defined(_TI_C11LIB) || __TI_PROPRIETARY_STRICT_ANSI_MACRO == 0 */
 N
-N#pragma diag_push
-N#pragma CHECK_MISRA("-19.10") /* need types as macro arguments */
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.10\")") /* need types as macro arguments */
+X_Pragma("CHECK_MISRA(\"-19.10\")")  
 N
 N#ifdef __TI_LLVM__
 S#  define offsetof(_type, _ident) __builtin_offsetof(_type, _ident)
@@ -3380,18 +3434,20 @@ X#    define offsetof(_type, _ident)     (__intaddr__( ((char *) &((_type *)0)->
 N#  endif /* __TMS320C55X__ */
 N#endif
 N
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N
 N#ifdef __cplusplus
 N} /* extern "C" */
 N#endif  /* __cplusplus */
 N
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N
 N#endif  /* _STDDEF */
-L 45 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cstddef" 2
+L 45 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cstddef" 2
 N#include <__nullptr>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__nullptr" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__nullptr" 1
 N// -*- C++ -*-
 N//===--------------------------- __nullptr --------------------------------===//
 N//
@@ -3455,7 +3511,7 @@ N
 N#endif  // _LIBCPP_HAS_NO_NULLPTR
 N
 N#endif  // _LIBCPP_NULLPTR
-L 46 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cstddef" 2
+L 46 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cstddef" 2
 N
 N_LIBCPP_BEGIN_NAMESPACE_STD
 Xnamespace std { inline namespace __2 {
@@ -3505,7 +3561,7 @@ S#include <type_traits>  // rest of byte
 N#endif
 N
 N#endif  // _LIBCPP_CSTDDEF
-L 48 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/initializer_list" 2
+L 48 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/initializer_list" 2
 N
 N#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
 X#if !0L
@@ -3600,9 +3656,9 @@ N
 N}  // std
 N
 N#endif  // _LIBCPP_INITIALIZER_LIST
-L 640 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/algorithm" 2
+L 640 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/algorithm" 2
 N#include <type_traits>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/type_traits" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/type_traits" 1
 N// -*- C++ -*-
 N//===------------------------ type_traits ---------------------------------===//
 N//
@@ -8750,9 +8806,9 @@ S}
 N#endif
 N
 N#endif  // _LIBCPP_TYPE_TRAITS
-L 641 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/algorithm" 2
+L 641 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/algorithm" 2
 N#include <cstring>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cstring" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cstring" 1
 N// -*- C++ -*-
 N//===--------------------------- cstring ----------------------------------===//
 N//
@@ -8814,7 +8870,7 @@ N*/
 N
 N#include <__config>
 N#include <string.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/string.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/string.h" 1
 N/* -*- C++ -*- */
 N/*===--------------------------- complex.h --------------------------------===*/
 N/*                                                                            */
@@ -8877,7 +8933,7 @@ N#pragma GCC system_header
 N#endif
 N
 N#include_next <string.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/string.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/string.h" 1
 N/*****************************************************************************/
 N/* string.h                                                                  */
 N/*                                                                           */
@@ -8918,6 +8974,8 @@ N
 N#ifndef _STRING_H_
 N#define _STRING_H_
 N
+N#include <_ti_config.h>
+N
 N#if defined(__TMS320C2000__)
 X#if 0L
 S#if defined(__TMS320C28XX_CLA__)
@@ -8925,11 +8983,16 @@ S#error "Header file <string.h> not supported by CLA compiler"
 S#endif
 N#endif
 N
-N#pragma diag_push
-N#pragma CHECK_MISRA("-6.3") /* standard types required for standard headers */
-N#pragma CHECK_MISRA("-19.1") /* #includes required for implementation */
-N#pragma CHECK_MISRA("-20.1") /* standard headers must define standard names */
-N#pragma CHECK_MISRA("-20.2") /* standard headers must define standard names */
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-6.3\")") /* standard types required for standard headers */
+X_Pragma("CHECK_MISRA(\"-6.3\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.1\")") /* #includes required for implementation */
+X_Pragma("CHECK_MISRA(\"-19.1\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-20.1\")") /* standard headers must define standard names */
+X_Pragma("CHECK_MISRA(\"-20.1\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-20.2\")") /* standard headers must define standard names */
+X_Pragma("CHECK_MISRA(\"-20.2\")")  
 N
 N#ifdef __cplusplus
 Nextern "C" {
@@ -8948,10 +9011,11 @@ Stypedef __SIZE_T_TYPE__ size_t;
 S#endif
 N#endif
 N
-N#include <_ti_config.h>
 N
-N#pragma diag_push
-N#pragma CHECK_MISRA("-19.4") /* macros required for implementation */
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.4\")") /* macros required for implementation */
+X_Pragma("CHECK_MISRA(\"-19.4\")")  
 N
 N#if defined(_OPTIMIZE_FOR_SPACE) && (defined(__ARM_ARCH) || 		\
 N				     defined(__TMS320C2000__)  ||       \
@@ -8962,7 +9026,8 @@ N#else
 S#define _OPT_IDECL	_IDECL
 N#endif
 N
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N
 N_OPT_IDECL size_t  strlen(const char *string);
 X size_t  strlen(const char *string);
@@ -9013,12 +9078,19 @@ N
 N
 N_CODE_ACCESS void   *memmove(void *s1, const void *s2, size_t n);
 X void   *memmove(void *s1, const void *s2, size_t n);
-N#pragma diag_push
-N#pragma CHECK_MISRA("-16.4") /* false positives due to builtin declarations */
+N
+N_CODE_ACCESS void   *memccpy(void *dest, const void *src, int ch, size_t count);
+X void   *memccpy(void *dest, const void *src, int ch, size_t count);
+N
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-16.4\")") /* false positives due to builtin declarations */
+X_Pragma("CHECK_MISRA(\"-16.4\")")  
 N_CODE_ACCESS void   *memcpy(void * __restrict s1,
 X void   *memcpy(void * __restrict s1,
 N                            const void * __restrict s2, size_t n);
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N
 N_OPT_IDECL int     memcmp(const void *cs, const void *ct, size_t n);
 X int     memcmp(const void *cs, const void *ct, size_t n);
@@ -9039,17 +9111,17 @@ X#if 0L && !1L
 S
 S#ifndef __cplusplus
 S
-S#pragma diag_push
+S_TI_PROPRIETARY_PRAGMA("diag_push")
 S
 S/* keep macros as direct #defines and not function-like macros or function
 S   names surrounded by parentheses to support all original supported use cases
 S   including taking their address through the macros and prefixing with
 S   namespace macros */
-S#pragma CHECK_MISRA("-19.4")
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.4\")")
 S#define far_memcpy __memcpy_ff
 S#define far_strcpy strcpy_ff
 S
-S#pragma diag_pop
+S_TI_PROPRIETARY_PRAGMA("diag_pop")
 S
 Ssize_t    far_strlen(const char *s);
 Schar     *strcpy_nf(char *s1, const char *s2);
@@ -9101,8 +9173,8 @@ S					defined(__TMS320C2000__)  ||    \
 S                                        defined(__MSP430__))))
 X#if (defined(_STRING_IMPLEMENTATION) ||					     !(defined(_OPTIMIZE_FOR_SPACE) && (defined(__ARM_ARCH) || 							defined(__TMS320C2000__)  ||                                            defined(__MSP430__))))
 S
-S#pragma diag_push
-S#pragma CHECK_MISRA("-19.4") /* macros required for implementation */
+S_TI_PROPRIETARY_PRAGMA("diag_push")
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.4\")") /* macros required for implementation */
 S
 S#if (defined(_OPTIMIZE_FOR_SPACE) && (defined(__ARM_ARCH) || 		\
 S				      defined(__TMS320C2000__) ||       \
@@ -9113,9 +9185,9 @@ S#else
 S#define _OPT_IDEFN	_IDEFN
 S#endif
 S
-S#pragma diag_pop
+S_TI_PROPRIETARY_PRAGMA("diag_pop")
 S
-S#pragma diag_push /* functions */
+S_TI_PROPRIETARY_PRAGMA("diag_push") /* functions */
 S
 S/* MISRA exceptions to avoid changing inline versions of the functions that
 S   would be linked in instead of included inline at different mf levels */
@@ -9123,24 +9195,24 @@ S/* these functions are very well-tested, stable, and efficient; it would
 S   introduce a high risk to implement new, separate MISRA versions just for the
 S   inline headers */
 S
-S#pragma CHECK_MISRA("-5.7") /* keep names intact */
-S#pragma CHECK_MISRA("-6.1") /* false positive on use of char type */
-S#pragma CHECK_MISRA("-8.5") /* need to define inline functions */
-S#pragma CHECK_MISRA("-10.1") /* use implicit casts */
-S#pragma CHECK_MISRA("-10.3") /* need casts */
-S#pragma CHECK_MISRA("-11.5") /* casting away const required for standard impl */
-S#pragma CHECK_MISRA("-12.1") /* avoid changing expressions */
-S#pragma CHECK_MISRA("-12.2") /* avoid changing expressions */
-S#pragma CHECK_MISRA("-12.4") /* avoid changing expressions */
-S#pragma CHECK_MISRA("-12.5") /* avoid changing expressions */
-S#pragma CHECK_MISRA("-12.6") /* avoid changing expressions */
-S#pragma CHECK_MISRA("-12.13") /* ++/-- needed for reasonable implementation */
-S#pragma CHECK_MISRA("-13.1") /* avoid changing expressions */
-S#pragma CHECK_MISRA("-14.7") /* use multiple return points */
-S#pragma CHECK_MISRA("-14.8") /* use non-compound statements */
-S#pragma CHECK_MISRA("-14.9") /* use non-compound statements */
-S#pragma CHECK_MISRA("-17.4") /* pointer arithmetic needed for reasonable impl */
-S#pragma CHECK_MISRA("-17.6") /* false positive returning pointer-typed param */
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-5.7\")") /* keep names intact */
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-6.1\")") /* false positive on use of char type */
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-8.5\")") /* need to define inline functions */
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-10.1\")") /* use implicit casts */
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-10.3\")") /* need casts */
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-11.5\")") /* casting away const required for standard impl */
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-12.1\")") /* avoid changing expressions */
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-12.2\")") /* avoid changing expressions */
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-12.4\")") /* avoid changing expressions */
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-12.5\")") /* avoid changing expressions */
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-12.6\")") /* avoid changing expressions */
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-12.13\")") /* ++/-- needed for reasonable implementation */
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-13.1\")") /* avoid changing expressions */
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-14.7\")") /* use multiple return points */
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-14.8\")") /* use non-compound statements */
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-14.9\")") /* use non-compound statements */
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-17.4\")") /* pointer arithmetic needed for reasonable impl */
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-17.6\")") /* false positive returning pointer-typed param */
 S
 S#if defined(_INLINE) || defined(_STRLEN)
 S_OPT_IDEFN size_t strlen(const char *string)
@@ -9327,7 +9399,7 @@ S     return mem;
 S}
 S#endif /* _INLINE || _MEMSET */
 S
-S#pragma diag_pop
+S_TI_PROPRIETARY_PRAGMA("diag_pop")
 S
 S#endif /* (_STRING_IMPLEMENTATION || !(_OPTIMIZE_FOR_SPACE && __ARM_ARCH)) */
 S
@@ -9340,7 +9412,7 @@ N/*----------------------------------------------------------------------------*
 N#if __has_include(<sys/cdefs.h>)
 X#if 1
 N#include <sys/cdefs.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/sys/cdefs.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/sys/cdefs.h" 1
 N/*-
 N * SPDX-License-Identifier: BSD-3-Clause
 N *
@@ -9381,10 +9453,14 @@ N
 N#ifndef	_SYS_CDEFS_H_
 N#define	_SYS_CDEFS_H_
 N
+N#include <_ti_config.h>
+N
 N#if defined(__TI_COMPILER_VERSION__)
 X#if 1L
-N#pragma diag_push
-N#pragma CHECK_MISRA("none")
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"none\")")
+X_Pragma("CHECK_MISRA(\"none\")")
 N#endif
 N
 N/*
@@ -10027,8 +10103,9 @@ N */
 N#define	__IDSTRING(name,string)	static const char name[] __unused = string
 N#endif
 N
-N#if defined(__TI_COMPILER_VERSION__) && defined(__TI_STRICT_ANSI_MODE__)
-X#if 1L && 1L
+N#if defined(__TI_COMPILER_VERSION__) && \
+N  defined(__TI_PROPRIETARY_STRICT_ANSI_MACRO)
+X#if 1L &&   1L
 N#define __extension__
 N#endif
 N
@@ -10350,11 +10427,12 @@ N#define	__guarded_by(x)		__lock_annotate(guarded_by(x))
 N#define	__pt_guarded_by(x)	__lock_annotate(pt_guarded_by(x))
 N
 N#ifdef __TI_COMPILER_VERSION__
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N#endif
 N
 N#endif /* !_SYS_CDEFS_H_ */
-L 431 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/string.h" 2
+L 435 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/string.h" 2
 N#endif
 N
 N/*----------------------------------------------------------------------------*/
@@ -10369,10 +10447,11 @@ S__END_DECLS
 N#endif
 N
 N
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N
 N#endif /* ! _STRING_H_ */
-L 62 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/string.h" 2
+L 62 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/string.h" 2
 N
 N/* MSVCRT, GNU libc and its derivates may already have the correct prototype in */
 N/* <string.h>. This macro can be defined by users if their C library provides */
@@ -10424,7 +10503,7 @@ S}
 N#endif
 N
 N#endif  /* _LIBCPP_STRING_H */
-L 62 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cstring" 2
+L 62 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cstring" 2
 N
 N#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
 X#if !0L
@@ -10464,9 +10543,9 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // _LIBCPP_CSTRING
-L 642 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/algorithm" 2
+L 642 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/algorithm" 2
 N#include <utility> // needed to provide swap_ranges.
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/utility" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/utility" 1
 N// -*- C++ -*-
 N//===-------------------------- utility -----------------------------------===//
 N//
@@ -10665,7 +10744,7 @@ N*/
 N
 N#include <__config>
 N#include <__tuple>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__tuple" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__tuple" 1
 N// -*- C++ -*-
 N//===----------------------------------------------------------------------===//
 N//
@@ -11270,11 +11349,11 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // _LIBCPP___TUPLE
-L 199 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/utility" 2
+L 199 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/utility" 2
 N#include <type_traits>
 N#include <initializer_list>
 N#include <limits>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/limits" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/limits" 1
 N// -*- C++ -*-
 N//===---------------------------- limits ----------------------------------===//
 N//
@@ -11387,7 +11466,7 @@ S#include "support/win32/limits_msvc_win32.h"
 N#elif defined(_LIBCPP_COMPILER_TI)
 X#elif 1L
 N#include "support/ti/__limit_defs.h"
-L 1 "C:\ti\ccs930\ccs\tools\compiler\ti-cgt-arm_18.12.5.LTS\include\libcxx\support/ti/__limit_defs.h" 1
+L 1 "C:\ti\ccs1011\ccs\tools\compiler\ti-cgt-arm_20.2.1.LTS\include\libcxx\support/ti/__limit_defs.h" 1
 N// -*- C++ -*-
 N//===--------------------- support/ti/limits.h ----------------------------===//
 N//
@@ -11403,7 +11482,7 @@ N#define _LIBCPP_SUPPORT_TI_LIMIT_DEFS_H
 N
 N#include <__config>
 N#include <float.h>  // FP Limits
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/float.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/float.h" 1
 N/* -*- C++ -*- */
 N/*===--------------------------- complex.h --------------------------------===*/
 N/*                                                                            */
@@ -11474,7 +11553,7 @@ N#pragma GCC system_header
 N#endif
 N
 N#include_next <float.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/float.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/float.h" 1
 N/*****************************************************************************/
 N/* float.h                                                                   */
 N/*                                                                           */
@@ -11522,8 +11601,10 @@ N#define _FLOAT_H_
 N
 N#include <_ti_config.h>
 N
-N#pragma diag_push
-N#pragma CHECK_MISRA("-20.1") /* standard headers must define standard names */
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-20.1\")") /* standard headers must define standard names */
+X_Pragma("CHECK_MISRA(\"-20.1\")")  
 N
 N#define FLT_RADIX                         2   /* RADIX OF EXPONENT         */
 N#define FLT_ROUNDS                        1   /* ROUND TO NEAREST          */
@@ -11539,7 +11620,7 @@ N#define FLT_MAX_10_EXP                   38   /* MAX POWER OF 10           */
 N#define FLT_EPSILON         1.192092896E-07F  /* SMALLEST X WHERE 1+X != 1 */
 N#define FLT_MIN             1.175494351E-38F  /* MIN NORMALIZED POS VALUE  */
 N#define FLT_MAX             3.402823466E+38F  /* MAX POSITIVE VALUE        */
-N#if defined(_TI_C11LIB) || __TI_STRICT_ANSI_MODE__ == 0
+N#if defined(_TI_C11LIB) || __TI_PROPRIETARY_STRICT_ANSI_MACRO == 0
 X#if 1L || 0 == 0
 N#define FLT_TRUE_MIN        1.401298464E-45F  /* MIN POSITIVE VALUE        */
 N#define FLT_HAS_SUBNORM                    0  /* SUPPORTS SUBNORMAL        */
@@ -11558,7 +11639,7 @@ S#define DBL_MAX_10_EXP      (FLT_MAX_10_EXP)  /* MAX POWER OF 10           */
 S#define DBL_EPSILON         1.192092896E-07   /* SMALLEST X WHERE 1+X != 1 */
 S#define DBL_MIN             1.175494351E-38   /* MIN NORMALIZED POS VALUE  */
 S#define DBL_MAX             3.402823466E+38   /* MAX POSITIVE VALUE        */
-S#if defined(_TI_C11LIB) || __TI_STRICT_ANSI_MODE__ == 0
+S#if defined(_TI_C11LIB) || __TI_PROPRIETARY_STRICT_ANSI_MACRO == 0
 S#define DBL_TRUE_MIN        ((double)(FLT_TRUE_MIN))
 S#define DBL_HAS_SUBNORM     (FLT_HAS_SUBNORM)
 S#endif /* C11 IS VISIBLE */
@@ -11575,7 +11656,7 @@ N#define DBL_MAX_10_EXP                  308   /* MAX POWER OF 10           */
 N#define DBL_EPSILON  2.2204460492503131E-16   /* SMALLEST X WHERE 1+X != 1 */
 N#define DBL_MIN     2.2250738585072014E-308   /* MIN NORMALIZED POS VALUE  */
 N#define DBL_MAX     1.7976931348623157E+308   /* MAX POSITIVE VALUE        */
-N#if defined(_TI_C11LIB) || __TI_STRICT_ANSI_MODE__ == 0
+N#if defined(_TI_C11LIB) || __TI_PROPRIETARY_STRICT_ANSI_MACRO == 0
 X#if 1L || 0 == 0
 N#define DBL_TRUE_MIN 4.9406564584124654E-324
 N#define DBL_HAS_SUBNORM                   0
@@ -11596,7 +11677,7 @@ S#define LDBL_MAX_10_EXP     (FLT_MAX_10_EXP)  /* MAX POWER OF 10           */
 S#define LDBL_EPSILON        1.192092896E-07L  /* SMALLEST X WHERE 1+X != 1 */
 S#define LDBL_MIN            1.175494351E-38L  /* MIN NORMALIZED POS VALUE  */
 S#define LDBL_MAX            3.402823466E+38L  /* MAX POSITIVE VALUE        */
-S#if defined(_TI_C11LIB) || __TI_STRICT_ANSI_MODE__ == 0
+S#if defined(_TI_C11LIB) || __TI_PROPRIETARY_STRICT_ANSI_MACRO == 0
 S#define LDBL_TRUE_MIN       ((long double)FLT_TRUE_MIN)
 S#define LDBL_HAS_SUBNORM    (FLT_HAS_SUBNORM)              1
 S#endif
@@ -11613,7 +11694,7 @@ N#define LDBL_MAX_10_EXP                 308   /* MAX POWER OF 10           */
 N#define LDBL_EPSILON 2.2204460492503131E-16L  /* SMALLEST X WHERE 1+X != 1 */
 N#define LDBL_MIN    2.2250738585072014E-308L  /* MIN NORMALIZED POS VALUE  */
 N#define LDBL_MAX    1.7976931348623157E+308L  /* MAX POSITIVE VALUE        */
-N#if defined(_TI_C11LIB) || __TI_STRICT_ANSI_MODE__ == 0
+N#if defined(_TI_C11LIB) || __TI_PROPRIETARY_STRICT_ANSI_MACRO == 0
 X#if 1L || 0 == 0
 N#define LDBL_TRUE_MIN 4.9406564584124654E-324L
 N#define LDBL_HAS_SUBNORM                  0
@@ -11623,10 +11704,11 @@ N#endif
 N
 N#define DECIMAL_DIG        (LDBL_DECIMAL_DIG) /* LARGEST DECIMAL PRECISION */
 N
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N
 N#endif /* _FLOAT_H_ */
-L 70 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/float.h" 2
+L 70 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/float.h" 2
 N
 N#ifdef __cplusplus
 N
@@ -11641,7 +11723,7 @@ N
 N#endif /* __cplusplus */
 N
 N#endif  /* _LIBCPP_FLOAT_H */
-L 16 "C:\ti\ccs930\ccs\tools\compiler\ti-cgt-arm_18.12.5.LTS\include\libcxx\support/ti/__limit_defs.h" 2
+L 16 "C:\ti\ccs1011\ccs\tools\compiler\ti-cgt-arm_20.2.1.LTS\include\libcxx\support/ti/__limit_defs.h" 2
 N
 N#define __DBL_DENORM_MIN__ (0.0)
 N#define __DBL_DIG__ DBL_DIG
@@ -11678,7 +11760,7 @@ N#define __LDBL_MIN_10_EXP__ LDBL_MIN_10_EXP
 N#define __LDBL_MIN_EXP__ LDBL_MIN_EXP
 N
 N#endif // _LIBCPP_SUPPORT_TI_LIMITS_H
-L 111 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/limits" 2
+L 111 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/limits" 2
 N#endif // _LIBCPP_MSVCRT
 N
 N#if defined(__IBMCPP__)
@@ -11694,7 +11776,7 @@ N
 N_LIBCPP_PUSH_MACROS
 X_Pragma("push_macro(\"min\")") _Pragma("push_macro(\"max\")")
 N#include <__undef_macros>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__undef_macros" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros" 1
 N// -*- C++ -*-
 N//===------------------------ __undef_macros ------------------------------===//
 N//
@@ -11729,7 +11811,7 @@ S#endif
 S#endif
 S#undef max
 N#endif
-L 123 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/limits" 2
+L 123 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/limits" 2
 N
 N
 N_LIBCPP_BEGIN_NAMESPACE_STD
@@ -12854,11 +12936,11 @@ N_LIBCPP_POP_MACROS
 X_Pragma("pop_macro(\"min\")") _Pragma("pop_macro(\"max\")")
 N
 N#endif  // _LIBCPP_LIMITS
-L 202 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/utility" 2
+L 202 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/utility" 2
 N#include <cstddef>
 N#include <cstring>
 N#include <cstdint>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cstdint" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cstdint" 1
 N// -*- C++ -*-
 N//===--------------------------- cstdint ----------------------------------===//
 N//
@@ -13004,7 +13086,7 @@ N*/
 N
 N#include <__config>
 N#include <stdint.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/stdint.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/stdint.h" 1
 N/* -*- C++ -*- */
 N/*===--------------------------- complex.h --------------------------------===*/
 N/*                                                                            */
@@ -13127,7 +13209,7 @@ S#   define __STDC_CONSTANT_MACROS
 N#endif
 N
 N#include_next <stdint.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/stdint.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/stdint.h" 1
 N/*****************************************************************************/
 N/* STDINT.H                                                                  */
 N/*                                                                           */
@@ -13167,8 +13249,17 @@ N/*****************************************************************************/
 N#ifndef _STDINT_H_
 N#define _STDINT_H_
 N
+N#include <_ti_config.h>
+N
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.1\")") /* no code before #include */
+X_Pragma("CHECK_MISRA(\"-19.1\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.7\")") /* prefer functions to macros */
+X_Pragma("CHECK_MISRA(\"-19.7\")")  
+N
 N#include <_stdint40.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/_stdint40.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/_stdint40.h" 1
 N/*****************************************************************************/
 N/* _STDINT40.H                                                               */
 N/*                                                                           */
@@ -13208,6 +13299,11 @@ N/*****************************************************************************/
 N#ifndef __STDINT40_H_
 N#define __STDINT40_H_
 N
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.7\")") /* prefer functions to macros */
+X_Pragma("CHECK_MISRA(\"-19.7\")")  
+N
 N#if defined(_TMS320C6X) && !defined(__C6X_MIGRATION__)
 X#if 0L && !0L
 S    typedef          __int40_t  int40_t;
@@ -13220,10 +13316,10 @@ S    typedef  int40_t  int_fast40_t;
 S    typedef uint40_t uint_fast40_t;
 N#endif
 N
-N/* 
+N/*
 N   According to footnotes in the 1999 C standard, "C++ implementations
 N   should define these macros only when __STDC_LIMIT_MACROS is defined
-N   before <stdint.h> is included." 
+N   before <stdint.h> is included."
 N*/
 N#if !defined(__cplusplus) || defined(__STDC_LIMIT_MACROS)
 X#if !1L || 1L
@@ -13247,12 +13343,16 @@ S    #define UINT40_C(value) ((uint_least40_t)(value))
 N#endif
 N
 N#endif /* !defined(__cplusplus) || defined(__STDC_LIMIT_MACROS) */
+N
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
+N
 N#endif /* __STDINT40_H_ */
-L 41 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/stdint.h" 2
-N#if __has_include(<sys/stdint.h>) 
-X#if 1 
+L 47 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/stdint.h" 2
+N#if __has_include(<sys/stdint.h>)
+X#if 1
 N#include <sys/stdint.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/sys/stdint.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/sys/stdint.h" 1
 N/*-
 N * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
 N *
@@ -13286,9 +13386,11 @@ N
 N#ifndef _SYS_STDINT_H_
 N#define _SYS_STDINT_H_
 N
+N#include <_ti_config.h>
+N
 N#include <sys/cdefs.h>
 N#include <sys/_types.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/sys/_types.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/sys/_types.h" 1
 N/*-
 N * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
 N *
@@ -13324,7 +13426,7 @@ N#define _SYS__TYPES_H_
 N
 N#include <sys/cdefs.h>
 N#include <machine/_types.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/machine/_types.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/machine/_types.h" 1
 N/*-
 N * SPDX-License-Identifier: BSD-4-Clause
 N *
@@ -13372,10 +13474,30 @@ N#ifndef _SYS_CDEFS_H_
 S#error this file needs sys/cdefs.h as a prerequisite
 N#endif
 N
+N#include <_ti_config.h>
+N
 N#ifdef __TI_COMPILER_VERSION__
-N#pragma diag_push
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
 N/* This file is required to use base types */
-N#pragma CHECK_MISRA("-6.3")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-6.3\")")
+X_Pragma("CHECK_MISRA(\"-6.3\")")
+N#endif
+N
+N#ifdef __clang__
+S
+S/* Always use POSIX epoch for time_t */
+S#define __TI_TIME32_USES_POSIX_EPOCH
+S
+S/* Unless AEABI portability mode or user indicates __TI_TIME_USES_64 = 0, */
+S/* use 64bit time_t and redirect all time routines to 64bit variants.     */
+S#if !defined(_TIME_IMPLEMENTATION) && \
+S    !(defined(__TI_TIME_USES_64) && __TI_TIME_USES_64 == 0) && \
+S    !(defined(_AEABI_PORTABILITY_LEVEL) && _AEABI_PORTABILITY_LEVEL != 0)
+X#if !defined(_TIME_IMPLEMENTATION) &&     !(defined(__TI_TIME_USES_64) && __TI_TIME_USES_64 == 0) &&     !(defined(_AEABI_PORTABILITY_LEVEL) && _AEABI_PORTABILITY_LEVEL != 0)
+S#define __TI_TIME_USES_64 1
+S#endif
+S
 N#endif
 N
 N/*
@@ -13423,8 +13545,9 @@ Ntypedef	__int32_t	__register_t;
 Ntypedef	__int32_t	__segsz_t;		/* segment size (in pages) */
 Ntypedef	__uint32_t	__size_t;		/* sizeof() */
 Ntypedef	__int32_t	__ssize_t;		/* byte count or error */
-N#if (defined(__TI_TIME_USES_64) && __TI_TIME_USES_64)
-X#if (0L && __TI_TIME_USES_64)
+N#if defined(_TARGET_DEFAULTS_TO_TIME64) || \
+N    (defined(__TI_TIME_USES_64) && __TI_TIME_USES_64)
+X#if 0L ||     (0L && __TI_TIME_USES_64)
 Stypedef	__int64_t	__time_t;		/* time()... */
 N#else
 Ntypedef __uint32_t      __time_t;
@@ -13461,8 +13584,14 @@ N#else
 S#    define __WCHAR_MAX 0xffffffffu
 N#endif
 N#else
+S#include <machine/_limits.h>            /* get a definition of __UINT_MAX */
 S#define	__WCHAR_MAX	__UINT_MAX	/* max value for a wchar_t */
 N#endif
+N
+N/*
+N * POSIX target specific _off_t type definition
+N */
+Ntypedef long _off_t;
 N
 N/*
 N * Unusual type definitions.
@@ -13485,17 +13614,21 @@ N#endif
 N
 N#if defined(__TI_COMPILER_VERSION__)
 X#if 1L
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N#endif
 N
 N#endif /* !_MACHINE__TYPES_H_ */
-L 36 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/sys/_types.h" 2
+L 36 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/sys/_types.h" 2
 N
 N#if defined(__TI_COMPILER_VERSION__)
 X#if 1L
-N#pragma diag_push
+N#include <_ti_config.h>
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
 N/* This file is required to use types without size and signedness */
-N#pragma CHECK_MISRA("-6.3")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-6.3\")")
+X_Pragma("CHECK_MISRA(\"-6.3\")")
 N#endif
 N
 N/*
@@ -13516,8 +13649,8 @@ Ntypedef	__uint16_t	__mode_t;	/* permissions */
 Ntypedef	int		__accmode_t;	/* access permissions */
 Ntypedef	int		__nl_item;
 Ntypedef	__uint64_t	__nlink_t;	/* link count */
-Ntypedef	__int64_t	__off_t;	/* file offset */
-Ntypedef	__int64_t	__off64_t;	/* file offset (alias) */
+Ntypedef	_off_t	        __off_t;	/* file offset (target-specific)  */
+Ntypedef	__int64_t	__off64_t;	/* file offset (always 64-bit)    */
 Ntypedef	__int32_t	__pid_t;	/* process [group] */
 Ntypedef	__int64_t	__rlim_t;	/* resource limit - intentionally */
 N					/* signed, because of legacy code */
@@ -13626,14 +13759,15 @@ N#define	__INO64
 N
 N#if defined(__TI_COMPILER_VERSION__)
 X#if 1L
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N#endif
 N
 N#endif /* !_SYS__TYPES_H_ */
-L 36 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/sys/stdint.h" 2
+L 38 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/sys/stdint.h" 2
 N
 N#include <machine/_stdint.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/machine/_stdint.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/machine/_stdint.h" 1
 N/*-
 N * SPDX-License-Identifier: BSD-2-Clause-NetBSD
 N *
@@ -13671,9 +13805,17 @@ N
 N#ifndef _MACHINE__STDINT_H_
 N#define	_MACHINE__STDINT_H_
 N
-N#pragma diag_push
+N#include <_ti_config.h>
+N
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
 N/* 19.4 is issued for macros that are defined in terms of other macros. */
-N#pragma CHECK_MISRA("-19.4")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.4\")")
+X_Pragma("CHECK_MISRA(\"-19.4\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.7\")")
+X_Pragma("CHECK_MISRA(\"-19.7\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.13\")")
+X_Pragma("CHECK_MISRA(\"-19.13\")")
 N
 N#if !defined(__cplusplus) || defined(__STDC_CONSTANT_MACROS)
 X#if !1L || 1L
@@ -13799,12 +13941,13 @@ N#define	WINT_MAX	INT32_MAX
 N
 N#endif /* !defined(__cplusplus) || defined(__STDC_LIMIT_MACROS) */
 N
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N
 N#endif /* !_MACHINE__STDINT_H_ */
-L 38 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/sys/stdint.h" 2
+L 40 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/sys/stdint.h" 2
 N#include <sys/_stdint.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/sys/_stdint.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/sys/_stdint.h" 1
 N/*-
 N * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
 N *
@@ -13903,7 +14046,7 @@ N#define	_UINTMAX_T_DECLARED
 N#endif
 N
 N#endif /* !_SYS__STDINT_H_ */
-L 39 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/sys/stdint.h" 2
+L 41 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/sys/stdint.h" 2
 N
 Ntypedef	__int_least8_t		int_least8_t;
 Ntypedef	__int_least16_t		int_least16_t;
@@ -13925,6 +14068,10 @@ Ntypedef	__uint_fast16_t		uint_fast16_t;
 Ntypedef	__uint_fast32_t		uint_fast32_t;
 Ntypedef	__uint_fast64_t		uint_fast64_t;
 N
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-10.1\")")
+X_Pragma("CHECK_MISRA(\"-10.1\")")
 N/* GNU and Darwin define this and people seem to think it's portable */
 N#if defined(UINTPTR_MAX) && defined(UINT64_MAX) && (UINTPTR_MAX == UINT64_MAX)
 X#if 1L && 1L && (0xffffffffU == 0xffffffffffffffffULL)
@@ -13932,13 +14079,18 @@ S#define	__WORDSIZE		64
 N#else
 N#define	__WORDSIZE		32
 N#endif
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N
-N#pragma diag_push
-N#pragma CHECK_MISRA("-19.4")
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.4\")")
+X_Pragma("CHECK_MISRA(\"-19.4\")")
 N/* Limits of wchar_t. */
 N#define	WCHAR_MIN	__WCHAR_MIN
 N#define	WCHAR_MAX	__WCHAR_MAX
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N
 N#if __EXT1_VISIBLE
 X#if 1
@@ -13949,7 +14101,7 @@ N#endif
 N#endif /* __EXT1_VISIBLE */
 N
 N#endif /* !_SYS_STDINT_H_ */
-L 43 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/stdint.h" 2
+L 49 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/stdint.h" 2
 N#else
 S/* 7.18.1.1 Exact-width integer types */
 S
@@ -14034,7 +14186,7 @@ S    typedef uint64_t uint_least64_t;
 S#else
 S/* sorry, [u]int_least64_t not implemented for C27X, CLA */
 S#endif
-S#elif defined(_TMS320C5XX) || defined(__TMS320C55X__) 
+S#elif defined(_TMS320C5XX) || defined(__TMS320C55X__)
 S/* sorry, [u]int_least64_t not implemented for C54x, C55x */
 S#endif
 S
@@ -14083,7 +14235,7 @@ S    typedef uint64_t uint_fast64_t;
 S#else
 S/* sorry, [u]int_fast64_t not implemented for C27X, CLA */
 S#endif
-S#elif defined(_TMS320C5XX) || defined(__TMS320C55X__) 
+S#elif defined(_TMS320C5XX) || defined(__TMS320C55X__)
 S/* sorry, [u]int_fast64_t not implemented for C54x, C55x */
 S#endif
 S
@@ -14131,10 +14283,10 @@ S    typedef unsigned long uintmax_t;
 S#endif
 S#endif
 S
-S/* 
+S/*
 S   According to footnotes in the 1999 C standard, "C++ implementations
 S   should define these macros only when __STDC_LIMIT_MACROS is defined
-S   before <stdint.h> is included." 
+S   before <stdint.h> is included."
 S*/
 S#if !defined(__cplusplus) || defined(__STDC_LIMIT_MACROS)
 S
@@ -14349,12 +14501,21 @@ S#elif defined(__C7000__)
 S    #define SIZE_MAX (UINT64_MAX)
 S#endif
 S
+S
 S#ifndef WCHAR_MAX
-S#if !defined(__TI_WCHAR_T_BITS__) || __TI_WCHAR_T_BITS__ == 16
-S#define WCHAR_MAX 0xffffu
-S#else 
-S#define WCHAR_MAX 0xffffffffu
-S#endif
+S# if defined(__TI_COMPILER_VERSION__)
+S#  if !defined(__TI_WCHAR_T_BITS__) || __TI_WCHAR_T_BITS__ == 16
+S#   define WCHAR_MAX 0xffffu
+S#  else
+S#   define WCHAR_MAX 0xffffffffu
+S#  endif
+S# elif defined(__clang__) && defined(__arm__)
+S#  if((__ARM_SIZEOF_WCHAR_T*8) == 16)
+S#   define WCHAR_MAX 0xffffu
+S#  else
+S#   define WCHAR_MAX 0xffffffffu
+S#  endif
+S# endif
 S#endif
 S
 S#ifndef WCHAR_MIN
@@ -14374,9 +14535,9 @@ S
 S/* 7.18.4.1 Macros for minimum-width integer constants */
 S
 S/*
-S   There is a defect report filed against the C99 standard concerning how 
+S   There is a defect report filed against the C99 standard concerning how
 S   the (U)INTN_C macros should be implemented.  Please refer to --
-S   http://wwwold.dkuug.dk/JTC1/SC22/WG14/www/docs/dr_209.htm 
+S   http://wwwold.dkuug.dk/JTC1/SC22/WG14/www/docs/dr_209.htm
 S   for more information.  These macros are implemented according to the
 S   suggestion given at this web site.
 S*/
@@ -14409,11 +14570,15 @@ S    #define UINTMAX_C(value) ((uintmax_t)(value))
 S
 S#endif /* !defined(__cplusplus) || defined(__STDC_LIMIT_MACROS) */
 N#endif
+N
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
+N
 N#endif /* _STDINT_H_ */
-L 120 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/stdint.h" 2
+L 120 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/stdint.h" 2
 N
 N#endif  /* _LIBCPP_STDINT_H */
-L 146 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cstdint" 2
+L 146 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cstdint" 2
 N
 N#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
 X#if !0L
@@ -14463,9 +14628,9 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // _LIBCPP_CSTDINT
-L 205 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/utility" 2
+L 205 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/utility" 2
 N#include <__debug>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__debug" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__debug" 1
 N// -*- C++ -*-
 N//===--------------------------- __debug ----------------------------------===//
 N//
@@ -14792,7 +14957,7 @@ X} }
 N
 N#endif  // _LIBCPP_DEBUG_H
 N
-L 206 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/utility" 2
+L 206 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/utility" 2
 N
 N#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
 X#if !0L
@@ -16419,9 +16584,9 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // _LIBCPP_UTILITY
-L 643 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/algorithm" 2
+L 643 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/algorithm" 2
 N#include <memory>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/memory" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/memory" 1
 N// -*- C++ -*-
 N//===-------------------------- memory ------------------------------------===//
 N//
@@ -17066,7 +17231,7 @@ N
 N#include <__config>
 N#include <type_traits>
 N#include <typeinfo>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/typeinfo" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/typeinfo" 1
 N// -*- C++ -*-
 N//===-------------------------- typeinfo ----------------------------------===//
 N//
@@ -17128,7 +17293,7 @@ N*/
 N
 N#include <__config>
 N#include <exception>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/exception" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/exception" 1
 N// -*- C++ -*-
 N//===-------------------------- exception ---------------------------------===//
 N//
@@ -17211,7 +17376,7 @@ N
 N#include <__config>
 N#include <cstddef>
 N#include <cstdlib>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cstdlib" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cstdlib" 1
 N// -*- C++ -*-
 N//===--------------------------- cstdlib ----------------------------------===//
 N//
@@ -17298,7 +17463,7 @@ N*/
 N
 N#include <__config>
 N#include <stdlib.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/stdlib.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/stdlib.h" 1
 N/* -*- C++ -*- */
 N/*===--------------------------- complex.h --------------------------------===*/
 N/*                                                                            */
@@ -17396,7 +17561,7 @@ N#pragma GCC system_header
 N#endif
 N
 N#include_next <stdlib.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/stdlib.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/stdlib.h" 1
 N/*****************************************************************************/
 N/* stdlib.h                                                                  */
 N/*                                                                           */
@@ -17434,8 +17599,12 @@ N/*  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.     */
 N/*                                                                           */
 N/*****************************************************************************/
 N
+N#ifndef __MISRA1915WORKAROUND__
+N
 N#ifndef _STDLIB_H_
 N#define _STDLIB_H_
+N
+N#include <_ti_config.h>
 N
 N#if defined(__TMS320C2000__)
 X#if 0L
@@ -17444,25 +17613,31 @@ S#error "Header file <stdlib.h> not supported by CLA compiler"
 S#endif
 N#endif
 N
-N#include <_ti_config.h>
 N
-N#pragma diag_push
-N#pragma CHECK_MISRA("-6.3") /* standard types required for standard headers */
-N#pragma CHECK_MISRA("-8.5") /* need to define inline function */
-N#pragma CHECK_MISRA("-19.1") /* #includes required for implementation */
-N#pragma CHECK_MISRA("-19.7") /* need function-like macros */
-N#pragma CHECK_MISRA("-20.1") /* standard headers must define standard names */
-N#pragma CHECK_MISRA("-20.2") /* standard headers must define standard names */
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-6.3\")") /* standard types required for standard headers */
+X_Pragma("CHECK_MISRA(\"-6.3\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-8.5\")") /* need to define inline function */
+X_Pragma("CHECK_MISRA(\"-8.5\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.1\")") /* #includes required for implementation */
+X_Pragma("CHECK_MISRA(\"-19.1\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.7\")") /* need function-like macros */
+X_Pragma("CHECK_MISRA(\"-19.7\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-20.1\")") /* standard headers must define standard names */
+X_Pragma("CHECK_MISRA(\"-20.1\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-20.2\")") /* standard headers must define standard names */
+X_Pragma("CHECK_MISRA(\"-20.2\")")  
 N
 N/*---------------------------------------------------------------------------*/
 N/* Attributes are only available in relaxed ANSI mode.                       */
 N/*---------------------------------------------------------------------------*/
 N#ifndef __ATTRIBUTE
-N#if __TI_STRICT_ANSI_MODE__
-X#if 0
-S#define __ATTRIBUTE(attr)
+N#if defined(__clang__) && !defined(__TI_PROPRIETARY_STRICT_ANSI_MACRO)
+X#if 0L && !1L
+S#define __ATTRIBUTE(attr) __attribute__(attr)
 N#else
-N#define __ATTRIBUTE(attr) __attribute__(attr)
+N#define __ATTRIBUTE(attr)
 N#endif
 N#endif
 N
@@ -17470,8 +17645,10 @@ N#ifdef __cplusplus
 Nextern "C" {
 N#endif /* !__cplusplus */
 N
-N#pragma diag_push
-N#pragma CHECK_MISRA("-5.7") /* keep names intact */
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-5.7\")") /* keep names intact */
+X_Pragma("CHECK_MISRA(\"-5.7\")")  
 N
 Ntypedef struct { int quot, rem; } div_t;
 N
@@ -17490,7 +17667,8 @@ N#define _LLONG_AVAILABLE 1
 Ntypedef struct { long long quot, rem; } lldiv_t;
 N#endif
 N
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N
 N#if defined(_AEABI_PORTABILITY_LEVEL) && _AEABI_PORTABILITY_LEVEL != 0
 X#if 0L && _AEABI_PORTABILITY_LEVEL != 0
@@ -17538,8 +17716,10 @@ N/*        requires that they exist as separate functions, so     */
 N/*        they are supplied in the library.  The prototype is    */
 N/*        here mainly for documentation.                         */
 N/*---------------------------------------------------------------*/
-N#pragma diag_push
-N#pragma CHECK_MISRA("-16.4") /* false positives due to builtin declarations */
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-16.4\")") /* false positives due to builtin declarations */
+X_Pragma("CHECK_MISRA(\"-16.4\")")  
 N    _CODE_ACCESS  int       abs(int _val); 
 X      int       abs(int _val); 
 N    _CODE_ACCESS  long      labs(long _val);
@@ -17549,7 +17729,8 @@ X#if 1L
 N    _CODE_ACCESS  long long llabs(long long _val);
 X      long long llabs(long long _val);
 N#endif
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N
 N    _CODE_ACCESS int       atoi(const char *_st);
 X     int       atoi(const char *_st);
@@ -17560,8 +17741,8 @@ X#if 1L
 N    _CODE_ACCESS long long atoll(const char *_st);
 X     long long atoll(const char *_st);
 N#endif
-N    _CODE_ACCESS int       ltoa(long val, char *buffer);
-X     int       ltoa(long val, char *buffer);
+N    _CODE_ACCESS char     *ltoa(long val, char * buffer, int radix);
+X     char     *ltoa(long val, char * buffer, int radix);
 N          _IDECL double    atof(const char *_st);
 X          extern  double    atof(const char *_st);
 N
@@ -17599,11 +17780,11 @@ N
 N    _CODE_ACCESS void  *calloc(size_t _num, size_t _size)
 X     void  *calloc(size_t _num, size_t _size)
 N               __ATTRIBUTE((malloc));
-X               __attribute__((malloc));
+X               ;
 N    _CODE_ACCESS void  *malloc(size_t _size)
 X     void  *malloc(size_t _size)
 N               __ATTRIBUTE((malloc));
-X               __attribute__((malloc));
+X               ;
 N    _CODE_ACCESS void  *realloc(void *_ptr, size_t _size);
 X     void  *realloc(void *_ptr, size_t _size);
 N    _CODE_ACCESS void   free(void *_ptr);
@@ -17611,13 +17792,13 @@ X     void   free(void *_ptr);
 N    _CODE_ACCESS void  *memalign(size_t _aln, size_t _size)
 X     void  *memalign(size_t _aln, size_t _size)
 N               __ATTRIBUTE((malloc));
-X               __attribute__((malloc));
-N#if defined(_TI_C11LIB) || __TI_STRICT_ANSI_MODE__ == 0
+X               ;
+N#if defined(_TI_C11LIB) || __TI_PROPRIETARY_STRICT_ANSI_MACRO == 0
 X#if 1L || 0 == 0
 N    _CODE_ACCESS void  *aligned_alloc(size_t _aln, size_t _size)
 X     void  *aligned_alloc(size_t _aln, size_t _size)
 N               __ATTRIBUTE((malloc));
-X               __attribute__((malloc));
+X               ;
 N#endif
 N
 N    _CODE_ACCESS void   __TI_heap_stats(void);
@@ -17647,13 +17828,13 @@ N                              __TI_compar_fn compar);
 N
 N    _TI_NORETURN _CODE_ACCESS void exit(int _status);
 X    [[noreturn]]  void exit(int _status);
-N#if defined(_TI_C99LIB) || __TI_STRICT_ANSI_MODE__ == 0
+N#if defined(_TI_C99LIB) || __TI_PROPRIETARY_STRICT_ANSI_MACRO == 0
 X#if 1L || 0 == 0
 N    _TI_NORETURN _CODE_ACCESS void _Exit(int _status);
 X    [[noreturn]]  void _Exit(int _status);
 N#endif
 N
-N#if defined(_TI_C11LIB) || __TI_STRICT_ANSI_MODE__ == 0
+N#if defined(_TI_C11LIB) || __TI_PROPRIETARY_STRICT_ANSI_MACRO == 0
 X#if 1L || 0 == 0
 N    _TI_NORETURN _CODE_ACCESS void quick_exit(int _status);
 X    [[noreturn]]  void quick_exit(int _status);
@@ -17710,10 +17891,10 @@ N/*****************************************************************************/
 N/* If we leave these active when in relaxed ANSI mode, we get infinite       */
 N/* recursion due to changes in type matching.  See comment in                */
 N/* ansi/sys_predef.c line 4377 on why we specifically check the              */
-N/* __TI_STRICT_ANSI_MODE__ macro here and its relation to strict ANSI and    */
-N/* relaxed ANSI parser modes.                                                */
+N/* __TI_PROPRIETARY_STRICT_ANSI_MACRO macro here and its relation to strict  */
+N/* ANSI and relaxed ANSI parser modes.                                       */
 N/*****************************************************************************/
-N#if __TI_STRICT_ANSI_MODE__
+N#if __TI_PROPRIETARY_STRICT_ANSI_MACRO
 X#if 0
 S    _CODE_ACCESS inline int atexit(void (*func)(void)) _TI_NOEXCEPT_CPP14
 S        {
@@ -17748,8 +17929,8 @@ N#if defined(__TMS320C2000__)
 X#if 0L
 S#include <stdlibf.h>     /* far versions of stdlib fns */
 S
-S#pragma diag_push
-S#pragma CHECK_MISRA("-19.4") /* Macros needed to retarget builtins */
+S_TI_PROPRIETARY_PRAGMA("diag_push")
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.4\")") /* Macros needed to retarget builtins */
 S
 Sldiv_t __attribute__((builtin))
 S__euclidean_div_i32byu32(long numerator, unsigned long denominator);
@@ -17759,14 +17940,16 @@ S/*****************************************************************************/
 S/* These two structures are unsigned analogues of ldiv_t and lldiv_t.        */
 S/* They are used only by the fast integer division intrinsics                */
 S/*****************************************************************************/
-S#pragma diag_push
-S#pragma CHECK_MISRA("-5.7") /* Must have equivalent field names to ldiv_t and
+S_TI_PROPRIETARY_PRAGMA("diag_push")
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-5.7\")") /* Must have equivalent field names to ldiv_t and
 S                               lldiv_t for usability */
 S
+Stypedef struct { long long quot; long rem; }                        __llldiv_t;
 Stypedef struct { unsigned long quot; unsigned long rem; }            __uldiv_t;
 Stypedef struct { unsigned long long quot; unsigned long long rem; } __ulldiv_t;
+Stypedef struct { unsigned long long quot; unsigned long rem; }      __ullldiv_t;
 S
-S#pragma diag_pop
+S_TI_PROPRIETARY_PRAGMA("diag_pop")
 S
 S/*****************************************************************************/
 S/* NOTE: The result of division between two unsigned values does not vary    */
@@ -17795,7 +17978,7 @@ S__modulo_div_i32byi32(long numerator, long denominator);
 S
 Sldiv_t __attribute__((builtin))
 S__traditional_div_i32byu32(long numerator, unsigned long denominator);
-S/* Declared above for all C200 targets */
+S/* Declared above for all C2000 targets */
 S/* ldiv_t __attribute__((builtin))
 S__euclidean_div_i32byu32(long numerator, unsigned long denominator); */
 Sldiv_t __attribute__((builtin))
@@ -17835,55 +18018,32 @@ S__traditional_div_u64byu64(unsigned long long numerator,
 S                           unsigned long long denominator);
 S
 S/* 64-bit by 32-bit */
-S/*
-Slldiv_t __attribute__((builtin))
-S__traditional_div_i64byi32(unsigned long long numerator, long denominator);
-Slldiv_t __attribute__((builtin))
-S__euclidean_div_i64byi32(unsigned long long numerator, long denominator);
-Slldiv_t __attribute__((builtin))
-S__modulo_div_i64byi32(unsigned long long numerator, long denominator);
+S__llldiv_t __attribute__((builtin))
+S__traditional_div_i64byi32(long long numerator, long denominator);
+S
+S__llldiv_t __attribute__((builtin))
+S__euclidean_div_i64byi32(long long numerator, long denominator);
+S
+S__llldiv_t __attribute__((builtin))
+S__modulo_div_i64byi32(long long numerator, long denominator);
 S
 Slldiv_t __attribute__((builtin))
-S__traditional_div_i64byu32(unsigned long long numerator,
-S                           unsigned long denominator);
-Slldiv_t __attribute__((builtin))
-S__euclidean_div_i64byu32(unsigned long long numerator,
-S                         unsigned long denominator);
-Slldiv_t __attribute__((builtin))
-S__modulo_div_i64byu32(unsigned long long numerator, unsigned long denominator);
+S__traditional_div_i64byu32(long long numerator, unsigned long denominator);
 S
-S__ulldiv_t __attribute__((builtin))
+S__llldiv_t __attribute__((builtin))
+S__euclidean_div_i64byu32(long long numerator, unsigned long denominator);
+S
+S__llldiv_t __attribute__((builtin))
+S__modulo_div_i64byu32(long long numerator, unsigned long denominator);
+S
+S__ullldiv_t __attribute__((builtin))
 S__traditional_div_u64byu32(unsigned long long numerator,
 S                           unsigned long denominator);
-S*/
-S#define __traditional_div_i64byi32(n, d) \
-S    __traditional_div_i64byi64((n), (long long)(d))
-X#define __traditional_div_i64byi32(n, d)     __traditional_div_i64byi64((n), (long long)(d))
-S#define __euclidean_div_i64byi32(n, d) \
-S    __euclidean_div_i64byi64((n), (long long)d)
-X#define __euclidean_div_i64byi32(n, d)     __euclidean_div_i64byi64((n), (long long)d)
-S#define __modulo_div_i64byi32(n, d) \
-S    __modulo_div_i64byi64((n), (long long)d)
-X#define __modulo_div_i64byi32(n, d)     __modulo_div_i64byi64((n), (long long)d)
-S
-S#define __traditional_div_i64byu32(n, d) \
-S    __traditional_div_i64byu64((n), (unsigned long long)d)
-X#define __traditional_div_i64byu32(n, d)     __traditional_div_i64byu64((n), (unsigned long long)d)
-S#define __euclidean_div_i64byu32(n, d) \
-S    __euclidean_div_i64byu64((n), (unsigned long long)d)
-X#define __euclidean_div_i64byu32(n, d)     __euclidean_div_i64byu64((n), (unsigned long long)d)
-S#define __modulo_div_i64byu32(n, d) \
-S    __modulo_div_i64byu64((n), (unsigned long long)d)
-X#define __modulo_div_i64byu32(n, d)     __modulo_div_i64byu64((n), (unsigned long long)d)
-S
-S#define __traditional_div_u64byu32(n, d) \
-S    __traditional_div_u64byu64((n), (unsigned long long)d)
-X#define __traditional_div_u64byu32(n, d)     __traditional_div_u64byu64((n), (unsigned long long)d)
 S
 S/* ldiv and lldiv implementations using intrinsics. They are implemented using
 S * inline functions so the address of the functions can be taken */
-S#pragma diag_push
-S#pragma CHECK_MISRA("-5.6") /* We use a preprocessor macro to optimize ldiv
+S_TI_PROPRIETARY_PRAGMA("diag_push")
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-5.6\")") /* We use a preprocessor macro to optimize ldiv
 S                               and lldiv standard functions */
 S
 S#define ldiv __fast_ldiv
@@ -17900,15 +18060,16 @@ S{
 S   return __traditional_div_i64byi64(_numer, _denom);
 S}
 S
-S#pragma diag_pop
+S_TI_PROPRIETARY_PRAGMA("diag_pop")
 S
 S# endif /* defined(__TMS320C28XX_FAST_IDIV__) */
 S
-S#pragma diag_pop
+S_TI_PROPRIETARY_PRAGMA("diag_pop")
 S
 N#endif
 N
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N
 N#if defined(_AEABI_PORTABILITY_LEVEL) && _AEABI_PORTABILITY_LEVEL != 0 && \
 N   !defined(_AEABI_PORTABLE)
@@ -17918,9 +18079,13 @@ N#endif
 N
 N#endif  /* ! _STDLIB_H_ */
 N
-N#pragma diag_push
-N#pragma CHECK_MISRA("-19.15") /* FreeBSD library requires code outside of the
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.15\")") /* FreeBSD library requires code outside of the
+X_Pragma("CHECK_MISRA(\"-19.15\")") 
 N                                 include guard */
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.1\")")
+X_Pragma("CHECK_MISRA(\"-19.1\")")
 N
 N/*----------------------------------------------------------------------------*/
 N/* If sys/cdefs.h is available, go ahead and include it. xlocale.h assumes    */
@@ -17942,8 +18107,17 @@ S#include <xlocale/_stdlib.h>
 S__END_DECLS
 N#endif
 N
+N/*----------------------------------------------------------------------------*/
+N/* The _TI_PROPRIETARY_PRAGMA macro exoands to a C99 _Pragma operator. */
+N/* The _Pragma statement is handled after the Pragma itself causing unexpected */
+N/* warnings due to the diagnostic state being popped. This is done to suppress */
+N/* unexpected 19.15 misra warnings.                                   */
+N/*----------------------------------------------------------------------------*/
+N#ifdef __TI_COMPILER_VERSION__
 N#pragma diag_pop
-L 95 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/stdlib.h" 2
+N#endif
+N#endif
+L 95 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/stdlib.h" 2
 N
 N#ifdef __cplusplus
 N
@@ -17981,7 +18155,7 @@ N
 N#endif  /* __cplusplus */
 N
 N#endif  /* _LIBCPP_STDLIB_H */
-L 87 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cstdlib" 2
+L 87 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cstdlib" 2
 N
 N#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
 X#if !0L
@@ -18063,7 +18237,7 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // _LIBCPP_CSTDLIB
-L 83 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/exception" 2
+L 83 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/exception" 2
 N#include <type_traits>
 N
 N#if defined(_LIBCPP_ABI_MICROSOFT) && !defined(_LIBCPP_NO_VCRUNTIME)
@@ -18368,7 +18542,7 @@ N
 N}  // std
 N
 N#endif  // _LIBCPP_EXCEPTION
-L 62 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/typeinfo" 2
+L 62 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/typeinfo" 2
 N#include <cstddef>
 N#include <cstdint>
 N#ifdef _LIBCPP_NO_EXCEPTIONS
@@ -18593,11 +18767,11 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // __LIBCPP_TYPEINFO
-L 645 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/memory" 2
+L 645 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/memory" 2
 N#include <cstddef>
 N#include <cstdint>
 N#include <new>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/new" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/new" 1
 N// -*- C++ -*-
 N//===----------------------------- new ------------------------------------===//
 N//
@@ -18899,11 +19073,11 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // _LIBCPP_NEW
-L 648 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/memory" 2
+L 648 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/memory" 2
 N#include <utility>
 N#include <limits>
 N#include <iterator>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/iterator" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/iterator" 1
 N// -*- C++ -*-
 N//===-------------------------- iterator ----------------------------------===//
 N//
@@ -19330,7 +19504,7 @@ N*/
 N
 N#include <__config>
 N#include <iosfwd> // for forward declarations of vector and string.
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/iosfwd" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/iosfwd" 1
 N// -*- C++ -*-
 N//===--------------------------- iosfwd -----------------------------------===//
 N//
@@ -19421,7 +19595,7 @@ N*/
 N
 N#include <__config>
 N#include <wchar.h>  // for mbstate_t
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/wchar.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/wchar.h" 1
 N/* -*- C++ -*- */
 N/*===--------------------------- complex.h --------------------------------===*/
 N/*                                                                            */
@@ -19544,7 +19718,7 @@ N#define __CORRECT_ISO_CPP_WCHAR_H_PROTO
 N#endif
 N
 N#include_next <wchar.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/wchar.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/wchar.h" 1
 N/*-
 N * SPDX-License-Identifier: (BSD-2-Clause AND BSD-2-Clause-NetBSD)
 N *
@@ -19611,7 +19785,7 @@ N#define _WCHAR_H_
 N
 N#include <sys/cdefs.h>
 N#include <sys/_null.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/sys/_null.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/sys/_null.h" 1
 N/*-
 N * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
 N *
@@ -19644,6 +19818,11 @@ N */
 N
 N#ifndef NULL
 S
+S#include <_ti_config.h>
+S
+S_TI_PROPRIETARY_PRAGMA("diag_push")
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-20.1\")")
+S
 S#if !defined(__cplusplus)
 S#define	NULL	((void *)0)
 S#else
@@ -19660,11 +19839,13 @@ S#endif	/* __LP64__ */
 S#endif	/* __GNUG__ */
 S#endif	/* !__cplusplus */
 S
+S_TI_PROPRIETARY_PRAGMA("diag_pop")
+S
 N#endif
-L 67 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/wchar.h" 2
+L 67 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/wchar.h" 2
 N#include <sys/_types.h>
 N#include <machine/_limits.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/machine/_limits.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/machine/_limits.h" 1
 N/*-
 N * SPDX-License-Identifier: BSD-3-Clause
 N *
@@ -19701,6 +19882,13 @@ N */
 N
 N#ifndef _MACHINE__LIMITS_H_
 N#define	_MACHINE__LIMITS_H_
+N
+N#include <_ti_config.h>
+N
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.4\")")
+X_Pragma("CHECK_MISRA(\"-19.4\")")
 N
 N/*
 N * According to ANSI (section 2.2.4.2), the values below must be usable by
@@ -19739,8 +19927,8 @@ N#define	__SSIZE_MAX	__INT_MAX	/* max value for a ssize_t */
 N
 N#define	__SIZE_T_MAX	__UINT_MAX	/* max value for a size_t */
 N
-N#define	__OFF_MAX	__LLONG_MAX	/* max value for a off_t */
-N#define	__OFF_MIN	__LLONG_MIN	/* min value for a off_t */
+N#define	__OFF_MAX	__LONG_MAX	/* max value for a off_t */
+N#define	__OFF_MIN	__LONG_MIN	/* min value for a off_t */
 N
 N/* Quads and long longs are the same size.  Ensure they stay in sync. */
 N#define	__UQUAD_MAX	__ULLONG_MAX	/* max value for a uquad_t */
@@ -19753,8 +19941,31 @@ N
 N/* Minimum signal stack size. */
 N#define	__MINSIGSTKSZ	(1024 * 4)
 N
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
+N
 N#endif /* !_MACHINE__LIMITS_H_ */
-L 69 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/wchar.h" 2
+L 69 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/wchar.h" 2
+N
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-5.6\")")
+X_Pragma("CHECK_MISRA(\"-5.6\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-6.3\")")
+X_Pragma("CHECK_MISRA(\"-6.3\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-16.3\")")
+X_Pragma("CHECK_MISRA(\"-16.3\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.1\")")
+X_Pragma("CHECK_MISRA(\"-19.1\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.4\")")
+X_Pragma("CHECK_MISRA(\"-19.4\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.7\")")
+X_Pragma("CHECK_MISRA(\"-19.7\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.10\")")
+X_Pragma("CHECK_MISRA(\"-19.10\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-20.2\")")
+X_Pragma("CHECK_MISRA(\"-20.2\")")
+N
 N
 N#ifndef _MBSTATE_T_DECLARED
 Ntypedef	__mbstate_t	mbstate_t;
@@ -19945,7 +20156,7 @@ N
 N#if __POSIX_VISIBLE >= 200809 || defined(_XLOCALE_H_)
 X#if 200809 >= 200809 || 0L
 N#include <xlocale/_wchar.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/xlocale/_wchar.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/xlocale/_wchar.h" 1
 N/*-
 N * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
 N *
@@ -20081,13 +20292,16 @@ S			    mbstate_t * __restrict, locale_t);
 S
 S#endif /* _XLOCALE_WCHAR_H */
 N#endif /* _XLOCALE_H_ */
-L 238 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/wchar.h" 2
+L 249 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/wchar.h" 2
 N#endif
 N__END_DECLS
 X}
 N
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
+N
 N#endif /* !_WCHAR_H_ */
-L 120 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/wchar.h" 2
+L 120 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/wchar.h" 2
 N
 N/* Determine whether we have const-correct overloads for wcschr and friends. */
 N#if defined(_WCHAR_H_CPLUSPLUS_98_CONFORMANCE_)
@@ -20156,7 +20370,7 @@ S}  /* extern "C++" */
 N#endif  /* __cplusplus && _LIBCPP_MSVCRT */
 N
 N#endif  /* _LIBCPP_WCHAR_H */
-L 91 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/iosfwd" 2
+L 91 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/iosfwd" 2
 N
 N#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
 X#if !0L
@@ -20296,9 +20510,9 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // _LIBCPP_IOSFWD
-L 427 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/iterator" 2
+L 427 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/iterator" 2
 N#include <__functional_base>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__functional_base" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__functional_base" 1
 N// -*- C++ -*-
 N//===----------------------------------------------------------------------===//
 N//
@@ -21006,7 +21220,7 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // _LIBCPP_FUNCTIONAL_BASE
-L 428 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/iterator" 2
+L 428 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/iterator" 2
 N#include <type_traits>
 N#include <cstddef>
 N#include <initializer_list>
@@ -22664,11 +22878,11 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // _LIBCPP_ITERATOR
-L 651 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/memory" 2
+L 651 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/memory" 2
 N#include <__functional_base>
 N#include <iosfwd>
 N#include <tuple>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/tuple" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/tuple" 1
 N// -*- C++ -*-
 N//===--------------------------- tuple ------------------------------------===//
 N//
@@ -24285,9 +24499,9 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // _LIBCPP_TUPLE
-L 654 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/memory" 2
+L 654 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/memory" 2
 N#include <stdexcept>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/stdexcept" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/stdexcept" 1
 N// -*- C++ -*-
 N//===--------------------------- stdexcept --------------------------------===//
 N//
@@ -24632,10 +24846,10 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // _LIBCPP_STDEXCEPT
-L 655 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/memory" 2
+L 655 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/memory" 2
 N#include <cstring>
 N#include <cassert>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cassert" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cassert" 1
 N// -*- C++ -*-
 N//===-------------------------- cassert -----------------------------------===//
 N//
@@ -24657,7 +24871,7 @@ N*/
 N
 N#include <__config>
 N#include <assert.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/assert.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/assert.h" 1
 N/*****************************************************************************/
 N/* assert.h                                                                  */
 N/*                                                                           */
@@ -24707,17 +24921,22 @@ S#error "Header file <assert.h> not supported by CLA compiler"
 S#endif
 N#endif
 N
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-6.3\")") /* standard types required for standard headers */
+X_Pragma("CHECK_MISRA(\"-6.3\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.4\")") /* macros required for implementation */
+X_Pragma("CHECK_MISRA(\"-19.4\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.7\")") /* macros required for implementation */
+X_Pragma("CHECK_MISRA(\"-19.7\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.13\")") /* # and ## required for implementation */
+X_Pragma("CHECK_MISRA(\"-19.13\")")  
+N
 N#ifndef __cplusplus
-S#if defined(_TI_C11LIB) || __TI_STRICT_ANSI_MODE__ == 0
+S#if defined(_TI_C11LIB) || __TI_PROPRIETARY_STRICT_ANSI_MACRO == 0
 S#define	static_assert	_Static_assert
 S#endif
 N#endif
-N
-N#pragma diag_push
-N#pragma CHECK_MISRA("-6.3") /* standard types required for standard headers */
-N#pragma CHECK_MISRA("-19.4") /* macros required for implementation */
-N#pragma CHECK_MISRA("-19.7") /* macros required for implementation */
-N#pragma CHECK_MISRA("-19.13") /* # and ## required for implementation */
 N
 N#ifdef __cplusplus
 Nextern "C"
@@ -24767,7 +24986,8 @@ N#ifdef __cplusplus
 N} /* extern "C" */
 N#endif /* __cplusplus */
 N
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N
 N#if defined(_AEABI_PORTABILITY_LEVEL) && _AEABI_PORTABILITY_LEVEL != 0 && \
 N   !defined(_AEABI_PORTABLE)
@@ -24776,17 +24996,17 @@ S#define _AEABI_PORTABLE
 N#endif
 N
 N#endif /* _ASSERT */
-L 22 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cassert" 2
+L 22 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cassert" 2
 N
 N#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
 X#if !0L
 N#pragma GCC system_header
 N#endif
-L 657 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/memory" 2
+L 657 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/memory" 2
 N#if !defined(_LIBCPP_HAS_NO_ATOMIC_HEADER)
 X#if !0L
 N#  include <atomic>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/atomic" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/atomic" 1
 N// -*- C++ -*-
 N//===--------------------------- atomic -----------------------------------===//
 N//
@@ -25350,7 +25570,7 @@ N#endif
 N
 N#ifdef __TI_COMPILER_VERSION__
 N#include <_atomic.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/_atomic.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/_atomic.h" 1
 N/******************************************************************************/
 N/*                                                                            */
 N/* _ATOMIC.H                                                                  */
@@ -25398,7 +25618,7 @@ N#else
 N#include <cstdlib>
 N#include <cstdint>
 N#include <cstdbool>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cstdbool" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cstdbool" 1
 N// -*- C++ -*-
 N//===--------------------------- cstdbool ---------------------------------===//
 N//
@@ -25432,7 +25652,7 @@ N#undef __bool_true_false_are_defined
 N#define __bool_true_false_are_defined 1
 N
 N#endif  // _LIBCPP_CSTDBOOL
-L 48 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/_atomic.h" 2
+L 48 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/_atomic.h" 2
 N#endif
 N
 N/* Implement the GCC Atomic builtins required to implement C++1x */
@@ -25810,11 +26030,11 @@ N__TI_ATOMIC_LOAD_N(1, uint8_t)
 X__attribute__((always_inline)) static inline uint8_t __atomic_load_1 (const void *ptr, int memorder) { uint8_t t0 = *(const volatile uint8_t*)ptr; do { switch (memorder) { case 2: case 4: case 5: _dmb(); break; case 0: case 1: case 3: default: break; } } while (0); return t0; }
 N__TI_ATOMIC_STORE_N(1, uint8_t)
 X__attribute__((always_inline)) static inline void __atomic_store_1 (void *ptr, uint8_t val, int memorder) { do { switch (memorder) { case 3: case 4: case 5: _dmb(); break; case 0: case 1: case 2: default: break; } } while (0); *(volatile uint8_t*)ptr = val; do { switch (memorder) { case 2: case 4: case 5: _dmb(); break; case 0: case 1: case 3: default: break; } } while (0); return; }
-R "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/_atomic.h" 395 1 (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
-R "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/_atomic.h" 395 1 (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
-R "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/_atomic.h" 395 1 (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
-R "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/_atomic.h" 395 1 (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
-R "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/_atomic.h" 395 1 (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
+R "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/_atomic.h" 395 1 (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
+R "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/_atomic.h" 395 1 (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
+R "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/_atomic.h" 395 1 (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
+R "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/_atomic.h" 395 1 (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
+R "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/_atomic.h" 395 1 (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
 N__TI_ATOMIC_N(1, uint8_t)
 X__attribute__((always_inline)) static inline uint8_t __atomic_exchange_1 (void *ptr, uint8_t val, int memorder) { uint8_t t0; uint32_t exflag; do { switch (memorder) { case 3: case 4: case 5: _dmb(); break; case 0: case 1: case 2: default: break; } } while (0); retry: t0 = __ldrexb(ptr); exflag = __strexb(val, ptr); if (exflag) goto retry; do { switch (memorder) { case 2: case 4: case 5: _dmb(); break; case 0: case 1: case 3: default: break; } } while (0); return t0; } __attribute__((always_inline)) static inline bool __atomic_compare_exchange_1 (void *ptr, void *expected, uint8_t desired, int success_memorder, int failure_memorder) { uint8_t t0, t1; uint32_t exflag = 0; do { switch (success_memorder) { case 3: case 4: case 5: _dmb(); break; case 0: case 1: case 2: default: break; } } while (0); t1 = *(uint8_t*)expected; retry: t0 = __ldrexb(ptr); if (t0 == t1) { exflag = __strexb(desired, ptr); if (exflag) goto retry; do { switch (success_memorder) { case 2: case 4: case 5: _dmb(); break; case 0: case 1: case 3: default: break; } } while (0); return 1; } else { __clrex(); *(uint8_t*)expected = t0; do { switch (failure_memorder) { case 2: case 4: case 5: _dmb(); break; case 0: case 1: case 3: default: break; } } while (0); return 0; }} __attribute__((always_inline)) static inline uint8_t __atomic_fetch_add_1 (void *ptr, uint8_t val, int memorder) { uint8_t t0, t1; uint32_t exflag = 0; do { switch (memorder) { case 3: case 4: case 5: _dmb(); break; case 0: case 1: case 2: default: break; } } while (0); retry: t0 = __ldrexb(ptr); t1 = t0 + val; exflag = __strexb(t1, ptr); if (exflag) goto retry; do { switch (memorder) { case 2: case 4: case 5: _dmb(); break; case 0: case 1: case 3: default: break; } } while (0); return t0;} __attribute__((always_inline)) static inline uint8_t __atomic_fetch_sub_1 (void *ptr, uint8_t val, int memorder) { uint8_t t0, t1; uint32_t exflag = 0; do { switch (memorder) { case 3: case 4: case 5: _dmb(); break; case 0: case 1: case 2: default: break; } } while (0); retry: t0 = __ldrexb(ptr); t1 = t0 - val; exflag = __strexb(t1, ptr); if (exflag) goto retry; do { switch (memorder) { case 2: case 4: case 5: _dmb(); break; case 0: case 1: case 3: default: break; } } while (0); return t0;} __attribute__((always_inline)) static inline uint8_t __atomic_fetch_and_1 (void *ptr, uint8_t val, int memorder) { uint8_t t0, t1; uint32_t exflag = 0; do { switch (memorder) { case 3: case 4: case 5: _dmb(); break; case 0: case 1: case 2: default: break; } } while (0); retry: t0 = __ldrexb(ptr); t1 = t0 & val; exflag = __strexb(t1, ptr); if (exflag) goto retry; do { switch (memorder) { case 2: case 4: case 5: _dmb(); break; case 0: case 1: case 3: default: break; } } while (0); return t0;} __attribute__((always_inline)) static inline uint8_t __atomic_fetch_xor_1 (void *ptr, uint8_t val, int memorder) { uint8_t t0, t1; uint32_t exflag = 0; do { switch (memorder) { case 3: case 4: case 5: _dmb(); break; case 0: case 1: case 2: default: break; } } while (0); retry: t0 = __ldrexb(ptr); t1 = t0 ^ val; exflag = __strexb(t1, ptr); if (exflag) goto retry; do { switch (memorder) { case 2: case 4: case 5: _dmb(); break; case 0: case 1: case 3: default: break; } } while (0); return t0;} __attribute__((always_inline)) static inline uint8_t __atomic_fetch_or_1 (void *ptr, uint8_t val, int memorder) { uint8_t t0, t1; uint32_t exflag = 0; do { switch (memorder) { case 3: case 4: case 5: _dmb(); break; case 0: case 1: case 2: default: break; } } while (0); retry: t0 = __ldrexb(ptr); t1 = t0 | val; exflag = __strexb(t1, ptr); if (exflag) goto retry; do { switch (memorder) { case 2: case 4: case 5: _dmb(); break; case 0: case 1: case 3: default: break; } } while (0); return t0;}
 N#endif
@@ -25824,11 +26044,11 @@ N__TI_ATOMIC_LOAD_N(2, uint16_t)
 X__attribute__((always_inline)) static inline uint16_t __atomic_load_2 (const void *ptr, int memorder) { uint16_t t0 = *(const volatile uint16_t*)ptr; do { switch (memorder) { case 2: case 4: case 5: _dmb(); break; case 0: case 1: case 3: default: break; } } while (0); return t0; } 
 N__TI_ATOMIC_STORE_N(2, uint16_t)
 X__attribute__((always_inline)) static inline void __atomic_store_2 (void *ptr, uint16_t val, int memorder) { do { switch (memorder) { case 3: case 4: case 5: _dmb(); break; case 0: case 1: case 2: default: break; } } while (0); *(volatile uint16_t*)ptr = val; do { switch (memorder) { case 2: case 4: case 5: _dmb(); break; case 0: case 1: case 3: default: break; } } while (0); return; }
-R "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/_atomic.h" 400 1 (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
-R "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/_atomic.h" 400 1 (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
-R "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/_atomic.h" 400 1 (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
-R "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/_atomic.h" 400 1 (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
-R "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/_atomic.h" 400 1 (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
+R "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/_atomic.h" 400 1 (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
+R "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/_atomic.h" 400 1 (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
+R "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/_atomic.h" 400 1 (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
+R "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/_atomic.h" 400 1 (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
+R "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/_atomic.h" 400 1 (ULP 5.4) Detected an assignment to a type with size less than int. To avoid unnecessary sign extension, use int-sized types for local varaibles and convert to smaller types for static storage.
 N__TI_ATOMIC_N(2, uint16_t)
 X__attribute__((always_inline)) static inline uint16_t __atomic_exchange_2 (void *ptr, uint16_t val, int memorder) { uint16_t t0; uint32_t exflag; do { switch (memorder) { case 3: case 4: case 5: _dmb(); break; case 0: case 1: case 2: default: break; } } while (0); retry: t0 = __ldrexh(ptr); exflag = __strexh(val, ptr); if (exflag) goto retry; do { switch (memorder) { case 2: case 4: case 5: _dmb(); break; case 0: case 1: case 3: default: break; } } while (0); return t0; } __attribute__((always_inline)) static inline bool __atomic_compare_exchange_2 (void *ptr, void *expected, uint16_t desired, int success_memorder, int failure_memorder) { uint16_t t0, t1; uint32_t exflag = 0; do { switch (success_memorder) { case 3: case 4: case 5: _dmb(); break; case 0: case 1: case 2: default: break; } } while (0); t1 = *(uint16_t*)expected; retry: t0 = __ldrexh(ptr); if (t0 == t1) { exflag = __strexh(desired, ptr); if (exflag) goto retry; do { switch (success_memorder) { case 2: case 4: case 5: _dmb(); break; case 0: case 1: case 3: default: break; } } while (0); return 1; } else { __clrex(); *(uint16_t*)expected = t0; do { switch (failure_memorder) { case 2: case 4: case 5: _dmb(); break; case 0: case 1: case 3: default: break; } } while (0); return 0; }} __attribute__((always_inline)) static inline uint16_t __atomic_fetch_add_2 (void *ptr, uint16_t val, int memorder) { uint16_t t0, t1; uint32_t exflag = 0; do { switch (memorder) { case 3: case 4: case 5: _dmb(); break; case 0: case 1: case 2: default: break; } } while (0); retry: t0 = __ldrexh(ptr); t1 = t0 + val; exflag = __strexh(t1, ptr); if (exflag) goto retry; do { switch (memorder) { case 2: case 4: case 5: _dmb(); break; case 0: case 1: case 3: default: break; } } while (0); return t0;} __attribute__((always_inline)) static inline uint16_t __atomic_fetch_sub_2 (void *ptr, uint16_t val, int memorder) { uint16_t t0, t1; uint32_t exflag = 0; do { switch (memorder) { case 3: case 4: case 5: _dmb(); break; case 0: case 1: case 2: default: break; } } while (0); retry: t0 = __ldrexh(ptr); t1 = t0 - val; exflag = __strexh(t1, ptr); if (exflag) goto retry; do { switch (memorder) { case 2: case 4: case 5: _dmb(); break; case 0: case 1: case 3: default: break; } } while (0); return t0;} __attribute__((always_inline)) static inline uint16_t __atomic_fetch_and_2 (void *ptr, uint16_t val, int memorder) { uint16_t t0, t1; uint32_t exflag = 0; do { switch (memorder) { case 3: case 4: case 5: _dmb(); break; case 0: case 1: case 2: default: break; } } while (0); retry: t0 = __ldrexh(ptr); t1 = t0 & val; exflag = __strexh(t1, ptr); if (exflag) goto retry; do { switch (memorder) { case 2: case 4: case 5: _dmb(); break; case 0: case 1: case 3: default: break; } } while (0); return t0;} __attribute__((always_inline)) static inline uint16_t __atomic_fetch_xor_2 (void *ptr, uint16_t val, int memorder) { uint16_t t0, t1; uint32_t exflag = 0; do { switch (memorder) { case 3: case 4: case 5: _dmb(); break; case 0: case 1: case 2: default: break; } } while (0); retry: t0 = __ldrexh(ptr); t1 = t0 ^ val; exflag = __strexh(t1, ptr); if (exflag) goto retry; do { switch (memorder) { case 2: case 4: case 5: _dmb(); break; case 0: case 1: case 3: default: break; } } while (0); return t0;} __attribute__((always_inline)) static inline uint16_t __atomic_fetch_or_2 (void *ptr, uint16_t val, int memorder) { uint16_t t0, t1; uint32_t exflag = 0; do { switch (memorder) { case 3: case 4: case 5: _dmb(); break; case 0: case 1: case 2: default: break; } } while (0); retry: t0 = __ldrexh(ptr); t1 = t0 | val; exflag = __strexh(t1, ptr); if (exflag) goto retry; do { switch (memorder) { case 2: case 4: case 5: _dmb(); break; case 0: case 1: case 3: default: break; } } while (0); return t0;}
 N#endif
@@ -25886,7 +26106,7 @@ N#undef __disable_interrupts
 N#undef __restore_interrupts
 N
 N#endif /* __ATOMICHDR */
-L 561 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/atomic" 2
+L 561 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/atomic" 2
 N#endif
 N
 N#if _LIBCPP_STD_VER > 14
@@ -27584,7 +27804,7 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // _LIBCPP_ATOMIC
-L 659 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/memory" 2
+L 659 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/memory" 2
 N#endif
 N
 N#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
@@ -27595,7 +27815,7 @@ N
 N_LIBCPP_PUSH_MACROS
 X_Pragma("push_macro(\"min\")") _Pragma("push_macro(\"max\")")
 N#include <__undef_macros>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__undef_macros" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros" 1
 N// -*- C++ -*-
 N//===------------------------ __undef_macros ------------------------------===//
 N//
@@ -27630,7 +27850,7 @@ S#endif
 S#endif
 S#undef max
 N#endif
-L 667 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/memory" 2
+L 667 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/memory" 2
 N
 N
 N_LIBCPP_BEGIN_NAMESPACE_STD
@@ -33127,7 +33347,7 @@ N_LIBCPP_POP_MACROS
 X_Pragma("pop_macro(\"min\")") _Pragma("pop_macro(\"max\")")
 N
 N#endif  // _LIBCPP_MEMORY
-L 644 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/algorithm" 2
+L 644 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/algorithm" 2
 N#include <iterator>
 N#include <cstddef>
 N
@@ -33138,7 +33358,7 @@ N#endif
 N#if defined(__TI_COMPILER_VERSION__)
 X#if 1L
 N#include "support/ti/support.h"
-L 1 "C:\ti\ccs930\ccs\tools\compiler\ti-cgt-arm_18.12.5.LTS\include\libcxx\support/ti/support.h" 1
+L 1 "C:\ti\ccs1011\ccs\tools\compiler\ti-cgt-arm_20.2.1.LTS\include\libcxx\support/ti/support.h" 1
 N// -*- C++ -*-
 N//===----------------------- support/ibm/support.h ----------------------===//
 N//
@@ -33274,7 +33494,7 @@ N#define __builtin_clzl(x) (__ti_support<unsigned long>::clz(x))
 N#define __builtin_clzll(x) (__ti_support<unsigned long long>::clz(x))
 N
 N#endif /* !defined(_LIBCPP_SUPPORT_TI___SUPPORT_H) */
-L 652 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/algorithm" 2
+L 652 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/algorithm" 2
 N#endif
 N#if defined(_LIBCPP_COMPILER_MSVC)
 X#if 0L
@@ -33291,7 +33511,7 @@ N
 N_LIBCPP_PUSH_MACROS
 X_Pragma("push_macro(\"min\")") _Pragma("push_macro(\"max\")")
 N#include <__undef_macros>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__undef_macros" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros" 1
 N// -*- C++ -*-
 N//===------------------------ __undef_macros ------------------------------===//
 N//
@@ -33326,7 +33546,7 @@ S#endif
 S#endif
 S#undef max
 N#endif
-L 665 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/algorithm" 2
+L 665 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/algorithm" 2
 N
 N
 N_LIBCPP_BEGIN_NAMESPACE_STD
@@ -35220,7 +35440,7 @@ Ntemplate <class _BidirectionalIterator>
 Ninline _LIBCPP_INLINE_VISIBILITY
 Xinline __attribute__ ((__always_inline__))
 Nvoid
-N__reverse(_BidirectionalIterator __first, _BidirectionalIterator __last, bidirectional_iterator_tag)
+N__reverse_internal(_BidirectionalIterator __first, _BidirectionalIterator __last, bidirectional_iterator_tag)
 N{
 N    while (__first != __last)
 N    {
@@ -35236,7 +35456,7 @@ Ntemplate <class _RandomAccessIterator>
 Ninline _LIBCPP_INLINE_VISIBILITY
 Xinline __attribute__ ((__always_inline__))
 Nvoid
-N__reverse(_RandomAccessIterator __first, _RandomAccessIterator __last, random_access_iterator_tag)
+N__reverse_internal(_RandomAccessIterator __first, _RandomAccessIterator __last, random_access_iterator_tag)
 N{
 N    if (__first != __last)
 N        for (; __first < --__last; ++__first)
@@ -35250,8 +35470,8 @@ Xinline __attribute__ ((__always_inline__))
 Nvoid
 Nreverse(_BidirectionalIterator __first, _BidirectionalIterator __last)
 N{
-N    _VSTD::__reverse(__first, __last, typename iterator_traits<_BidirectionalIterator>::iterator_category());
-X    std::__2::__reverse(__first, __last, typename iterator_traits<_BidirectionalIterator>::iterator_category());
+N    _VSTD::__reverse_internal(__first, __last, typename iterator_traits<_BidirectionalIterator>::iterator_category());
+X    std::__2::__reverse_internal(__first, __last, typename iterator_traits<_BidirectionalIterator>::iterator_category());
 N}
 N
 N// reverse_copy
@@ -35271,7 +35491,7 @@ N// rotate
 N
 Ntemplate <class _ForwardIterator>
 N_ForwardIterator
-N__rotate_left(_ForwardIterator __first, _ForwardIterator __last)
+N__rotate_left_internal(_ForwardIterator __first, _ForwardIterator __last)
 N{
 N    typedef typename iterator_traits<_ForwardIterator>::value_type value_type;
 N    value_type __tmp = _VSTD::move(*__first);
@@ -35404,8 +35624,8 @@ X    if (std::__2::is_trivially_move_assignable<value_type>::value)
 N    {
 N        if (_VSTD::next(__first) == __middle)
 X        if (std::__2::next(__first) == __middle)
-N            return _VSTD::__rotate_left(__first, __last);
-X            return std::__2::__rotate_left(__first, __last);
+N            return _VSTD::__rotate_left_internal(__first, __last);
+X            return std::__2::__rotate_left_internal(__first, __last);
 N    }
 N    return _VSTD::__rotate_forward(__first, __middle, __last);
 X    return std::__2::__rotate_forward(__first, __middle, __last);
@@ -35426,8 +35646,8 @@ X    if (std::__2::is_trivially_move_assignable<value_type>::value)
 N    {
 N        if (_VSTD::next(__first) == __middle)
 X        if (std::__2::next(__first) == __middle)
-N            return _VSTD::__rotate_left(__first, __last);
-X            return std::__2::__rotate_left(__first, __last);
+N            return _VSTD::__rotate_left_internal(__first, __last);
+X            return std::__2::__rotate_left_internal(__first, __last);
 N        if (_VSTD::next(__middle) == __last)
 X        if (std::__2::next(__middle) == __last)
 N            return _VSTD::__rotate_right(__first, __last);
@@ -35457,8 +35677,8 @@ X    if (std::__2::is_trivially_move_assignable<value_type>::value)
 N    {
 N        if (_VSTD::next(__first) == __middle)
 X        if (std::__2::next(__first) == __middle)
-N            return _VSTD::__rotate_left(__first, __last);
-X            return std::__2::__rotate_left(__first, __last);
+N            return _VSTD::__rotate_left_internal(__first, __last);
+X            return std::__2::__rotate_left_internal(__first, __last);
 N        if (_VSTD::next(__middle) == __last)
 X        if (std::__2::next(__middle) == __last)
 N            return _VSTD::__rotate_right(__first, __last);
@@ -39078,9 +39298,9 @@ N_LIBCPP_POP_MACROS
 X_Pragma("pop_macro(\"min\")") _Pragma("pop_macro(\"max\")")
 N
 N#endif  // _LIBCPP_ALGORITHM
-L 57 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__string" 2
+L 57 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__string" 2
 N#include <cstdio>     // For EOF.
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cstdio" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cstdio" 1
 N// -*- C++ -*-
 N//===---------------------------- cstdio ----------------------------------===//
 N//
@@ -39181,7 +39401,7 @@ N*/
 N
 N#include <__config>
 N#include <stdio.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/stdio.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/stdio.h" 1
 N/* -*- C++ -*- */
 N/*===--------------------------- complex.h --------------------------------===*/
 N/*                                                                            */
@@ -39293,7 +39513,7 @@ N#pragma GCC system_header
 N#endif
 N
 N#include_next <stdio.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/stdio.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/stdio.h" 1
 N/*****************************************************************************/
 N/* STDIO.H                                                                   */
 N/*                                                                           */
@@ -39342,7 +39562,7 @@ N#endif
 N
 N#include <_ti_config.h>
 N#include <stdarg.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/stdarg.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/stdarg.h" 1
 N/*****************************************************************************/
 N/* stdarg.h                                                                  */
 N/*                                                                           */
@@ -39429,16 +39649,24 @@ N#pragma diag_pop
 N
 N#endif /* _STDARG */
 N
-L 48 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/stdio.h" 2
+L 48 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/stdio.h" 2
 N
-N#pragma diag_push
-N#pragma CHECK_MISRA("-20.2") /* reuse of standard macros/objects/funcs */
-N#pragma CHECK_MISRA("-20.1") /* redefining reserved identifiers */
-N#pragma CHECK_MISRA("-19.7") /* use function instead of function-like macro */
-N#pragma CHECK_MISRA("-19.4") /* macros should have only simple expansions */
-N#pragma CHECK_MISRA("-19.1") /* include should follow directive or comment */
-N#pragma CHECK_MISRA("-16.3") /* parameters without names */
-N#pragma CHECK_MISRA("-6.3")  /* use size/sign-specific typedefs */
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-20.2\")") /* reuse of standard macros/objects/funcs */
+X_Pragma("CHECK_MISRA(\"-20.2\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-20.1\")") /* redefining reserved identifiers */
+X_Pragma("CHECK_MISRA(\"-20.1\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.7\")") /* use function instead of function-like macro */
+X_Pragma("CHECK_MISRA(\"-19.7\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.4\")") /* macros should have only simple expansions */
+X_Pragma("CHECK_MISRA(\"-19.4\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.1\")") /* include should follow directive or comment */
+X_Pragma("CHECK_MISRA(\"-19.1\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-16.3\")") /* parameters without names */
+X_Pragma("CHECK_MISRA(\"-16.3\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-6.3\")")  /* use size/sign-specific typedefs */
+X_Pragma("CHECK_MISRA(\"-6.3\")")   
 N
 N/*---------------------------------------------------------------------------*/
 N/* Attributes are only available in relaxed ANSI mode.                       */
@@ -39642,76 +39870,76 @@ Nextern _CODE_ACCESS int fprintf(FILE * __restrict _fp,
 Xextern  int fprintf(FILE * __restrict _fp,
 N                                const char * __restrict _format, ...)
 N               __ATTRIBUTE ((__format__ (__printf__, 2, 3)));
-X               __attribute__((__format__ (__printf__, 2, 3)));
+X               ;
 Nextern _CODE_ACCESS int fscanf(FILE * __restrict _fp,
 Xextern  int fscanf(FILE * __restrict _fp,
 N                               const char * __restrict _fmt, ...)
 N               __ATTRIBUTE ((__format__ (__scanf__, 2, 3)));
-X               __attribute__((__format__ (__scanf__, 2, 3)));
+X               ;
 Nextern _CODE_ACCESS int printf(const char * __restrict _format, ...)
 Xextern  int printf(const char * __restrict _format, ...)
 N               __ATTRIBUTE ((__format__ (__printf__, 1, 2)));
-X               __attribute__((__format__ (__printf__, 1, 2)));
+X               ;
 Nextern _CODE_ACCESS int scanf(const char * __restrict _fmt, ...)
 Xextern  int scanf(const char * __restrict _fmt, ...)
 N               __ATTRIBUTE ((__format__ (__scanf__, 1, 2)));
-X               __attribute__((__format__ (__scanf__, 1, 2)));
+X               ;
 Nextern _CODE_ACCESS int sprintf(char * __restrict _string,
 Xextern  int sprintf(char * __restrict _string,
 N                                const char * __restrict _format, ...)
 N               __ATTRIBUTE ((__format__ (__printf__, 2, 3)));
-X               __attribute__((__format__ (__printf__, 2, 3)));
+X               ;
 Nextern _CODE_ACCESS int snprintf(char * __restrict _string, size_t _n,
 Xextern  int snprintf(char * __restrict _string, size_t _n,
 N				 const char * __restrict _format, ...)
 N               __ATTRIBUTE ((__format__ (__printf__, 3, 4)));
-X               __attribute__((__format__ (__printf__, 3, 4)));
+X               ;
 Nextern _CODE_ACCESS int sscanf(const char * __restrict _str,
 Xextern  int sscanf(const char * __restrict _str,
 N                               const char * __restrict _fmt, ...)
 N               __ATTRIBUTE ((__format__ (__scanf__, 2, 3)));
-X               __attribute__((__format__ (__scanf__, 2, 3)));
+X               ;
 Nextern _CODE_ACCESS int vfprintf(FILE * __restrict _fp,
 Xextern  int vfprintf(FILE * __restrict _fp,
 N                                 const char * __restrict _format, va_list _ap)
 N               __ATTRIBUTE ((__format__ (__printf__, 2, 0)));
-X               __attribute__((__format__ (__printf__, 2, 0)));
+X               ;
 Nextern _CODE_ACCESS int vfscanf(FILE * __restrict _fp,
 Xextern  int vfscanf(FILE * __restrict _fp,
 N                                const char * __restrict _fmt, va_list _ap)
 N               __ATTRIBUTE ((__format__ (__scanf__, 2, 0)));
-X               __attribute__((__format__ (__scanf__, 2, 0)));
+X               ;
 Nextern _CODE_ACCESS int vprintf(const char * __restrict _format, va_list _ap)
 Xextern  int vprintf(const char * __restrict _format, va_list _ap)
 N               __ATTRIBUTE ((__format__ (__printf__, 1, 0)));
-X               __attribute__((__format__ (__printf__, 1, 0)));
+X               ;
 Nextern _CODE_ACCESS int vscanf(const char * __restrict _format, va_list _ap)
 Xextern  int vscanf(const char * __restrict _format, va_list _ap)
 N               __ATTRIBUTE ((__format__ (__scanf__, 1, 0)));
-X               __attribute__((__format__ (__scanf__, 1, 0)));
+X               ;
 Nextern _CODE_ACCESS int vsprintf(char * __restrict _string,
 Xextern  int vsprintf(char * __restrict _string,
 N                                 const char * __restrict _format, va_list _ap)
 N               __ATTRIBUTE ((__format__ (__printf__, 2, 0)));
-X               __attribute__((__format__ (__printf__, 2, 0)));
+X               ;
 Nextern _CODE_ACCESS int vsnprintf(char * __restrict _string, size_t _n,
 Xextern  int vsnprintf(char * __restrict _string, size_t _n,
 N				  const char * __restrict _format, va_list _ap)
 N               __ATTRIBUTE ((__format__ (__printf__, 3, 0)));
-X               __attribute__((__format__ (__printf__, 3, 0)));
+X               ;
 Nextern _CODE_ACCESS int vsscanf(const char * __restrict _str,
 Xextern  int vsscanf(const char * __restrict _str,
 N                                const char * __restrict _fmt, va_list _ap)
 N               __ATTRIBUTE ((__format__ (__scanf__, 2, 0)));
-X               __attribute__((__format__ (__scanf__, 2, 0)));
+X               ;
 Nextern _CODE_ACCESS int	asprintf(char **, const char *, ...)
 Xextern  int	asprintf(char **, const char *, ...)
 N               __ATTRIBUTE ((__format__ (__printf__, 2, 3)));
-X               __attribute__((__format__ (__printf__, 2, 3)));
+X               ;
 Nextern _CODE_ACCESS int	vasprintf(char **, const char *, va_list)
 Xextern  int	vasprintf(char **, const char *, va_list)
 N               __ATTRIBUTE ((__format__ (__printf__, 2, 0)));
-X               __attribute__((__format__ (__printf__, 2, 0)));
+X               ;
 N
 N/****************************************************************************/
 N/* CHARACTER INPUT/OUTPUT FUNCTIONS                                         */
@@ -39794,8 +40022,6 @@ N#ifdef __cplusplus
 N} /* extern "C" */
 N#endif  /* __cplusplus */
 N
-N#pragma diag_pop
-N
 N#if defined(_AEABI_PORTABILITY_LEVEL) && _AEABI_PORTABILITY_LEVEL != 0 && \
 N   !defined(_AEABI_PORTABLE)
 X#if 0L && _AEABI_PORTABILITY_LEVEL != 0 &&    !0L
@@ -39812,6 +40038,15 @@ N#include <sys/cdefs.h>
 N#endif
 N
 N/*----------------------------------------------------------------------------*/
+N/* If sys/_types.h is available, include it. xlocale.h assumes this file will */
+N/* have already provided a definition of __va_list.                           */
+N/*----------------------------------------------------------------------------*/
+N#if __has_include(<sys/_types.h>)
+X#if 1
+N#include <sys/_types.h>
+N#endif
+N
+N/*----------------------------------------------------------------------------*/
 N/* Include xlocale/_stdio.h if xlocale.h has already been included. This is   */
 N/* to conform with FreeBSD's xlocale implementation.                          */
 N/*----------------------------------------------------------------------------*/
@@ -39821,8 +40056,11 @@ S#include <xlocale/_stdio.h>
 S__END_DECLS
 N#endif
 N
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
+N
 N#endif  /* #ifndef _STDIO_H_ */
-L 109 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/stdio.h" 2
+L 109 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/stdio.h" 2
 N
 N#ifdef __cplusplus
 N
@@ -39843,7 +40081,7 @@ N
 N#endif
 N
 N#endif  /* _LIBCPP_STDIO_H */
-L 101 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cstdio" 2
+L 101 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cstdio" 2
 N
 N#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
 X#if !0L
@@ -39920,7 +40158,7 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // _LIBCPP_CSTDIO
-L 58 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__string" 2
+L 58 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__string" 2
 N#include <memory>     // for __murmur2_or_cityhash
 N
 N#include <__debug>
@@ -39933,7 +40171,7 @@ N
 N_LIBCPP_PUSH_MACROS
 X_Pragma("push_macro(\"min\")") _Pragma("push_macro(\"max\")")
 N#include <__undef_macros>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__undef_macros" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros" 1
 N// -*- C++ -*-
 N//===------------------------ __undef_macros ------------------------------===//
 N//
@@ -39968,7 +40206,7 @@ S#endif
 S#endif
 S#undef max
 N#endif
-L 68 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__string" 2
+L 68 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__string" 2
 N
 N
 N_LIBCPP_BEGIN_NAMESPACE_STD
@@ -40218,8 +40456,7 @@ Nchar_traits<char>::find(const char_type* __s, size_t __n, const char_type& __a)
 Xchar_traits<char>::find(const char_type* __s, size_t __n, const char_type& __a) noexcept
 N{
 N    if (__n == 0)
-N        return NULL;
-X        return 0;
+N        return 0;
 N#if __has_feature(cxx_constexpr_string_builtins)
 X#if 0
 S    return __builtin_char_memchr(__s, to_int_type(__a), __n);
@@ -40233,7 +40470,7 @@ S        if (eq(*__s, __a))
 S            return __s;
 S        ++__s;
 S    }
-S    return NULL;
+S    return 0;
 N#endif
 N}
 N
@@ -40358,8 +40595,7 @@ Nchar_traits<wchar_t>::find(const char_type* __s, size_t __n, const char_type& _
 Xchar_traits<wchar_t>::find(const char_type* __s, size_t __n, const char_type& __a) noexcept
 N{
 N    if (__n == 0)
-N        return NULL;
-X        return 0;
+N        return 0;
 N#if __has_feature(cxx_constexpr_string_builtins)
 X#if 0
 S        return __builtin_wmemchr(__s, __a, __n);
@@ -40373,7 +40609,7 @@ S        if (eq(*__s, __a))
 S            return __s;
 S        ++__s;
 S    }
-S    return NULL;
+S    return 0;
 N#endif
 N}
 N
@@ -40690,7 +40926,7 @@ N// __str_find
 Ntemplate<class _CharT, class _SizeT, class _Traits, _SizeT __npos>
 Ninline _SizeT _LIBCPP_CONSTEXPR_AFTER_CXX11 _LIBCPP_INLINE_VISIBILITY
 Xinline _SizeT constexpr __attribute__ ((__always_inline__))
-N__str_find(const _CharT *__p, _SizeT __sz, 
+N__str_find(const _CharT *__p, _SizeT __sz,
 N             _CharT __c, _SizeT __pos) _NOEXCEPT
 X             _CharT __c, _SizeT __pos) noexcept
 N{
@@ -40745,7 +40981,7 @@ N
 Ntemplate<class _CharT, class _SizeT, class _Traits, _SizeT __npos>
 Ninline _SizeT _LIBCPP_CONSTEXPR_AFTER_CXX11 _LIBCPP_INLINE_VISIBILITY
 Xinline _SizeT constexpr __attribute__ ((__always_inline__))
-N__str_find(const _CharT *__p, _SizeT __sz, 
+N__str_find(const _CharT *__p, _SizeT __sz,
 N       const _CharT* __s, _SizeT __pos, _SizeT __n) _NOEXCEPT
 X       const _CharT* __s, _SizeT __pos, _SizeT __n) noexcept
 N{
@@ -40769,7 +41005,7 @@ N
 Ntemplate<class _CharT, class _SizeT, class _Traits, _SizeT __npos>
 Ninline _SizeT _LIBCPP_CONSTEXPR_AFTER_CXX11 _LIBCPP_INLINE_VISIBILITY
 Xinline _SizeT constexpr __attribute__ ((__always_inline__))
-N__str_rfind(const _CharT *__p, _SizeT __sz, 
+N__str_rfind(const _CharT *__p, _SizeT __sz,
 N              _CharT __c, _SizeT __pos) _NOEXCEPT
 X              _CharT __c, _SizeT __pos) noexcept
 N{
@@ -40790,7 +41026,7 @@ N
 Ntemplate<class _CharT, class _SizeT, class _Traits, _SizeT __npos>
 Ninline _SizeT _LIBCPP_CONSTEXPR_AFTER_CXX11 _LIBCPP_INLINE_VISIBILITY
 Xinline _SizeT constexpr __attribute__ ((__always_inline__))
-N__str_rfind(const _CharT *__p, _SizeT __sz, 
+N__str_rfind(const _CharT *__p, _SizeT __sz,
 N        const _CharT* __s, _SizeT __pos, _SizeT __n) _NOEXCEPT
 X        const _CharT* __s, _SizeT __pos, _SizeT __n) noexcept
 N{
@@ -40802,7 +41038,7 @@ N    else
 N        __pos = __sz;
 N    const _CharT* __r = _VSTD::__find_end(
 X    const _CharT* __r = std::__2::__find_end(
-N                  __p, __p + __pos, __s, __s + __n, _Traits::eq, 
+N                  __p, __p + __pos, __s, __s + __n, _Traits::eq,
 N                        random_access_iterator_tag(), random_access_iterator_tag());
 N    if (__n > 0 && __r == __p + __pos)
 N        return __npos;
@@ -40945,7 +41181,7 @@ N    _CharT  __escape;
 N
 N    __quoted_output_proxy(_Iter __f, _Iter __l, _CharT __d, _CharT __e)
 N    : __first(__f), __last(__l), __delim(__d), __escape(__e) {}
-N    //  This would be a nice place for a string_ref 
+N    //  This would be a nice place for a string_ref
 N};
 N
 N_LIBCPP_END_NAMESPACE_STD
@@ -40955,7 +41191,7 @@ N_LIBCPP_POP_MACROS
 X_Pragma("pop_macro(\"min\")") _Pragma("pop_macro(\"max\")")
 N
 N#endif  // _LIBCPP___STRING
-L 170 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/string_view" 2
+L 170 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/string_view" 2
 N#include <algorithm>
 N#include <iterator>
 N#include <limits>
@@ -40970,7 +41206,7 @@ N
 N_LIBCPP_PUSH_MACROS
 X_Pragma("push_macro(\"min\")") _Pragma("push_macro(\"max\")")
 N#include <__undef_macros>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__undef_macros" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros" 1
 N// -*- C++ -*-
 N//===------------------------ __undef_macros ------------------------------===//
 N//
@@ -41005,7 +41241,7 @@ S#endif
 S#endif
 S#undef max
 N#endif
-L 182 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/string_view" 2
+L 182 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/string_view" 2
 N
 N
 N_LIBCPP_BEGIN_NAMESPACE_STD
@@ -41787,12 +42023,12 @@ N_LIBCPP_POP_MACROS
 X_Pragma("pop_macro(\"min\")") _Pragma("pop_macro(\"max\")")
 N
 N#endif // _LIBCPP_STRING_VIEW
-L 471 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/string" 2
+L 471 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/string" 2
 N#include <iosfwd>
 N#include <cstring>
 N#include <cstdio>  // For EOF.
 N#include <cwchar>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cwchar" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cwchar" 1
 N// -*- C++ -*-
 N//===--------------------------- cwchar -----------------------------------===//
 N//
@@ -41900,7 +42136,7 @@ N*/
 N
 N#include <__config>
 N#include <cwctype>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cwctype" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cwctype" 1
 N// -*- C++ -*-
 N//===--------------------------- cwctype ----------------------------------===//
 N//
@@ -41955,7 +42191,7 @@ N*/
 N
 N#include <__config>
 N#include <cctype>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cctype" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cctype" 1
 N// -*- C++ -*-
 N//===---------------------------- cctype ----------------------------------===//
 N//
@@ -41995,7 +42231,7 @@ N*/
 N
 N#include <__config>
 N#include <ctype.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/ctype.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/ctype.h" 1
 N/* -*- C++ -*- */
 N/*===--------------------------- complex.h --------------------------------===*/
 N/*                                                                            */
@@ -42036,7 +42272,7 @@ N#pragma GCC system_header
 N#endif
 N
 N#include_next <ctype.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/ctype.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/ctype.h" 1
 N/*****************************************************************************/
 N/* ctype.h                                                                   */
 N/*                                                                           */
@@ -42094,12 +42330,18 @@ S#error "Header file <ctype.h> not supported by CLA compiler"
 S#endif
 N#endif
 N
-N#pragma diag_push
-N#pragma CHECK_MISRA("-6.3") /* standard types required for standard headers */
-N#pragma CHECK_MISRA("-8.5") /* need to define inline function */
-N#pragma CHECK_MISRA("-19.1") /* #includes required for implementation */
-N#pragma CHECK_MISRA("-19.7") /* macros required for implementation */
-N#pragma CHECK_MISRA("-20.2") /* standard headers must define standard names */
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-6.3\")") /* standard types required for standard headers */
+X_Pragma("CHECK_MISRA(\"-6.3\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-8.5\")") /* need to define inline function */
+X_Pragma("CHECK_MISRA(\"-8.5\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.1\")") /* #includes required for implementation */
+X_Pragma("CHECK_MISRA(\"-19.1\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.7\")") /* macros required for implementation */
+X_Pragma("CHECK_MISRA(\"-19.7\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-20.2\")") /* standard headers must define standard names */
+X_Pragma("CHECK_MISRA(\"-20.2\")")  
 N
 N#ifdef __cplusplus
 Nextern "C"
@@ -42113,7 +42355,7 @@ N/************************************************************************/
 N/*   FUNCTION DECLARATIONS                                              */
 N/************************************************************************/
 N#include "_isfuncdcl.h"
-L 1 "C:\ti\ccs930\ccs\tools\compiler\ti-cgt-arm_18.12.5.LTS\include\_isfuncdcl.h" 1
+L 1 "C:\ti\ccs1011\ccs\tools\compiler\ti-cgt-arm_20.2.1.LTS\include\_isfuncdcl.h" 1
 N/****************************************************************************/
 N/*  _ISFUNCDCL.H                                                            */
 N/*                                                                          */
@@ -42186,7 +42428,7 @@ N_IDECL int toascii(int _c);
 Xextern  int toascii(int _c);
 N
 N#endif
-L 75 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/ctype.h" 2
+L 75 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/ctype.h" 2
 N
 N_IDECL int toupper(int ch);
 Xextern  int toupper(int ch);
@@ -42324,10 +42566,11 @@ X#if 0L && _AEABI_PORTABILITY_LEVEL != 0 &&    !0L
 S#define _AEABI_PORTABLE
 N#endif
 N
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N
 N#endif /* ! _CTYPE_H_ */
-L 40 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/ctype.h" 2
+L 40 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/ctype.h" 2
 N
 N#ifdef __cplusplus
 N
@@ -42349,7 +42592,7 @@ N
 N#endif
 N
 N#endif  /* _LIBCPP_CTYPE_H */
-L 40 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cctype" 2
+L 40 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cctype" 2
 N
 N#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
 X#if !0L
@@ -42435,9 +42678,9 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // _LIBCPP_CCTYPE
-L 55 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cwctype" 2
+L 55 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cwctype" 2
 N#include <wctype.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/wctype.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/wctype.h" 1
 N/* -*- C++ -*- */
 N/*===--------------------------- complex.h --------------------------------===*/
 N/*                                                                            */
@@ -42493,7 +42736,7 @@ N#pragma GCC system_header
 N#endif
 N
 N#include_next <wctype.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/wctype.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/wctype.h" 1
 N/*****************************************************************************/
 N/* wctype.h                                                                  */
 N/*                                                                           */
@@ -42540,6 +42783,15 @@ N#ifndef _WCTYPE_H_
 N#define _WCTYPE_H_
 N
 N#include <_ti_config.h>
+N
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-6.3\")")
+X_Pragma("CHECK_MISRA(\"-6.3\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.1\")")
+X_Pragma("CHECK_MISRA(\"-19.1\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.15\")")
+X_Pragma("CHECK_MISRA(\"-19.15\")")
 N
 N#if defined(__TMS320C2000__)
 X#if 0L
@@ -42625,8 +42877,6 @@ N#ifdef __cplusplus
 N} /* extern "C" */
 N#endif /* __cplusplus */
 N
-N#endif /* ! _WCTYPE_H_ */
-N
 N/*----------------------------------------------------------------------------*/
 N/* If sys/cdefs.h is available, go ahead and include it. xlocale.h assumes    */
 N/* this file will have already included sys/cdefs.h.                          */
@@ -42646,7 +42896,7 @@ N__BEGIN_DECLS
 Xextern "C" {
 N#define _XLOCALE_WCTYPES 1
 N#include <xlocale/_ctype.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/xlocale/_ctype.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/xlocale/_ctype.h" 1
 N/*****************************************************************************/
 N/*  _CTYPE.H                                                                 */
 N/*                                                                           */
@@ -42721,6 +42971,33 @@ N
 N#if	(defined(_XLOCALE_WCTYPES) && !defined(_XLOCALE_WCTYPE_H)) || \
 N	(!defined(_XLOCALE_WCTYPES) && !defined(_XLOCALE_CTYPE_H))
 X#if	(1L && !0L) || 	(!1L && !0L)
+N
+N#include <_ti_config.h>
+N
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-6.3\")")
+X_Pragma("CHECK_MISRA(\"-6.3\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-8.1\")")
+X_Pragma("CHECK_MISRA(\"-8.1\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-8.5\")")
+X_Pragma("CHECK_MISRA(\"-8.5\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-10.1\")")
+X_Pragma("CHECK_MISRA(\"-10.1\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-16.3\")")
+X_Pragma("CHECK_MISRA(\"-16.3\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-16.4\")")
+X_Pragma("CHECK_MISRA(\"-16.4\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.4\")")
+X_Pragma("CHECK_MISRA(\"-19.4\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.6\")")
+X_Pragma("CHECK_MISRA(\"-19.6\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.7\")")
+X_Pragma("CHECK_MISRA(\"-19.7\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.12\")")
+X_Pragma("CHECK_MISRA(\"-19.12\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.13\")")
+X_Pragma("CHECK_MISRA(\"-19.13\")")
 N
 N#ifdef _XLOCALE_WCTYPES
 N#define _XLOCALE_WCTYPE_H
@@ -42837,14 +43114,23 @@ S{
 S   return toupper(__c);
 S}
 N#endif
+N
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
+N
 N#endif /* (defined(_XLOCALE_WCTYPES) && !defined(_XLOCALE_WCTYPE_H)) || \
 N	(!defined(_XLOCALE_WCTYPES) && !defined(_XLOCALE_CTYPE_H)) */
 X#endif  
-L 129 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/wctype.h" 2
+L 132 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/wctype.h" 2
 N__END_DECLS
 X}
 N#endif
-L 55 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/wctype.h" 2
+N
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
+N
+N#endif /* ! _WCTYPE_H_ */
+L 55 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/wctype.h" 2
 N
 N#ifdef __cplusplus
 N
@@ -42870,7 +43156,7 @@ N
 N#endif  /* __cplusplus */
 N
 N#endif  /* _LIBCPP_WCTYPE_H */
-L 56 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cwctype" 2
+L 56 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cwctype" 2
 N
 N#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
 X#if !0L
@@ -42906,9 +43192,9 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // _LIBCPP_CWCTYPE
-L 108 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cwchar" 2
+L 108 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cwchar" 2
 N#include <wchar.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/wchar.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/wchar.h" 1
 N/* -*- C++ -*- */
 N/*===--------------------------- complex.h --------------------------------===*/
 N/*                                                                            */
@@ -43093,7 +43379,7 @@ S}  /* extern "C++" */
 S#endif  /* __cplusplus && _LIBCPP_MSVCRT */
 S
 N#endif  /* _LIBCPP_WCHAR_H */
-L 109 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cwchar" 2
+L 109 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cwchar" 2
 N
 N#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
 X#if !0L
@@ -43182,7 +43468,7 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // _LIBCPP_CWCHAR
-L 475 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/string" 2
+L 475 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/string" 2
 N#include <algorithm>
 N#include <iterator>
 N#include <utility>
@@ -43205,7 +43491,7 @@ N
 N_LIBCPP_PUSH_MACROS
 X_Pragma("push_macro(\"min\")") _Pragma("push_macro(\"max\")")
 N#include <__undef_macros>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__undef_macros" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros" 1
 N// -*- C++ -*-
 N//===------------------------ __undef_macros ------------------------------===//
 N//
@@ -43240,7 +43526,7 @@ S#endif
 S#endif
 S#undef max
 N#endif
-L 495 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/string" 2
+L 495 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/string" 2
 N
 N
 N_LIBCPP_BEGIN_NAMESPACE_STD
@@ -47388,7 +47674,7 @@ N
 N#endif  // _LIBCPP_STRING
 L 12 "..\PID.h" 2
 N#include <sstream>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/sstream" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/sstream" 1
 N// -*- C++ -*-
 N//===--------------------------- sstream ----------------------------------===//
 N//
@@ -47563,7 +47849,7 @@ N*/
 N
 N#include <__config>
 N#include <ostream>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/ostream" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/ostream" 1
 N// -*- C++ -*-
 N//===-------------------------- ostream -----------------------------------===//
 N//
@@ -47702,7 +47988,7 @@ N*/
 N
 N#include <__config>
 N#include <ios>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/ios" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/ios" 1
 N// -*- C++ -*-
 N//===---------------------------- ios -------------------------------------===//
 N//
@@ -47919,7 +48205,7 @@ N
 N#include <__config>
 N#include <iosfwd>
 N#include <__locale>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__locale" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__locale" 1
 N// -*- C++ -*-
 N//===----------------------------------------------------------------------===//
 N//
@@ -47938,7 +48224,7 @@ N#include <string>
 N#include <memory>
 N#include <utility>
 N#include <mutex>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/mutex" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/mutex" 1
 N// -*- C++ -*-
 N//===--------------------------- mutex ------------------------------------===//
 N//
@@ -48130,7 +48416,7 @@ N*/
 N
 N#include <__config>
 N#include <__mutex_base>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__mutex_base" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__mutex_base" 1
 N// -*- C++ -*-
 N//===----------------------------------------------------------------------===//
 N//
@@ -48146,7 +48432,7 @@ N#define _LIBCPP___MUTEX_BASE
 N
 N#include <__config>
 N#include <chrono>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/chrono" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/chrono" 1
 N// -*- C++ -*-
 N//===---------------------------- chrono ----------------------------------===//
 N//
@@ -48450,7 +48736,7 @@ N*/
 N
 N#include <__config>
 N#include <ctime>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/ctime" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/ctime" 1
 N// -*- C++ -*-
 N//===---------------------------- ctime -----------------------------------===//
 N//
@@ -48499,7 +48785,7 @@ N*/
 N
 N#include <__config>
 N#include <time.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/time.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/time.h" 1
 N/*****************************************************************************/
 N/* time.h                                                                    */
 N/*                                                                           */
@@ -48542,7 +48828,7 @@ N#define _TIME_H_
 N
 N#include <_ti_config.h>
 N#include <abi_prefix.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/abi_prefix.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/abi_prefix.h" 1
 N/*****************************************************************************/
 N/* ABI_PREFIX.H                                                              */
 N/*                                                                           */
@@ -48612,7 +48898,7 @@ S#error "TARGET NOT DEFINED"
 N#endif
 N
 N#endif
-L 43 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/time.h" 2
+L 43 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/time.h" 2
 N#if __has_include(<sys/_types.h>)
 X#if 1
 N#include <sys/_types.h>
@@ -48797,7 +49083,7 @@ S}
 N#endif /* _INLINE || _CTIME64_IMPLEMENTATION */
 N
 N/*-----------------------------------------------------------------------*/
-N/* The user may define __TI_TIME_USES_64=1 to redirects all time        */
+N/* The user may define __TI_TIME_USES_64=1 to redirect all time          */
 N/* functions to time64 functions.                                        */
 N/*-----------------------------------------------------------------------*/
 N#if defined(_TIME_IMPLEMENTATION) && defined(__TI_TIME_USES_64) && __TI_TIME_USES_64
@@ -48837,6 +49123,10 @@ N#ifdef __cplusplus
 N} /* extern "C" */
 N#endif /* __cplusplus */
 N
+N/*---------------------------------------------------------------------------*/
+N/* A header file conforming to ARM CLIB ABI (GENC-003539) should             */
+N/* define _AEABI_PORTABLE when _AEABI_PORTABILITY_LEVEL is defined.          */
+N/*---------------------------------------------------------------------------*/
 N#if defined(_AEABI_PORTABILITY_LEVEL) && _AEABI_PORTABILITY_LEVEL != 0 && \
 N   !defined(_AEABI_PORTABLE)
 X#if 0L && _AEABI_PORTABILITY_LEVEL != 0 &&    !0L
@@ -48861,7 +49151,7 @@ X#if (1L && 200809 >= 200809) || 0L
 N__BEGIN_DECLS
 Xextern "C" {
 N#include <xlocale/_time.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/xlocale/_time.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/xlocale/_time.h" 1
 N/*-
 N * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
 N *
@@ -48923,14 +49213,14 @@ S           struct tm * __restrict, locale_t);
 S
 S#endif /* _XLOCALE_LOCALE2_H */
 N#endif /* _XLOCALE_H_ */
-L 253 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/time.h" 2
+L 257 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/time.h" 2
 N__END_DECLS
 X}
 N#endif
 N
 N#endif /* _TIME_H_ */
 N
-L 49 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/ctime" 2
+L 49 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/ctime" 2
 N
 N#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
 X#if !0L
@@ -48960,10 +49250,10 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // _LIBCPP_CTIME
-L 304 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/chrono" 2
+L 304 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/chrono" 2
 N#include <type_traits>
 N#include <ratio>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/ratio" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/ratio" 1
 N// -*- C++ -*-
 N//===---------------------------- ratio -----------------------------------===//
 N//
@@ -49047,7 +49337,7 @@ N
 N#include <__config>
 N#include <cstdint>
 N#include <climits>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/climits" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/climits" 1
 N// -*- C++ -*-
 N//===--------------------------- climits ----------------------------------===//
 N//
@@ -49090,7 +49380,7 @@ N*/
 N
 N#include <__config>
 N#include <limits.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/limits.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/limits.h" 1
 N/* -*- C++ -*- */
 N/*===--------------------------- complex.h --------------------------------===*/
 N/*                                                                            */
@@ -49140,7 +49430,7 @@ N#endif
 N
 N#ifndef __GNUC__
 N#include_next <limits.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/limits.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/limits.h" 1
 N/*****************************************************************************/
 N/* limits.h                                                                  */
 N/*                                                                           */
@@ -49181,8 +49471,12 @@ N
 N#ifndef _LIMITS_H_
 N#define _LIMITS_H_
 N
-N#pragma diag_push
-N#pragma CHECK_MISRA("-20.1") /* standard headers must define standard names */
+N#include <_ti_config.h>
+N
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-20.1\")") /* standard headers must define standard names */
+X_Pragma("CHECK_MISRA(\"-20.1\")")  
 N
 N#if defined(__TMS320C28XX_CLA__)
 X#if 0L
@@ -49203,10 +49497,8 @@ N#define SCHAR_MAX              127       /* MAX VALUE FOR SIGNED CHAR        */
 N#define UCHAR_MAX              255       /* MAX VALUE FOR UNSIGNED CHAR      */
 N#endif
 N
-N#if (!defined(__TMS320C2000__) && \
-N    !(defined(__TMS320C6X__) && !defined(__C6X_MIGRATION__))) && \
-N    (defined(__unsigned_chars__) || defined(__CHAR_UNSIGNED__))
-X#if (!0L &&     !(0L && !0L)) &&     (1L || 0L)
+N#if defined(__CHAR_UNSIGNED__) || defined(__TI_PROPRIETARY_UNSIGNED_CHARS__)
+X#if 0L || 1L
 N#define CHAR_MIN                 0       /* MIN VALUE FOR CHAR               */
 N#define CHAR_MAX        (UCHAR_MAX)      /* MAX VALUE FOR CHAR               */
 N#else
@@ -49276,7 +49568,8 @@ N#define LLONG_MIN         (-LLONG_MAX-1) /* MIN VALUE FOR LONG LONG          */
 N#define LLONG_MAX    9223372036854775807 /* MAX VALUE FOR LONG LONG          */
 N#define ULLONG_MAX 18446744073709551615U /* MAX VALUE FOR UNSIGNED LONG LONG */
 N
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N
 N#if defined(_AEABI_PORTABILITY_LEVEL) && _AEABI_PORTABILITY_LEVEL != 0 && \
 N   !defined(_AEABI_PORTABLE)
@@ -49286,7 +49579,7 @@ N#endif
 N
 N#endif /* #ifndef _LIMITS_H_ */
 N
-L 49 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/limits.h" 2
+L 49 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/limits.h" 2
 N#else
 S/*
 S*  GCC header limits.h recursively includes itself through another header called
@@ -49306,7 +49599,7 @@ S#include_next <limits.h>
 N#endif /* __GNUC__ */
 N
 N#endif  /* _LIBCPP_LIMITS_H */
-L 43 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/climits" 2
+L 43 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/climits" 2
 N
 N#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
 X#if !0L
@@ -49314,7 +49607,7 @@ N#pragma GCC system_header
 N#endif
 N
 N#endif  // _LIBCPP_CLIMITS
-L 84 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/ratio" 2
+L 84 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/ratio" 2
 N#include <type_traits>
 N
 N#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
@@ -49325,7 +49618,7 @@ N
 N_LIBCPP_PUSH_MACROS
 X_Pragma("push_macro(\"min\")") _Pragma("push_macro(\"max\")")
 N#include <__undef_macros>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__undef_macros" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros" 1
 N// -*- C++ -*-
 N//===------------------------ __undef_macros ------------------------------===//
 N//
@@ -49360,7 +49653,7 @@ S#endif
 S#endif
 S#undef max
 N#endif
-L 92 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/ratio" 2
+L 92 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/ratio" 2
 N
 N
 N_LIBCPP_BEGIN_NAMESPACE_STD
@@ -49828,7 +50121,7 @@ N_LIBCPP_POP_MACROS
 X_Pragma("pop_macro(\"min\")") _Pragma("pop_macro(\"max\")")
 N
 N#endif  // _LIBCPP_RATIO
-L 306 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/chrono" 2
+L 306 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/chrono" 2
 N#include <limits>
 N
 N#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
@@ -49839,7 +50132,7 @@ N
 N_LIBCPP_PUSH_MACROS
 X_Pragma("push_macro(\"min\")") _Pragma("push_macro(\"max\")")
 N#include <__undef_macros>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__undef_macros" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros" 1
 N// -*- C++ -*-
 N//===------------------------ __undef_macros ------------------------------===//
 N//
@@ -49874,7 +50167,7 @@ S#endif
 S#endif
 S#undef max
 N#endif
-L 314 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/chrono" 2
+L 314 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/chrono" 2
 N
 N
 N_LIBCPP_BEGIN_NAMESPACE_STD
@@ -50833,9 +51126,9 @@ N_LIBCPP_POP_MACROS
 X_Pragma("pop_macro(\"min\")") _Pragma("pop_macro(\"max\")")
 N
 N#endif  // _LIBCPP_CHRONO
-L 16 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__mutex_base" 2
+L 16 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__mutex_base" 2
 N#include <system_error>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/system_error" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/system_error" 1
 N// -*- C++ -*-
 N//===---------------------------- system_error ----------------------------===//
 N//
@@ -51065,7 +51358,7 @@ N*/
 N
 N#include <__config>
 N#include <cerrno>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cerrno" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cerrno" 1
 N// -*- C++ -*-
 N//===-------------------------- cerrno ------------------------------------===//
 N//
@@ -51093,7 +51386,7 @@ N*/
 N
 N#include <__config>
 N#include <errno.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/errno.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/errno.h" 1
 N/* -*- C++ -*- */
 N/*===--------------------------- complex.h --------------------------------===*/
 N/*                                                                            */
@@ -51127,7 +51420,7 @@ N#pragma GCC system_header
 N#endif
 N
 N#include_next <errno.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/errno.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/errno.h" 1
 N/*****************************************************************************/
 N/*  ERRNO.H                                                                  */
 N/*                                                                           */
@@ -51168,6 +51461,8 @@ N
 N#ifndef _ERRNO
 N#define _ERRNO
 N
+N#include <_ti_config.h>
+N
 N#if defined(__TMS320C2000__)
 X#if 0L
 S#if defined(__TMS320C28XX_CLA__)
@@ -51175,20 +51470,24 @@ S#error "Header file <errno.h> not supported by CLA compiler"
 S#endif
 N#endif
 N
-N#pragma diag_push
-N#pragma CHECK_MISRA("-6.3") /* standard types required for standard headers */
-N#pragma CHECK_MISRA("-19.1") /* #includes required for implementation */
-N#pragma CHECK_MISRA("-20.1") /* standard headers must define standard names */
-N#pragma CHECK_MISRA("-20.2") /* standard headers must define standard names */
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-6.3\")") /* standard types required for standard headers */
+X_Pragma("CHECK_MISRA(\"-6.3\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.1\")") /* #includes required for implementation */
+X_Pragma("CHECK_MISRA(\"-19.1\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-20.1\")") /* standard headers must define standard names */
+X_Pragma("CHECK_MISRA(\"-20.1\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-20.2\")") /* standard headers must define standard names */
+X_Pragma("CHECK_MISRA(\"-20.2\")")  
 N
 N#ifdef __cplusplus
 Nextern "C"
 N{
 N#endif /* __cplusplus */
 N
-N#include <_ti_config.h>
 N#include <_tls.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/_tls.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/_tls.h" 1
 N/*****************************************************************************/
 N/*  _tls.h                                                                   */
 N/*                                                                           */
@@ -51230,10 +51529,14 @@ N#define __TLS_H
 N
 N#include <_ti_config.h>
 N
-N#pragma diag_push
-N#pragma CHECK_MISRA("-19.4") /* macros required for implementation */
-N#pragma CHECK_MISRA("-19.7") /* macros required for implementation */
-N#pragma CHECK_MISRA("-19.10") /* need types as macro arguments */
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.4\")") /* macros required for implementation */
+X_Pragma("CHECK_MISRA(\"-19.4\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.7\")") /* macros required for implementation */
+X_Pragma("CHECK_MISRA(\"-19.7\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.10\")") /* need types as macro arguments */
+X_Pragma("CHECK_MISRA(\"-19.10\")")  
 N
 N/*****************************************************************************/
 N/* __TI_TLS__ - parser-generated symbol indicates compiler support for       */
@@ -51271,10 +51574,11 @@ N#define __TI_TLS_ARR(name) \
 N        (&(name[0]))
 X#define __TI_TLS_ARR(name)         (&(name[0]))
 N
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N
 N#endif /* __TLS_H */
-L 60 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/errno.h" 2
+L 61 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/errno.h" 2
 N
 N#if ((defined(__TMS320C2000__) && !defined(__TI_EABI__)) || defined(__PRU__) || \
 N     defined(__ARP32__))
@@ -51487,12 +51791,12 @@ S
 S    #define errno (* __c6xabi_errno_addr())
 S#else
 S    extern _DATA_ACCESS int errno;
-S    #pragma diag_push
+S    _TI_PROPRIETARY_PRAGMA("diag_push")
 S    /* errno is not allowed under MISRA, anyway */
-S    #pragma CHECK_MISRA("-5.6") /* duplicated name in another scope (errno) */
-S    #pragma CHECK_MISRA("-19.4") /* macro expands to parenthesized */
+S    _TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-5.6\")") /* duplicated name in another scope (errno) */
+S    _TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.4\")") /* macro expands to parenthesized */
 S    #define errno errno
-S    #pragma diag_pop
+S    _TI_PROPRIETARY_PRAGMA("diag_pop")
 N#endif
 N
 N#ifdef __cplusplus
@@ -51505,10 +51809,11 @@ X#if 0L && _AEABI_PORTABILITY_LEVEL != 0 &&    !0L
 S#define _AEABI_PORTABLE
 N#endif
 N
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N
 N#endif  /* _ERRNO */
-L 33 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/errno.h" 2
+L 33 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/errno.h" 2
 N
 N#ifdef __cplusplus
 N
@@ -51879,7 +52184,7 @@ N
 N#endif /* __cplusplus */
 N
 N#endif  /* _LIBCPP_ERRNO_H */
-L 28 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cerrno" 2
+L 28 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cerrno" 2
 N
 N#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
 X#if !0L
@@ -51887,7 +52192,7 @@ N#pragma GCC system_header
 N#endif
 N
 N#endif  // _LIBCPP_CERRNO
-L 230 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/system_error" 2
+L 230 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/system_error" 2
 N#include <type_traits>
 N#include <stdexcept>
 N#include <__functional_base>
@@ -52519,9 +52824,9 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // _LIBCPP_SYSTEM_ERROR
-L 17 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__mutex_base" 2
+L 17 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__mutex_base" 2
 N#include <__threading_support>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__threading_support" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__threading_support" 1
 N// -*- C++ -*-
 N//===----------------------------------------------------------------------===//
 N//
@@ -53165,7 +53470,7 @@ S
 N#endif // !_LIBCPP_HAS_NO_THREADS
 N
 N#endif // _LIBCPP_THREADING_SUPPORT
-L 18 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__mutex_base" 2
+L 18 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__mutex_base" 2
 N
 N
 N#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
@@ -53176,7 +53481,7 @@ N
 N_LIBCPP_PUSH_MACROS
 X_Pragma("push_macro(\"min\")") _Pragma("push_macro(\"max\")")
 N#include <__undef_macros>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__undef_macros" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros" 1
 N// -*- C++ -*-
 N//===------------------------ __undef_macros ------------------------------===//
 N//
@@ -53211,7 +53516,7 @@ S#endif
 S#endif
 S#undef max
 N#endif
-L 26 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__mutex_base" 2
+L 26 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__mutex_base" 2
 N
 N
 N_LIBCPP_BEGIN_NAMESPACE_STD
@@ -53631,9 +53936,9 @@ N_LIBCPP_POP_MACROS
 X_Pragma("pop_macro(\"min\")") _Pragma("pop_macro(\"max\")")
 N
 N#endif  // _LIBCPP___MUTEX_BASE
-L 192 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/mutex" 2
+L 192 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/mutex" 2
 N#include <functional>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/functional" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/functional" 1
 N// -*- C++ -*-
 N//===------------------------ functional ----------------------------------===//
 N//
@@ -56401,7 +56706,7 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // _LIBCPP_FUNCTIONAL
-L 193 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/mutex" 2
+L 193 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/mutex" 2
 N#include <memory>
 N#ifndef _LIBCPP_CXX03_LANG
 N#include <tuple>
@@ -56416,7 +56721,7 @@ N
 N_LIBCPP_PUSH_MACROS
 X_Pragma("push_macro(\"min\")") _Pragma("push_macro(\"max\")")
 N#include <__undef_macros>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__undef_macros" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros" 1
 N// -*- C++ -*-
 N//===------------------------ __undef_macros ------------------------------===//
 N//
@@ -56451,7 +56756,7 @@ S#endif
 S#endif
 S#undef max
 N#endif
-L 205 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/mutex" 2
+L 205 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/mutex" 2
 N
 N
 N_LIBCPP_BEGIN_NAMESPACE_STD
@@ -56966,11 +57271,11 @@ N_LIBCPP_POP_MACROS
 X_Pragma("pop_macro(\"min\")") _Pragma("pop_macro(\"max\")")
 N
 N#endif  // _LIBCPP_MUTEX
-L 19 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__locale" 2
+L 19 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__locale" 2
 N#include <cstdint>
 N#include <cctype>
 N#include <locale.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/locale.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/locale.h" 1
 N/* -*- C++ -*- */
 N/*===--------------------------- complex.h --------------------------------===*/
 N/*                                                                            */
@@ -57015,7 +57320,7 @@ N#pragma GCC system_header
 N#endif
 N
 N#include_next <locale.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/locale.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/locale.h" 1
 N/*****************************************************************************/
 N/* locale.h                                                                  */
 N/*                                                                           */
@@ -57055,6 +57360,8 @@ N/*****************************************************************************/
 N#ifndef _LOCALE_H_
 N#define _LOCALE_H_
 N
+N#include <_ti_config.h>
+N
 N#if defined(__TMS320C2000__)
 X#if 0L
 S#if defined(__TMS320C28XX_CLA__)
@@ -57062,10 +57369,14 @@ S#error "Header file <locale.h> not supported by CLA compiler"
 S#endif
 N#endif
 N
-N#pragma diag_push
-N#pragma CHECK_MISRA("-6.3") /* standard types required for standard headers */
-N#pragma CHECK_MISRA("-20.1") /* standard headers must define standard names */
-N#pragma CHECK_MISRA("-20.2") /* standard headers must define standard names */
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-6.3\")") /* standard types required for standard headers */
+X_Pragma("CHECK_MISRA(\"-6.3\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-20.1\")") /* standard headers must define standard names */
+X_Pragma("CHECK_MISRA(\"-20.1\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-20.2\")") /* standard headers must define standard names */
+X_Pragma("CHECK_MISRA(\"-20.2\")")  
 N
 N#ifdef __cplusplus
 Nextern "C" {
@@ -57185,7 +57496,8 @@ N#ifdef __cplusplus
 N} /* extern "C" */
 N#endif /* __cplusplus */
 N
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N
 N#if defined(_AEABI_PORTABILITY_LEVEL) && _AEABI_PORTABILITY_LEVEL != 0 && \
 N   !defined(_AEABI_PORTABLE)
@@ -57215,10 +57527,10 @@ N#endif
 N
 N#endif /* _LOCALE_H_ */
 N
-L 44 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/locale.h" 2
+L 44 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/locale.h" 2
 N
 N#endif  /* _LIBCPP_LOCALE_H */
-L 22 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__locale" 2
+L 22 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__locale" 2
 N#if defined(_LIBCPP_MSVCRT_LIKE)
 X#if 0L
 S# include <support/win32/locale_win32.h>
@@ -57244,7 +57556,7 @@ N    || defined(__EMSCRIPTEN__) || defined(__IBMCPP__)  \
 N    || defined(__TI_COMPILER_VERSION__))
 X#elif (0L      || 0L     || 0L || 0L      || 1L)
 N# include <xlocale.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/xlocale.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/xlocale.h" 1
 N/*-
 N * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
 N *
@@ -57285,7 +57597,7 @@ N#include <locale.h>
 N__BEGIN_DECLS
 Xextern "C" {
 N#include <xlocale/_locale.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/xlocale/_locale.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/xlocale/_locale.h" 1
 N/*-
 N * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
 N *
@@ -57346,11 +57658,11 @@ Nconst char	*querylocale(int mask, locale_t loc);
 Nlocale_t	 uselocale(locale_t loc);
 N
 N#endif /* _XLOCALE_LOCALE_H */
-L 40 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/xlocale.h" 2
+L 40 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/xlocale.h" 2
 N
 N#ifdef _STRING_H_
 N#include <xlocale/_string.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/xlocale/_string.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/xlocale/_string.h" 1
 N/*-
 N * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
 N *
@@ -57412,7 +57724,7 @@ Nchar	*strcasestr_l(const char *, const char *, locale_t);
 N
 N#endif /* _XLOCALE_STRING2_H */
 N#endif /* _XLOCALE_H_ */
-L 43 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/xlocale.h" 2
+L 43 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/xlocale.h" 2
 N#endif
 N
 N#ifdef _INTTYPES_H_
@@ -57425,7 +57737,7 @@ N#endif
 N
 N#ifdef _STDLIB_H_
 N#include <xlocale/_stdlib.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/xlocale/_stdlib.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/xlocale/_stdlib.h" 1
 N/*-
 N * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
 N *
@@ -57487,12 +57799,12 @@ N
 Nint			 ___mb_cur_max_l(locale_t);
 N#define MB_CUR_MAX_L(x) ((size_t)___mb_cur_max_l(x))
 N
-L 55 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/xlocale.h" 2
+L 55 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/xlocale.h" 2
 N#endif
 N
 N#ifdef _TIME_H_
 N#include <xlocale/_time.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/xlocale/_time.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/xlocale/_time.h" 1
 N/*-
 N * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
 N *
@@ -57553,7 +57865,7 @@ N           struct tm * __restrict, locale_t);
 N
 N#endif /* _XLOCALE_LOCALE2_H */
 N#endif /* _XLOCALE_H_ */
-L 59 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/xlocale.h" 2
+L 59 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/xlocale.h" 2
 N#endif
 N
 N#ifdef _LANGINFO_H_
@@ -57562,7 +57874,7 @@ N#endif
 N
 N#ifdef _CTYPE_H_
 N#include <xlocale/_ctype.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/xlocale/_ctype.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/xlocale/_ctype.h" 1
 N/*****************************************************************************/
 N/*  _CTYPE.H                                                                 */
 N/*                                                                           */
@@ -57637,6 +57949,33 @@ N
 N#if	(defined(_XLOCALE_WCTYPES) && !defined(_XLOCALE_WCTYPE_H)) || \
 N	(!defined(_XLOCALE_WCTYPES) && !defined(_XLOCALE_CTYPE_H))
 X#if	(0L && !1L) || 	(!0L && !0L)
+N
+N#include <_ti_config.h>
+N
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-6.3\")")
+X_Pragma("CHECK_MISRA(\"-6.3\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-8.1\")")
+X_Pragma("CHECK_MISRA(\"-8.1\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-8.5\")")
+X_Pragma("CHECK_MISRA(\"-8.5\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-10.1\")")
+X_Pragma("CHECK_MISRA(\"-10.1\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-16.3\")")
+X_Pragma("CHECK_MISRA(\"-16.3\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-16.4\")")
+X_Pragma("CHECK_MISRA(\"-16.4\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.4\")")
+X_Pragma("CHECK_MISRA(\"-19.4\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.6\")")
+X_Pragma("CHECK_MISRA(\"-19.6\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.7\")")
+X_Pragma("CHECK_MISRA(\"-19.7\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.12\")")
+X_Pragma("CHECK_MISRA(\"-19.12\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.13\")")
+X_Pragma("CHECK_MISRA(\"-19.13\")")
 N
 N#ifdef _XLOCALE_WCTYPES
 S#define _XLOCALE_WCTYPE_H
@@ -57749,16 +58088,20 @@ N{
 N   return toupper(__c);
 N}
 N#endif
+N
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
+N
 N#endif /* (defined(_XLOCALE_WCTYPES) && !defined(_XLOCALE_WCTYPE_H)) || \
 N	(!defined(_XLOCALE_WCTYPES) && !defined(_XLOCALE_CTYPE_H)) */
 X#endif  
-L 67 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/xlocale.h" 2
+L 67 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/xlocale.h" 2
 N#endif
 N
 N#ifdef _WCTYPE_H_
 N#define _XLOCALE_WCTYPES 1
 N#include <xlocale/_ctype.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/xlocale/_ctype.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/xlocale/_ctype.h" 1
 N/*****************************************************************************/
 N/*  _CTYPE.H                                                                 */
 N/*                                                                           */
@@ -57833,6 +58176,21 @@ N
 N#if	(defined(_XLOCALE_WCTYPES) && !defined(_XLOCALE_WCTYPE_H)) || \
 N	(!defined(_XLOCALE_WCTYPES) && !defined(_XLOCALE_CTYPE_H))
 X#if	(1L && !1L) || 	(!1L && !1L)
+S
+S#include <_ti_config.h>
+S
+S_TI_PROPRIETARY_PRAGMA("diag_push")
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-6.3\")")
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-8.1\")")
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-8.5\")")
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-10.1\")")
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-16.3\")")
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-16.4\")")
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.4\")")
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.6\")")
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.7\")")
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.12\")")
+S_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.13\")")
 S
 S#ifdef _XLOCALE_WCTYPES
 S#define _XLOCALE_WCTYPE_H
@@ -57929,15 +58287,18 @@ S{
 S   return toupper(__c);
 S}
 S#endif
+S
+S_TI_PROPRIETARY_PRAGMA("diag_pop")
+S
 N#endif /* (defined(_XLOCALE_WCTYPES) && !defined(_XLOCALE_WCTYPE_H)) || \
 N	(!defined(_XLOCALE_WCTYPES) && !defined(_XLOCALE_CTYPE_H)) */
 X#endif  
-L 72 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/xlocale.h" 2
+L 72 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/xlocale.h" 2
 N#endif
 N
 N#ifdef _STDIO_H_
 N#include <xlocale/_stdio.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/xlocale/_stdio.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/xlocale/_stdio.h" 1
 N/*-
 N * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
 N *
@@ -58022,12 +58383,12 @@ X	    ;
 Nint	 vasprintf_l(char **, locale_t, const char *, __va_list)
 N	    __printflike(3, 0);
 X	    ;
-L 76 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/xlocale.h" 2
+L 76 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/xlocale.h" 2
 N#endif
 N
 N#ifdef _WCHAR_H_
 N#include <xlocale/_wchar.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/xlocale/_wchar.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/xlocale/_wchar.h" 1
 N/*-
 N * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
 N *
@@ -58163,7 +58524,7 @@ N			    mbstate_t * __restrict, locale_t);
 N
 N#endif /* _XLOCALE_WCHAR_H */
 N#endif /* _XLOCALE_H_ */
-L 80 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/xlocale.h" 2
+L 80 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/xlocale.h" 2
 N#endif
 N
 N
@@ -58173,7 +58534,7 @@ N__END_DECLS
 X}
 N
 N#endif
-L 41 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__locale" 2
+L 41 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__locale" 2
 N#elif defined(__Fuchsia__)
 S# include <support/fuchsia/xlocale.h>
 S#elif defined(_LIBCPP_HAS_MUSL_LIBC)
@@ -59872,7 +60233,7 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // _LIBCPP___LOCALE
-L 217 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/ios" 2
+L 217 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/ios" 2
 N#include <system_error>
 N
 N#if !defined(_LIBCPP_HAS_NO_ATOMIC_HEADER)
@@ -60867,9 +61228,9 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // _LIBCPP_IOS
-L 139 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/ostream" 2
+L 139 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/ostream" 2
 N#include <streambuf>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/streambuf" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/streambuf" 1
 N// -*- C++ -*-
 N//===------------------------- streambuf ----------------------------------===//
 N//
@@ -60992,7 +61353,7 @@ N
 N_LIBCPP_PUSH_MACROS
 X_Pragma("push_macro(\"min\")") _Pragma("push_macro(\"max\")")
 N#include <__undef_macros>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__undef_macros" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros" 1
 N// -*- C++ -*-
 N//===------------------------ __undef_macros ------------------------------===//
 N//
@@ -61027,7 +61388,7 @@ S#endif
 S#endif
 S#undef max
 N#endif
-L 121 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/streambuf" 2
+L 121 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/streambuf" 2
 N
 N_LIBCPP_BEGIN_NAMESPACE_STD
 Xnamespace std { inline namespace __2 {
@@ -61450,9 +61811,9 @@ N_LIBCPP_POP_MACROS
 X_Pragma("pop_macro(\"min\")") _Pragma("pop_macro(\"max\")")
 N
 N#endif  // _LIBCPP_STEAMBUF
-L 140 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/ostream" 2
+L 140 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/ostream" 2
 N#include <locale>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/locale" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/locale" 1
 N// -*- C++ -*-
 N//===-------------------------- locale ------------------------------------===//
 N//
@@ -61644,7 +62005,7 @@ N#include <iterator>
 N#include <limits>
 N#ifndef __APPLE__
 N#include <cstdarg>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/cstdarg" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cstdarg" 1
 N// -*- C++ -*-
 N//===--------------------------- cstdarg ----------------------------------===//
 N//
@@ -61696,7 +62057,7 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // _LIBCPP_CSTDARG
-L 192 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/locale" 2
+L 192 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/locale" 2
 N#endif
 N#include <cstdlib>
 N#include <ctime>
@@ -61711,7 +62072,7 @@ N#endif
 N
 N#ifdef _LIBCPP_LOCALE__L_EXTENSIONS
 N#include <__bsd_locale_defaults.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__bsd_locale_defaults.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__bsd_locale_defaults.h" 1
 N// -*- C++ -*-
 N//===---------------------- __bsd_locale_defaults.h -----------------------===//
 N//
@@ -61750,7 +62111,7 @@ N#define __libcpp_asprintf_l(...)                            asprintf_l(__VA_ARG
 N#define __libcpp_sscanf_l(...)                              sscanf_l(__VA_ARGS__)
 N
 N#endif // _LIBCPP_BSD_LOCALE_DEFAULTS_H
-L 206 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/locale" 2
+L 206 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/locale" 2
 N#else
 S#include <__bsd_locale_fallbacks.h>
 N#endif
@@ -61763,7 +62124,7 @@ N
 N_LIBCPP_PUSH_MACROS
 X_Pragma("push_macro(\"min\")") _Pragma("push_macro(\"max\")")
 N#include <__undef_macros>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__undef_macros" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros" 1
 N// -*- C++ -*-
 N//===------------------------ __undef_macros ------------------------------===//
 N//
@@ -61798,7 +62159,7 @@ S#endif
 S#endif
 S#undef max
 N#endif
-L 216 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/locale" 2
+L 216 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/locale" 2
 N
 N
 N_LIBCPP_BEGIN_NAMESPACE_STD
@@ -66192,10 +66553,10 @@ N_LIBCPP_POP_MACROS
 X_Pragma("pop_macro(\"min\")") _Pragma("pop_macro(\"max\")")
 N
 N#endif  // _LIBCPP_LOCALE
-L 141 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/ostream" 2
+L 141 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/ostream" 2
 N#include <iterator>
 N#include <bitset>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/bitset" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/bitset" 1
 N// -*- C++ -*-
 N//===---------------------------- bitset ----------------------------------===//
 N//
@@ -66313,7 +66674,7 @@ N*/
 N
 N#include <__config>
 N#include <__bit_reference>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__bit_reference" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__bit_reference" 1
 N// -*- C++ -*-
 N//===----------------------------------------------------------------------===//
 N//
@@ -66338,7 +66699,7 @@ N
 N_LIBCPP_PUSH_MACROS
 X_Pragma("push_macro(\"min\")") _Pragma("push_macro(\"max\")")
 N#include <__undef_macros>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__undef_macros" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros" 1
 N// -*- C++ -*-
 N//===------------------------ __undef_macros ------------------------------===//
 N//
@@ -66373,7 +66734,7 @@ S#endif
 S#endif
 S#undef max
 N#endif
-L 23 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__bit_reference" 2
+L 23 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__bit_reference" 2
 N
 N
 N_LIBCPP_BEGIN_NAMESPACE_STD
@@ -67747,7 +68108,7 @@ N_LIBCPP_POP_MACROS
 X_Pragma("pop_macro(\"min\")") _Pragma("pop_macro(\"max\")")
 N
 N#endif  // _LIBCPP___BIT_REFERENCE
-L 118 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/bitset" 2
+L 118 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/bitset" 2
 N#include <cstddef>
 N#include <climits>
 N#include <string>
@@ -67763,7 +68124,7 @@ N
 N_LIBCPP_PUSH_MACROS
 X_Pragma("push_macro(\"min\")") _Pragma("push_macro(\"max\")")
 N#include <__undef_macros>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__undef_macros" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros" 1
 N// -*- C++ -*-
 N//===------------------------ __undef_macros ------------------------------===//
 N//
@@ -67798,7 +68159,7 @@ S#endif
 S#endif
 S#undef max
 N#endif
-L 131 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/bitset" 2
+L 131 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/bitset" 2
 N
 N
 N_LIBCPP_BEGIN_NAMESPACE_STD
@@ -68964,7 +69325,7 @@ N_LIBCPP_POP_MACROS
 X_Pragma("pop_macro(\"min\")") _Pragma("pop_macro(\"max\")")
 N
 N#endif  // _LIBCPP_BITSET
-L 143 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/ostream" 2
+L 143 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/ostream" 2
 N
 N#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
 X#if !0L
@@ -69952,9 +70313,9 @@ N_LIBCPP_END_NAMESPACE_STD
 X} }
 N
 N#endif  // _LIBCPP_OSTREAM
-L 175 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/sstream" 2
+L 175 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/sstream" 2
 N#include <istream>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/istream" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/istream" 1
 N// -*- C++ -*-
 N//===--------------------------- istream ----------------------------------===//
 N//
@@ -70127,7 +70488,7 @@ N
 N_LIBCPP_PUSH_MACROS
 X_Pragma("push_macro(\"min\")") _Pragma("push_macro(\"max\")")
 N#include <__undef_macros>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__undef_macros" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros" 1
 N// -*- C++ -*-
 N//===------------------------ __undef_macros ------------------------------===//
 N//
@@ -70162,7 +70523,7 @@ S#endif
 S#endif
 S#undef max
 N#endif
-L 171 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/istream" 2
+L 171 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/istream" 2
 N
 N
 N_LIBCPP_BEGIN_NAMESPACE_STD
@@ -71723,7 +72084,7 @@ N_LIBCPP_POP_MACROS
 X_Pragma("pop_macro(\"min\")") _Pragma("pop_macro(\"max\")")
 N
 N#endif  // _LIBCPP_ISTREAM
-L 176 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/sstream" 2
+L 176 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/sstream" 2
 N#include <string>
 N
 N#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
@@ -71734,7 +72095,7 @@ N
 N_LIBCPP_PUSH_MACROS
 X_Pragma("push_macro(\"min\")") _Pragma("push_macro(\"max\")")
 N#include <__undef_macros>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__undef_macros" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros" 1
 N// -*- C++ -*-
 N//===------------------------ __undef_macros ------------------------------===//
 N//
@@ -71769,7 +72130,7 @@ S#endif
 S#endif
 S#undef max
 N#endif
-L 184 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/sstream" 2
+L 184 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/sstream" 2
 N
 N
 N_LIBCPP_BEGIN_NAMESPACE_STD
@@ -72629,7 +72990,7 @@ N
 N#endif  // _LIBCPP_SSTREAM
 L 13 "..\PID.h" 2
 N#include <iomanip>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/iomanip" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/iomanip" 1
 N// -*- C++ -*-
 N//===--------------------------- iomanip ----------------------------------===//
 N//
@@ -73426,7 +73787,6 @@ N
 N
 R "../PID.cpp" 10 6 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
 R "../PID.cpp" 11 10 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
-R "" 0 0 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
 R "../PID.cpp" 13 13 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
 R "../PID.cpp" 14 20 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
 R "../PID.cpp" 15 25 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive

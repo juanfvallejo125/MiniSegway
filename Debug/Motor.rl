@@ -19,7 +19,7 @@ N#ifndef MOTOR_H_
 N#define MOTOR_H_
 N
 N#include <stdint.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/stdint.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/stdint.h" 1
 N/* -*- C++ -*- */
 N/*===--------------------------- complex.h --------------------------------===*/
 N/*                                                                            */
@@ -122,7 +122,7 @@ N
 N*/
 N
 N#include <__config>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__config" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__config" 1
 N/* -*- C++ -*- */
 N/*===--------------------------- complex.h --------------------------------===*/
 N/*                                                                            */
@@ -160,7 +160,7 @@ N#if defined(__TI_COMPILER_VERSION__) && !defined(_LIBCPP_BUILDING_LIBRARY) && \
 N    __has_include("__config_site")
 X#if 1L && !0L &&     1
 N#include "__config_site"
-L 1 "C:\ti\ccs930\ccs\tools\compiler\ti-cgt-arm_18.12.5.LTS\include\libcxx\__config_site" 1
+L 1 "C:\ti\ccs1011\ccs\tools\compiler\ti-cgt-arm_20.2.1.LTS\include\libcxx\__config_site" 1
 N//===----------------------------------------------------------------------===//
 N//
 N//                     The LLVM Compiler Infrastructure
@@ -188,7 +188,7 @@ N/* #undef _LIBCPP_HAS_THREAD_LIBRARY_EXTERNAL */
 N#define _LIBCPP_DISABLE_VISIBILITY_ANNOTATIONS
 N
 N#include "__libcxx_extra.h"
-L 1 "C:\ti\ccs930\ccs\tools\compiler\ti-cgt-arm_18.12.5.LTS\include\libcxx\__libcxx_extra.h" 1
+L 1 "C:\ti\ccs1011\ccs\tools\compiler\ti-cgt-arm_20.2.1.LTS\include\libcxx\__libcxx_extra.h" 1
 N/*****************************************************************************/
 N/* LIBCXX_EXTRA.H                                                            */
 N/*                                                                           */
@@ -241,10 +241,10 @@ N
 N/* #pragma diag_suppress 1585,2866 */
 N
 N#endif /* __LIBCXX_EXTRA_H__ */
-L 28 "C:\ti\ccs930\ccs\tools\compiler\ti-cgt-arm_18.12.5.LTS\include\libcxx\__config_site" 2
+L 28 "C:\ti\ccs1011\ccs\tools\compiler\ti-cgt-arm_20.2.1.LTS\include\libcxx\__config_site" 2
 N
 N#endif // _LIBCPP_CONFIG_SITE
-L 37 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/__config" 2
+L 37 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__config" 2
 N#endif
 N
 N#if defined(_MSC_VER) && !defined(__clang__)
@@ -1763,7 +1763,7 @@ N
 N#pragma diag_pop
 N
 N#endif // _LIBCPP_CONFIG
-L 103 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/stdint.h" 2
+L 103 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/stdint.h" 2
 N
 N#if !defined(_LIBCPP_HAS_NO_PRAGMA_SYSTEM_HEADER)
 X#if !0L
@@ -1784,7 +1784,7 @@ N#   define __STDC_CONSTANT_MACROS
 N#endif
 N
 N#include_next <stdint.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/stdint.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/stdint.h" 1
 N/*****************************************************************************/
 N/* STDINT.H                                                                  */
 N/*                                                                           */
@@ -1824,8 +1824,240 @@ N/*****************************************************************************/
 N#ifndef _STDINT_H_
 N#define _STDINT_H_
 N
+N#include <_ti_config.h>
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/_ti_config.h" 1
+N/*****************************************************************************/
+N/* _ti_config.h                                                              */
+N/*                                                                           */
+N/* Copyright (c) 2017 Texas Instruments Incorporated                         */
+N/* http://www.ti.com/                                                        */
+N/*                                                                           */
+N/*  Redistribution and  use in source  and binary forms, with  or without    */
+N/*  modification,  are permitted provided  that the  following conditions    */
+N/*  are met:                                                                 */
+N/*                                                                           */
+N/*     Redistributions  of source  code must  retain the  above copyright    */
+N/*     notice, this list of conditions and the following disclaimer.         */
+N/*                                                                           */
+N/*     Redistributions in binary form  must reproduce the above copyright    */
+N/*     notice, this  list of conditions  and the following  disclaimer in    */
+N/*     the  documentation  and/or   other  materials  provided  with  the    */
+N/*     distribution.                                                         */
+N/*                                                                           */
+N/*     Neither the  name of Texas Instruments Incorporated  nor the names    */
+N/*     of its  contributors may  be used to  endorse or  promote products    */
+N/*     derived  from   this  software  without   specific  prior  written    */
+N/*     permission.                                                           */
+N/*                                                                           */
+N/*  THIS SOFTWARE  IS PROVIDED BY THE COPYRIGHT  HOLDERS AND CONTRIBUTORS    */
+N/*  "AS IS"  AND ANY  EXPRESS OR IMPLIED  WARRANTIES, INCLUDING,  BUT NOT    */
+N/*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR    */
+N/*  A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT    */
+N/*  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,    */
+N/*  SPECIAL,  EXEMPLARY,  OR CONSEQUENTIAL  DAMAGES  (INCLUDING, BUT  NOT    */
+N/*  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,    */
+N/*  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY    */
+N/*  THEORY OF  LIABILITY, WHETHER IN CONTRACT, STRICT  LIABILITY, OR TORT    */
+N/*  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE    */
+N/*  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.     */
+N/*                                                                           */
+N/*****************************************************************************/
+N
+N#ifndef __TI_CONFIG_H
+N#define __TI_CONFIG_H
+N
+N/*Unsupported pragmas are omitted */
+N#ifdef __TI_COMPILER_VERSION__
+N# pragma diag_push
+N# pragma CHECK_MISRA("-19.7")
+N# pragma CHECK_MISRA("-19.4")
+N# pragma CHECK_MISRA("-19.1")
+N# pragma CHECK_MISRA("-19.15")
+N# define _TI_PROPRIETARY_PRAGMA(arg) _Pragma(arg)
+N# pragma diag_pop
+N#else
+S# define _TI_PROPRIETARY_PRAGMA(arg)
+N#endif
+N
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.4\")")
+X_Pragma("CHECK_MISRA(\"-19.4\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.1\")")
+X_Pragma("CHECK_MISRA(\"-19.1\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.6\")")
+X_Pragma("CHECK_MISRA(\"-19.6\")")
+N
+N/* Hide uses of the TI proprietary macros behind other macros.
+N    Implementations that don't implement these features should leave
+N    these macros undefined. */
+N#ifdef __TI_COMPILER_VERSION__
+N# ifdef __TI_STRICT_ANSI_MODE__
+N#  define __TI_PROPRIETARY_STRICT_ANSI_MACRO __TI_STRICT_ANSI_MODE__
+N# else
+S#  undef __TI_PROPRIETARY_STRICT_ANSI_MACRO
+N# endif
+N
+N# ifdef __TI_STRICT_FP_MODE__
+N#  define __TI_PROPRIETARY_STRICT_FP_MACRO __TI_STRICT_FP_MODE__
+N# else
+S#  undef __TI_PROPRIETARY_STRICT_FP_MACRO
+N# endif
+N
+N# ifdef __unsigned_chars__
+N#  define __TI_PROPRIETARY_UNSIGNED_CHARS__ __unsigned_chars__
+N# else
+S#  undef __TI_PROPRIETARY_UNSIGNED_CHARS__
+N# endif
+N#else
+S# undef __TI_PROPRIETARY_UNSIGNED_CHARS__
+S# undef __TI_PROPRIETARY_STRICT_ANSI_MACRO
+S# undef __TI_PROPRIETARY_STRICT_FP_MACRO
+N#endif
+N
+N/* Common definitions */
+N
+N#if defined(__cplusplus)
+X#if 1L
+N/* C++ */
+N# if (__cplusplus >= 201103L)
+X# if (201402L >= 201103L)
+N /* C++11 */
+N#  define _TI_NORETURN [[noreturn]]
+N#  define _TI_NOEXCEPT noexcept
+N# else
+S /* C++98/03 */
+S#  define _TI_NORETURN __attribute__((noreturn))
+S#  define _TI_NOEXCEPT throw()
+N# endif
+N#else
+S/* C */
+S# if defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 201112L)
+S /* C11 */
+S#  define _TI_NORETURN _Noreturn
+S# else
+S /* C89/C99 */
+S#  define _TI_NORETURN __attribute__((noreturn))
+S# endif
+S# define _TI_NOEXCEPT
+N#endif
+N
+N#if defined(__cplusplus) && (__cplusplus >= 201103L)
+X#if 1L && (201402L >= 201103L)
+N# define _TI_CPP11LIB 1
+N#endif
+N
+N#if defined(__cplusplus) && (__cplusplus >= 201402L)
+X#if 1L && (201402L >= 201402L)
+N# define _TI_CPP14LIB 1
+N#endif
+N
+N#if defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 199901L) || \
+N    defined(_TI_CPP11LIB)
+X#if 0L && (__STDC_VERSION__ >= 199901L) ||     1L
+N# define _TI_C99LIB 1
+N#endif
+N
+N#if defined(__STDC_VERSION__) && (__STDC_VERSION__ >= 201112L) || \
+N    defined(_TI_CPP14LIB)
+X#if 0L && (__STDC_VERSION__ >= 201112L) ||     1L
+N# define _TI_C11LIB 1
+N#endif
+N
+N/* _TI_NOEXCEPT_CPP14 is defined to noexcept only when compiling for C++14. It
+N   is intended to be used for functions like abort and atexit that are supposed
+N   to be declared noexcept only in C++14 mode. */
+N#ifdef _TI_CPP14LIB
+N# define _TI_NOEXCEPT_CPP14 noexcept
+N#else
+S# define _TI_NOEXCEPT_CPP14
+N#endif
+N
+N
+N
+N/* Target-specific definitions */
+N#include <linkage.h>
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/linkage.h" 1
+N/*****************************************************************************/
+N/* linkage.h                                                                 */
+N/*                                                                           */
+N/* Copyright (c) 1998 Texas Instruments Incorporated                         */
+N/* http://www.ti.com/                                                        */
+N/*                                                                           */
+N/*  Redistribution and  use in source  and binary forms, with  or without    */
+N/*  modification,  are permitted provided  that the  following conditions    */
+N/*  are met:                                                                 */
+N/*                                                                           */
+N/*     Redistributions  of source  code must  retain the  above copyright    */
+N/*     notice, this list of conditions and the following disclaimer.         */
+N/*                                                                           */
+N/*     Redistributions in binary form  must reproduce the above copyright    */
+N/*     notice, this  list of conditions  and the following  disclaimer in    */
+N/*     the  documentation  and/or   other  materials  provided  with  the    */
+N/*     distribution.                                                         */
+N/*                                                                           */
+N/*     Neither the  name of Texas Instruments Incorporated  nor the names    */
+N/*     of its  contributors may  be used to  endorse or  promote products    */
+N/*     derived  from   this  software  without   specific  prior  written    */
+N/*     permission.                                                           */
+N/*                                                                           */
+N/*  THIS SOFTWARE  IS PROVIDED BY THE COPYRIGHT  HOLDERS AND CONTRIBUTORS    */
+N/*  "AS IS"  AND ANY  EXPRESS OR IMPLIED  WARRANTIES, INCLUDING,  BUT NOT    */
+N/*  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR    */
+N/*  A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT    */
+N/*  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,    */
+N/*  SPECIAL,  EXEMPLARY,  OR CONSEQUENTIAL  DAMAGES  (INCLUDING, BUT  NOT    */
+N/*  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,    */
+N/*  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY    */
+N/*  THEORY OF  LIABILITY, WHETHER IN CONTRACT, STRICT  LIABILITY, OR TORT    */
+N/*  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE    */
+N/*  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.     */
+N/*                                                                           */
+N/*****************************************************************************/
+N
+N#ifndef _LINKAGE
+N#define _LINKAGE
+N
+N#pragma diag_push
+N#pragma CHECK_MISRA("-19.4") /* macros required for implementation */
+N
+N/* No modifiers are needed to access code or data */
+N
+N#define _CODE_ACCESS
+N#define _DATA_ACCESS
+N#define _DATA_ACCESS_NEAR
+N
+N/*--------------------------------------------------------------------------*/
+N/* Define _IDECL ==> how inline functions are declared                      */
+N/*--------------------------------------------------------------------------*/
+N#ifdef _INLINE
+S#define _IDECL static __inline
+S#define _IDEFN static __inline
+N#else
+N#define _IDECL extern _CODE_ACCESS
+N#define _IDEFN _CODE_ACCESS
+N#endif
+N
+N#pragma diag_pop
+N
+N#endif /* ifndef _LINKAGE */
+L 142 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/_ti_config.h" 2
+N
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
+N
+N#endif /* ifndef __TI_CONFIG_H */
+L 41 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/stdint.h" 2
+N
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.1\")") /* no code before #include */
+X_Pragma("CHECK_MISRA(\"-19.1\")")  
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.7\")") /* prefer functions to macros */
+X_Pragma("CHECK_MISRA(\"-19.7\")")  
+N
 N#include <_stdint40.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/_stdint40.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/_stdint40.h" 1
 N/*****************************************************************************/
 N/* _STDINT40.H                                                               */
 N/*                                                                           */
@@ -1865,6 +2097,11 @@ N/*****************************************************************************/
 N#ifndef __STDINT40_H_
 N#define __STDINT40_H_
 N
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.7\")") /* prefer functions to macros */
+X_Pragma("CHECK_MISRA(\"-19.7\")")  
+N
 N#if defined(_TMS320C6X) && !defined(__C6X_MIGRATION__)
 X#if 0L && !0L
 S    typedef          __int40_t  int40_t;
@@ -1877,10 +2114,10 @@ S    typedef  int40_t  int_fast40_t;
 S    typedef uint40_t uint_fast40_t;
 N#endif
 N
-N/* 
+N/*
 N   According to footnotes in the 1999 C standard, "C++ implementations
 N   should define these macros only when __STDC_LIMIT_MACROS is defined
-N   before <stdint.h> is included." 
+N   before <stdint.h> is included."
 N*/
 N#if !defined(__cplusplus) || defined(__STDC_LIMIT_MACROS)
 X#if !1L || 1L
@@ -1904,12 +2141,16 @@ S    #define UINT40_C(value) ((uint_least40_t)(value))
 N#endif
 N
 N#endif /* !defined(__cplusplus) || defined(__STDC_LIMIT_MACROS) */
+N
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
+N
 N#endif /* __STDINT40_H_ */
-L 41 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/stdint.h" 2
-N#if __has_include(<sys/stdint.h>) 
-X#if 1 
+L 47 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/stdint.h" 2
+N#if __has_include(<sys/stdint.h>)
+X#if 1
 N#include <sys/stdint.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/sys/stdint.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/sys/stdint.h" 1
 N/*-
 N * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
 N *
@@ -1943,8 +2184,10 @@ N
 N#ifndef _SYS_STDINT_H_
 N#define _SYS_STDINT_H_
 N
+N#include <_ti_config.h>
+N
 N#include <sys/cdefs.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/sys/cdefs.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/sys/cdefs.h" 1
 N/*-
 N * SPDX-License-Identifier: BSD-3-Clause
 N *
@@ -1985,10 +2228,14 @@ N
 N#ifndef	_SYS_CDEFS_H_
 N#define	_SYS_CDEFS_H_
 N
+N#include <_ti_config.h>
+N
 N#if defined(__TI_COMPILER_VERSION__)
 X#if 1L
-N#pragma diag_push
-N#pragma CHECK_MISRA("none")
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"none\")")
+X_Pragma("CHECK_MISRA(\"none\")")
 N#endif
 N
 N/*
@@ -2631,8 +2878,9 @@ N */
 N#define	__IDSTRING(name,string)	static const char name[] __unused = string
 N#endif
 N
-N#if defined(__TI_COMPILER_VERSION__) && defined(__TI_STRICT_ANSI_MODE__)
-X#if 1L && 1L
+N#if defined(__TI_COMPILER_VERSION__) && \
+N  defined(__TI_PROPRIETARY_STRICT_ANSI_MACRO)
+X#if 1L &&   1L
 N#define __extension__
 N#endif
 N
@@ -2954,13 +3202,14 @@ N#define	__guarded_by(x)		__lock_annotate(guarded_by(x))
 N#define	__pt_guarded_by(x)	__lock_annotate(pt_guarded_by(x))
 N
 N#ifdef __TI_COMPILER_VERSION__
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N#endif
 N
 N#endif /* !_SYS_CDEFS_H_ */
-L 35 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/sys/stdint.h" 2
+L 37 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/sys/stdint.h" 2
 N#include <sys/_types.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/sys/_types.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/sys/_types.h" 1
 N/*-
 N * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
 N *
@@ -2996,7 +3245,7 @@ N#define _SYS__TYPES_H_
 N
 N#include <sys/cdefs.h>
 N#include <machine/_types.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/machine/_types.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/machine/_types.h" 1
 N/*-
 N * SPDX-License-Identifier: BSD-4-Clause
 N *
@@ -3044,10 +3293,30 @@ N#ifndef _SYS_CDEFS_H_
 S#error this file needs sys/cdefs.h as a prerequisite
 N#endif
 N
+N#include <_ti_config.h>
+N
 N#ifdef __TI_COMPILER_VERSION__
-N#pragma diag_push
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
 N/* This file is required to use base types */
-N#pragma CHECK_MISRA("-6.3")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-6.3\")")
+X_Pragma("CHECK_MISRA(\"-6.3\")")
+N#endif
+N
+N#ifdef __clang__
+S
+S/* Always use POSIX epoch for time_t */
+S#define __TI_TIME32_USES_POSIX_EPOCH
+S
+S/* Unless AEABI portability mode or user indicates __TI_TIME_USES_64 = 0, */
+S/* use 64bit time_t and redirect all time routines to 64bit variants.     */
+S#if !defined(_TIME_IMPLEMENTATION) && \
+S    !(defined(__TI_TIME_USES_64) && __TI_TIME_USES_64 == 0) && \
+S    !(defined(_AEABI_PORTABILITY_LEVEL) && _AEABI_PORTABILITY_LEVEL != 0)
+X#if !defined(_TIME_IMPLEMENTATION) &&     !(defined(__TI_TIME_USES_64) && __TI_TIME_USES_64 == 0) &&     !(defined(_AEABI_PORTABILITY_LEVEL) && _AEABI_PORTABILITY_LEVEL != 0)
+S#define __TI_TIME_USES_64 1
+S#endif
+S
 N#endif
 N
 N/*
@@ -3095,8 +3364,9 @@ Ntypedef	__int32_t	__register_t;
 Ntypedef	__int32_t	__segsz_t;		/* segment size (in pages) */
 Ntypedef	__uint32_t	__size_t;		/* sizeof() */
 Ntypedef	__int32_t	__ssize_t;		/* byte count or error */
-N#if (defined(__TI_TIME_USES_64) && __TI_TIME_USES_64)
-X#if (0L && __TI_TIME_USES_64)
+N#if defined(_TARGET_DEFAULTS_TO_TIME64) || \
+N    (defined(__TI_TIME_USES_64) && __TI_TIME_USES_64)
+X#if 0L ||     (0L && __TI_TIME_USES_64)
 Stypedef	__int64_t	__time_t;		/* time()... */
 N#else
 Ntypedef __uint32_t      __time_t;
@@ -3133,8 +3403,14 @@ N#else
 S#    define __WCHAR_MAX 0xffffffffu
 N#endif
 N#else
+S#include <machine/_limits.h>            /* get a definition of __UINT_MAX */
 S#define	__WCHAR_MAX	__UINT_MAX	/* max value for a wchar_t */
 N#endif
+N
+N/*
+N * POSIX target specific _off_t type definition
+N */
+Ntypedef long _off_t;
 N
 N/*
 N * Unusual type definitions.
@@ -3157,17 +3433,21 @@ N#endif
 N
 N#if defined(__TI_COMPILER_VERSION__)
 X#if 1L
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N#endif
 N
 N#endif /* !_MACHINE__TYPES_H_ */
-L 36 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/sys/_types.h" 2
+L 36 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/sys/_types.h" 2
 N
 N#if defined(__TI_COMPILER_VERSION__)
 X#if 1L
-N#pragma diag_push
+N#include <_ti_config.h>
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
 N/* This file is required to use types without size and signedness */
-N#pragma CHECK_MISRA("-6.3")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-6.3\")")
+X_Pragma("CHECK_MISRA(\"-6.3\")")
 N#endif
 N
 N/*
@@ -3188,8 +3468,8 @@ Ntypedef	__uint16_t	__mode_t;	/* permissions */
 Ntypedef	int		__accmode_t;	/* access permissions */
 Ntypedef	int		__nl_item;
 Ntypedef	__uint64_t	__nlink_t;	/* link count */
-Ntypedef	__int64_t	__off_t;	/* file offset */
-Ntypedef	__int64_t	__off64_t;	/* file offset (alias) */
+Ntypedef	_off_t	        __off_t;	/* file offset (target-specific)  */
+Ntypedef	__int64_t	__off64_t;	/* file offset (always 64-bit)    */
 Ntypedef	__int32_t	__pid_t;	/* process [group] */
 Ntypedef	__int64_t	__rlim_t;	/* resource limit - intentionally */
 N					/* signed, because of legacy code */
@@ -3298,14 +3578,15 @@ N#define	__INO64
 N
 N#if defined(__TI_COMPILER_VERSION__)
 X#if 1L
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N#endif
 N
 N#endif /* !_SYS__TYPES_H_ */
-L 36 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/sys/stdint.h" 2
+L 38 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/sys/stdint.h" 2
 N
 N#include <machine/_stdint.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/machine/_stdint.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/machine/_stdint.h" 1
 N/*-
 N * SPDX-License-Identifier: BSD-2-Clause-NetBSD
 N *
@@ -3343,9 +3624,17 @@ N
 N#ifndef _MACHINE__STDINT_H_
 N#define	_MACHINE__STDINT_H_
 N
-N#pragma diag_push
+N#include <_ti_config.h>
+N
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
 N/* 19.4 is issued for macros that are defined in terms of other macros. */
-N#pragma CHECK_MISRA("-19.4")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.4\")")
+X_Pragma("CHECK_MISRA(\"-19.4\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.7\")")
+X_Pragma("CHECK_MISRA(\"-19.7\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.13\")")
+X_Pragma("CHECK_MISRA(\"-19.13\")")
 N
 N#if !defined(__cplusplus) || defined(__STDC_CONSTANT_MACROS)
 X#if !1L || 1L
@@ -3471,12 +3760,13 @@ N#define	WINT_MAX	INT32_MAX
 N
 N#endif /* !defined(__cplusplus) || defined(__STDC_LIMIT_MACROS) */
 N
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N
 N#endif /* !_MACHINE__STDINT_H_ */
-L 38 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/sys/stdint.h" 2
+L 40 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/sys/stdint.h" 2
 N#include <sys/_stdint.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/sys/_stdint.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/sys/_stdint.h" 1
 N/*-
 N * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
 N *
@@ -3575,7 +3865,7 @@ N#define	_UINTMAX_T_DECLARED
 N#endif
 N
 N#endif /* !_SYS__STDINT_H_ */
-L 39 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/sys/stdint.h" 2
+L 41 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/sys/stdint.h" 2
 N
 Ntypedef	__int_least8_t		int_least8_t;
 Ntypedef	__int_least16_t		int_least16_t;
@@ -3597,6 +3887,10 @@ Ntypedef	__uint_fast16_t		uint_fast16_t;
 Ntypedef	__uint_fast32_t		uint_fast32_t;
 Ntypedef	__uint_fast64_t		uint_fast64_t;
 N
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-10.1\")")
+X_Pragma("CHECK_MISRA(\"-10.1\")")
 N/* GNU and Darwin define this and people seem to think it's portable */
 N#if defined(UINTPTR_MAX) && defined(UINT64_MAX) && (UINTPTR_MAX == UINT64_MAX)
 X#if 1L && 1L && (0xffffffffU == 0xffffffffffffffffULL)
@@ -3604,13 +3898,18 @@ S#define	__WORDSIZE		64
 N#else
 N#define	__WORDSIZE		32
 N#endif
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N
-N#pragma diag_push
-N#pragma CHECK_MISRA("-19.4")
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.4\")")
+X_Pragma("CHECK_MISRA(\"-19.4\")")
 N/* Limits of wchar_t. */
 N#define	WCHAR_MIN	__WCHAR_MIN
 N#define	WCHAR_MAX	__WCHAR_MAX
-N#pragma diag_pop
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
 N
 N#if __EXT1_VISIBLE
 X#if 1
@@ -3621,7 +3920,7 @@ N#endif
 N#endif /* __EXT1_VISIBLE */
 N
 N#endif /* !_SYS_STDINT_H_ */
-L 43 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/stdint.h" 2
+L 49 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/stdint.h" 2
 N#else
 S/* 7.18.1.1 Exact-width integer types */
 S
@@ -3706,7 +4005,7 @@ S    typedef uint64_t uint_least64_t;
 S#else
 S/* sorry, [u]int_least64_t not implemented for C27X, CLA */
 S#endif
-S#elif defined(_TMS320C5XX) || defined(__TMS320C55X__) 
+S#elif defined(_TMS320C5XX) || defined(__TMS320C55X__)
 S/* sorry, [u]int_least64_t not implemented for C54x, C55x */
 S#endif
 S
@@ -3755,7 +4054,7 @@ S    typedef uint64_t uint_fast64_t;
 S#else
 S/* sorry, [u]int_fast64_t not implemented for C27X, CLA */
 S#endif
-S#elif defined(_TMS320C5XX) || defined(__TMS320C55X__) 
+S#elif defined(_TMS320C5XX) || defined(__TMS320C55X__)
 S/* sorry, [u]int_fast64_t not implemented for C54x, C55x */
 S#endif
 S
@@ -3803,10 +4102,10 @@ S    typedef unsigned long uintmax_t;
 S#endif
 S#endif
 S
-S/* 
+S/*
 S   According to footnotes in the 1999 C standard, "C++ implementations
 S   should define these macros only when __STDC_LIMIT_MACROS is defined
-S   before <stdint.h> is included." 
+S   before <stdint.h> is included."
 S*/
 S#if !defined(__cplusplus) || defined(__STDC_LIMIT_MACROS)
 S
@@ -4021,12 +4320,21 @@ S#elif defined(__C7000__)
 S    #define SIZE_MAX (UINT64_MAX)
 S#endif
 S
+S
 S#ifndef WCHAR_MAX
-S#if !defined(__TI_WCHAR_T_BITS__) || __TI_WCHAR_T_BITS__ == 16
-S#define WCHAR_MAX 0xffffu
-S#else 
-S#define WCHAR_MAX 0xffffffffu
-S#endif
+S# if defined(__TI_COMPILER_VERSION__)
+S#  if !defined(__TI_WCHAR_T_BITS__) || __TI_WCHAR_T_BITS__ == 16
+S#   define WCHAR_MAX 0xffffu
+S#  else
+S#   define WCHAR_MAX 0xffffffffu
+S#  endif
+S# elif defined(__clang__) && defined(__arm__)
+S#  if((__ARM_SIZEOF_WCHAR_T*8) == 16)
+S#   define WCHAR_MAX 0xffffu
+S#  else
+S#   define WCHAR_MAX 0xffffffffu
+S#  endif
+S# endif
 S#endif
 S
 S#ifndef WCHAR_MIN
@@ -4046,9 +4354,9 @@ S
 S/* 7.18.4.1 Macros for minimum-width integer constants */
 S
 S/*
-S   There is a defect report filed against the C99 standard concerning how 
+S   There is a defect report filed against the C99 standard concerning how
 S   the (U)INTN_C macros should be implemented.  Please refer to --
-S   http://wwwold.dkuug.dk/JTC1/SC22/WG14/www/docs/dr_209.htm 
+S   http://wwwold.dkuug.dk/JTC1/SC22/WG14/www/docs/dr_209.htm
 S   for more information.  These macros are implemented according to the
 S   suggestion given at this web site.
 S*/
@@ -4081,8 +4389,12 @@ S    #define UINTMAX_C(value) ((uintmax_t)(value))
 S
 S#endif /* !defined(__cplusplus) || defined(__STDC_LIMIT_MACROS) */
 N#endif
+N
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
+N
 N#endif /* _STDINT_H_ */
-L 120 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/stdint.h" 2
+L 120 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/stdint.h" 2
 N
 N#endif  /* _LIBCPP_STDINT_H */
 L 12 "..\Motor.h" 2
@@ -4189,7 +4501,7 @@ N#endif
 N
 N#include <stdint.h>
 N#include <msp.h>
-L 1 "C:/ti/ccs930/ccs/ccs_base/arm/include/msp.h" 1
+L 1 "C:/ti/ccs1011/ccs/ccs_base/arm/include/msp.h" 1
 N/******************************************************************************
 N*
 N* Copyright (C) 2012 - 2017 Texas Instruments Incorporated - http://www.ti.com/ 
@@ -4237,7 +4549,7 @@ N******************************************************************************/
 N#if defined (__MSP432P401R__)
 X#if 1L
 N#include "msp432p401r.h"
-L 1 "C:\ti\ccs930\ccs\ccs_base\arm\include\msp432p401r.h" 1
+L 1 "C:\ti\ccs1011\ccs\ccs_base\arm\include\msp432p401r.h" 1
 N/******************************************************************************
 N*
 N* Copyright (C) 2012 - 2017 Texas Instruments Incorporated - http://www.ti.com/
@@ -4303,7 +4615,7 @@ N#define __MSP432_HEADER_VERSION__ 3230
 N
 N/* Remap MSP432 intrinsics to ARM equivalents */
 N#include "msp_compatibility.h"
-L 1 "C:\ti\ccs930\ccs\ccs_base\arm\include\msp_compatibility.h" 1
+L 1 "C:\ti\ccs1011\ccs\ccs_base\arm\include\msp_compatibility.h" 1
 N//*****************************************************************************
 N//
 N// Copyright (C) 2013 - 2015 Texas Instruments Incorporated - http://www.ti.com/
@@ -4629,7 +4941,7 @@ N/* SYSCTL_SYSTEM_STAT[IP_PROT_ACT] Bits */
 N#define SYSCTL_SYSTEM_STAT_IP_PROT_ACT_OFS       ( 5)                            /*!< IP_PROT_ACT Bit Offset */
 N#define SYSCTL_SYSTEM_STAT_IP_PROT_ACT           ((uint32_t)0x00000020)          /*!< Indicates if IP protection is active */
 N
-L 66 "C:\ti\ccs930\ccs\ccs_base\arm\include\msp432p401r.h" 2
+L 66 "C:\ti\ccs1011\ccs\ccs_base\arm\include\msp432p401r.h" 2
 N
 N/******************************************************************************
 N* include MSP430 legacy definitions to make porting of code from MSP430       *
@@ -4639,7 +4951,7 @@ N* your project to omit including the classic defines                          *
 N******************************************************************************/
 N#ifndef NO_MSP_CLASSIC_DEFINES
 N#include "msp432p401r_classic.h"
-L 1 "C:\ti\ccs930\ccs\ccs_base\arm\include\msp432p401r_classic.h" 1
+L 1 "C:\ti\ccs1011\ccs\ccs_base\arm\include\msp432p401r_classic.h" 1
 N/******************************************************************************
 N*
 N* Copyright (C) 2012 - 2017 Texas Instruments Incorporated - http://www.ti.com/
@@ -8263,7 +8575,7 @@ N}
 N#endif
 N
 N#endif /* __MSP432P401R_CLASSIC_H__ */
-L 75 "C:\ti\ccs930\ccs\ccs_base\arm\include\msp432p401r.h" 2
+L 75 "C:\ti\ccs1011\ccs\ccs_base\arm\include\msp432p401r.h" 2
 N#endif
 N
 N
@@ -8422,7 +8734,7 @@ N/* disable the TI ULP advisor check for the core header file definitions */
 N#pragma diag_push
 N#pragma CHECK_ULP("none")
 N#include "core_cm4.h"
-L 1 "C:/ti/ccs930/ccs/ccs_base/arm/include/CMSIS/core_cm4.h" 1
+L 1 "C:/ti/ccs1011/ccs/ccs_base/arm/include/CMSIS/core_cm4.h" 1
 N/**************************************************************************//**
 N * @file     core_cm4.h
 N * @brief    CMSIS Cortex-M4 Core Peripheral Access Layer Header File
@@ -8593,7 +8905,7 @@ S
 N#endif
 N
 N#include "cmsis_compiler.h"               /* CMSIS compiler specific defines */
-L 1 "C:\ti\ccs930\ccs\ccs_base\arm\include\CMSIS\cmsis_compiler.h" 1
+L 1 "C:\ti\ccs1011\ccs\ccs_base\arm\include\CMSIS\cmsis_compiler.h" 1
 N/**************************************************************************//**
 N * @file     cmsis_compiler.h
 N * @brief    CMSIS compiler generic header file
@@ -8696,7 +9008,7 @@ S */
 N#elif defined ( __TI_ARM__ )
 X#elif 1L
 N  #include <cmsis_ccs.h>
-L 1 "C:/ti/ccs930/ccs/ccs_base/arm/include/CMSIS/cmsis_ccs.h" 1
+L 1 "C:/ti/ccs1011/ccs/ccs_base/arm/include/CMSIS/cmsis_ccs.h" 1
 N//*****************************************************************************
 N//
 N// Copyright (C) 2012 - 2017 Texas Instruments Incorporated - http://www.ti.com/
@@ -8963,7 +9275,7 @@ N
 N/** @} */ /* end of group CMSIS_SIMD_intrinsics */
 N
 N#endif /* CMSIS_CCS_H_ */
-L 98 "C:\ti\ccs930\ccs\ccs_base\arm\include\CMSIS\cmsis_compiler.h" 2
+L 98 "C:\ti\ccs1011\ccs\ccs_base\arm\include\CMSIS\cmsis_compiler.h" 2
 N
 N  #ifndef   __ASM
 N    #define __ASM                     __asm
@@ -9090,7 +9402,7 @@ N
 N
 N#endif /* __CMSIS_COMPILER_H */
 N
-L 161 "C:/ti/ccs930/ccs/ccs_base/arm/include/CMSIS/core_cm4.h" 2
+L 161 "C:/ti/ccs1011/ccs/ccs_base/arm/include/CMSIS/core_cm4.h" 2
 N
 N
 N#ifdef __cplusplus
@@ -11222,7 +11534,7 @@ N
 N#endif /* __CORE_CM4_H_DEPENDANT */
 N
 N#endif /* __CMSIS_GENERIC */
-L 233 "C:\ti\ccs930\ccs\ccs_base\arm\include\msp432p401r.h" 2
+L 233 "C:\ti\ccs1011\ccs\ccs_base\arm\include\msp432p401r.h" 2
 N#pragma diag_pop
 N#else
 S#include "core_cm4.h"
@@ -11230,7 +11542,7 @@ N#endif
 N
 N/* System Header */
 N#include "system_msp432p401r.h"
-L 1 "C:\ti\ccs930\ccs\ccs_base\arm\include\system_msp432p401r.h" 1
+L 1 "C:\ti\ccs1011\ccs\ccs_base\arm\include\system_msp432p401r.h" 1
 N/**************************************************************************//**
 N* @file     system_msp432p401r.h
 N* @brief    CMSIS Cortex-M4F Device Peripheral Access Layer Header File for
@@ -11323,7 +11635,7 @@ N#endif
 N
 N#endif /* SYSTEM_MSP432P401R_H */
 N
-L 240 "C:\ti\ccs930\ccs\ccs_base\arm\include\msp432p401r.h" 2
+L 240 "C:\ti\ccs1011\ccs\ccs_base\arm\include\msp432p401r.h" 2
 N
 N/******************************************************************************
 N* Definition of standard bits                                                 *
@@ -18527,7 +18839,7 @@ N#endif
 N
 N#endif /* __MSP432P401R_H__ */
 N
-L 47 "C:/ti/ccs930/ccs/ccs_base/arm/include/msp.h" 2
+L 47 "C:/ti/ccs1011/ccs/ccs_base/arm/include/msp.h" 2
 N
 N#elif defined (__MSP432P401M__)
 S#include "msp432p401m.h"
@@ -18567,7 +18879,7 @@ N#endif /* __MSP432_H__ */
 N
 L 61 "C:\ti\msp432_driverlib_3_21_00_05\driverlib\MSP432P4xx\adc14.h" 2
 N#include <stdbool.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/stdbool.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/stdbool.h" 1
 N/* -*- C++ -*- */
 N/*===--------------------------- complex.h --------------------------------===*/
 N/*                                                                            */
@@ -18598,7 +18910,7 @@ N#pragma GCC system_header
 N#endif
 N
 N#include_next <stdbool.h>
-L 1 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/stdbool.h" 1
+L 1 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/stdbool.h" 1
 N/*
 N * Copyright (c) 2000 Jeroen Ruigrok van der Werven <asmodai@FreeBSD.org>
 N * All rights reserved.
@@ -18629,8 +18941,20 @@ N *
 N * $FreeBSD: release/10.0.0/include/stdbool.h 228878 2011-12-25 20:15:41Z ed $
 N */
 N
+N/* If this file is included in C99 mode, _Bool is a builtin, so no definition. */
+N/* If this is C89 mode and this file is included, _Bool is pre-defined in C89 */
+N/* relaxed mode by the EDG parser, so it needs to be defined in strict mode. */
 N#ifndef __bool_true_false_are_defined
 N#define	__bool_true_false_are_defined	1
+N
+N#include <_ti_config.h>
+N
+N_TI_PROPRIETARY_PRAGMA("diag_push")
+X_Pragma("diag_push")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.4\")")
+X_Pragma("CHECK_MISRA(\"-19.4\")")
+N_TI_PROPRIETARY_PRAGMA("CHECK_MISRA(\"-19.11\")")
+X_Pragma("CHECK_MISRA(\"-19.11\")")
 N
 N#ifndef __cplusplus
 S
@@ -18638,13 +18962,17 @@ S#define	false	0
 S#define	true	1
 S
 S#define	bool	_Bool
-S#if __TI_STRICT_ANSI_MODE__ && 199901L > __STDC_VERSION__
+S#if __TI_PROPRIETARY_STRICT_ANSI_MACRO && 199901L > __STDC_VERSION__
 Stypedef unsigned char _Bool;
 S#endif
 S
 N#endif /* !__cplusplus */
+N
+N_TI_PROPRIETARY_PRAGMA("diag_pop")
+X_Pragma("diag_pop")
+N
 N#endif /* __bool_true_false_are_defined */
-L 30 "C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include/libcxx/stdbool.h" 2
+L 30 "C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/stdbool.h" 2
 N
 N#ifdef __cplusplus
 N#undef bool

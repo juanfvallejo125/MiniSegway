@@ -4,7 +4,7 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS
+CG_TOOL_ROOT := C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -136,34 +136,34 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-Mini_Segway.out \
+MiniSegway.out \
 
 EXE_OUTPUTS__QUOTED += \
-"Mini_Segway.out" \
+"MiniSegway.out" \
 
 BIN_OUTPUTS += \
-Mini_Segway.hex \
+MiniSegway.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"Mini_Segway.hex" \
+"MiniSegway.hex" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "Mini_Segway.out"
+	@$(MAKE) --no-print-directory -Onone "MiniSegway.out"
 
 # Tool invocations
-Mini_Segway.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+MiniSegway.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: ARM Linker'
-	"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -Ooff --opt_for_speed=1 --advice:power="all" --define=__MSP432P401R__ --define=ccs -g --rtti --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --gen_preprocessor_listing -z -m"Mini_Segway.map" --heap_size=1024 --stack_size=512 -i"C:/ti/ccs930/ccs/ccs_base/arm/include" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/lib" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Mini_Segway_linkInfo.xml" --rom_model -o "Mini_Segway.out" $(ORDERED_OBJS)
+	"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me -Ooff --opt_for_speed=1 --advice:power="all" --define=__MSP432P401R__ --define=ccs -g --rtti --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --gen_preprocessor_listing -z -m"MiniSegway.map" --heap_size=1024 --stack_size=512 -i"C:/ti/ccs1011/ccs/ccs_base/arm/include" -i"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/lib" -i"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="MiniSegway_linkInfo.xml" --rom_model -o "MiniSegway.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
-Mini_Segway.hex: $(EXE_OUTPUTS)
+MiniSegway.hex: $(EXE_OUTPUTS)
 	@echo 'Building files: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo 'Invoking: ARM Hex Utility'
-	"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.5.LTS/bin/armhex" --memwidth=8 --romwidth=8 -o "Mini_Segway.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/bin/armhex" --memwidth=8 --romwidth=8 -o "MiniSegway.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $(strip $(EXE_OUTPUTS__QUOTED))'
 	@echo ' '
 

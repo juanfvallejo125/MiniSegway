@@ -67,8 +67,9 @@ void configTimerCapture() {
 void setupClocks(){
     // Set the DCO to DCO_Freq MHZ and set the sub master clock
     CS_setDCOFrequency(DCO_Freq);
+    CS_initClockSignal(CS_MCLK, CS_DCOCLK_SELECT, 1);
     // Init the submaster clock
-    CS_initClockSignal(CS_SMCLK, CS_DCOCLK_SELECT, CS_CLOCK_DIVIDER_4);
+    CS_initClockSignal(CS_SMCLK, CS_DCOCLK_SELECT, CS_CLOCK_DIVIDER_8);
 }
 
 void setupEncoderInterrupts(){
