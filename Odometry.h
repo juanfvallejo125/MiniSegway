@@ -30,10 +30,10 @@ public:
     double x = 0;
     double y = 0;
     double theta = 0;
-    double rightAngRate[2] = {};
-    double leftAngRate[2] = {};
-    double prevRightCount = 0;
-    double prevLeftCount = 0;
+    double rightLinSpeed[2] = {};
+    double leftLinSpeed[2] = {};
+    long prevRightCount = 0;
+    long prevLeftCount = 0;
     Motor* rightMotor;
     Motor* leftMotor;
 

@@ -42645,6 +42645,7 @@ N    uint16_t enc_portB;
 N    uint32_t enc_pinB;
 N
 N    volatile long enc_count;
+N    volatile long previous_enc_count;
 N    volatile double enc_velocity;
 N
 N    volatile long prev_tick;
@@ -42659,6 +42660,7 @@ N    uint8_t getPWM();
 N
 N    void forward();
 N    void backward();
+N    void calculateEncVelocity();
 N};
 N
 N
@@ -42699,5 +42701,11 @@ N    GPIO_setOutputLowOnPin(forwardPort, forwardPin);
 N
 N}
 N
+Nvoid Motor::calculateEncVelocity(){
+N    enc_velocity = 100*(enc_count - previous_enc_count);
+N    previous_enc_count = enc_count;
+N}
+N
 N
 R "../Motor.cpp" 12 26 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+R "../Motor.cpp" 44 18 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive

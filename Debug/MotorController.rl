@@ -42657,6 +42657,7 @@ N    uint16_t enc_portB;
 N    uint32_t enc_pinB;
 N
 N    volatile long enc_count;
+N    volatile long previous_enc_count;
 N    volatile double enc_velocity;
 N
 N    volatile long prev_tick;
@@ -42671,6 +42672,7 @@ N    uint8_t getPWM();
 N
 N    void forward();
 N    void backward();
+N    void calculateEncVelocity();
 N};
 N
 N

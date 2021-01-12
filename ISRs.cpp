@@ -12,13 +12,13 @@ extern "C" void PORT4_IRQHandler(){
     // Right Encoder Interrupt triggered
     if(GPIO_getInputPinValue(rightMotor.enc_portB, rightMotor.enc_pinB) == 1){
         rightMotor.enc_count++;
-        rightMotor.enc_velocity = 1000.0/(ms-rightMotor.prev_tick);
+//        rightMotor.enc_velocity = 1000.0/(ms-rightMotor.prev_tick);
     }
     else{
         rightMotor.enc_count--;
-        rightMotor.enc_velocity = -1000.0/(ms-rightMotor.prev_tick);
+//        rightMotor.enc_velocity = -1000.0/(ms-rightMotor.prev_tick);
     }
-    rightMotor.prev_tick = ms;
+//    rightMotor.prev_tick = ms;
     GPIO_clearInterruptFlag(rightMotor.enc_portA, rightMotor.enc_pinA);
 }
 
@@ -26,13 +26,13 @@ extern "C" void PORT5_IRQHandler(){
     // Left Encoder Interrupt triggered
     if(GPIO_getInputPinValue(leftMotor.enc_portB, leftMotor.enc_pinB) == 0){
         leftMotor.enc_count++;
-        leftMotor.enc_velocity = 1000.0/(ms-leftMotor.prev_tick);
+//        leftMotor.enc_velocity = 1000.0/(ms-leftMotor.prev_tick);
     }
     else{
         leftMotor.enc_count--;
-        leftMotor.enc_velocity = -1000.0/(ms-leftMotor.prev_tick);
+//        leftMotor.enc_velocity = -1000.0/(ms-leftMotor.prev_tick);
     }
-    leftMotor.prev_tick = ms;
+//    leftMotor.prev_tick = ms;
     GPIO_clearInterruptFlag(leftMotor.enc_portA, leftMotor.enc_pinA);
 }
 

@@ -40,4 +40,9 @@ void Motor::backward(){
 
 }
 
+void Motor::calculateEncVelocity(){
+    enc_velocity = 100*(enc_count - previous_enc_count);
+    previous_enc_count = enc_count;
+}
+
 

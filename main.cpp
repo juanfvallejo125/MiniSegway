@@ -106,6 +106,8 @@ void main(void)
         protocol.executeProtocol();
 
         //Read sensors
+        rightMotor.calculateEncVelocity();
+        leftMotor.calculateEncVelocity();
         odom.updateOdometry();
         imu.getFilteredAngle();
 

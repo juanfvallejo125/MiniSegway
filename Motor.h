@@ -30,6 +30,7 @@ public:
     uint32_t enc_pinB;
 
     volatile long enc_count;
+    volatile long previous_enc_count;
     volatile double enc_velocity;
 
     volatile long prev_tick;
@@ -44,6 +45,7 @@ public:
 
     void forward();
     void backward();
+    void calculateEncVelocity();
 };
 
 
