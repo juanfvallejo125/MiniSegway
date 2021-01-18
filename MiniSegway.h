@@ -16,7 +16,8 @@ enum ControlMode {velocityMode, angleMode};
 // Global definitions
 #define DCO_Freq 32E+6
 #define MAX_PWM 225
-const double dt = 0.01;
+#define LOOP_TIME 20
+const double dt = LOOP_TIME/1000;
 
 const double Kp_tilt = 38;//18//35//38
 const double Kd_tilt = 0.02;//0.05//0.02

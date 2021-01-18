@@ -42647,6 +42647,7 @@ N
 N    volatile long enc_count;
 N    volatile long previous_enc_count;
 N    volatile double enc_velocity;
+N    volatile bool edge_flip = false;
 N
 N    volatile long prev_tick;
 N
@@ -42702,10 +42703,9 @@ N
 N}
 N
 Nvoid Motor::calculateEncVelocity(){
-N    enc_velocity = 100*(enc_count - previous_enc_count);
+N    enc_velocity = (enc_count - previous_enc_count)*50; // 100 for 100 Hz, 50 for 50 Hz
 N    previous_enc_count = enc_count;
 N}
-N
 N
 R "../Motor.cpp" 12 26 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
 R "../Motor.cpp" 44 18 (ULP 5.2) Detected floating point operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive

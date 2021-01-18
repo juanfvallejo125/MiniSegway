@@ -42659,6 +42659,7 @@ N
 N    volatile long enc_count;
 N    volatile long previous_enc_count;
 N    volatile double enc_velocity;
+N    volatile bool edge_flip = false;
 N
 N    volatile long prev_tick;
 N

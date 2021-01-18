@@ -32,6 +32,7 @@ public:
     volatile long enc_count;
     volatile long previous_enc_count;
     volatile double enc_velocity;
+    volatile bool edge_flip = false;
 
     volatile long prev_tick;
 

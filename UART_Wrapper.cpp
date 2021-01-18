@@ -111,7 +111,7 @@ void UART::RFToStream(){
     ostream << '\n';
 }
 
-void UART::dataLogTransfer(PID& innerPID, PID& outerPID){
+void UART::dataLogTransfer(PID& innerPID, PID& outerPID, PID& turningPID){
 //    //printRF();// User Input
 //    printPID(innerPID);// Inner PID
 //    printPWM();// Variable controlled by inner PID
@@ -126,13 +126,15 @@ void UART::dataLogTransfer(PID& innerPID, PID& outerPID){
                                       "$Angle %.4f Angular_Rate %.4f Angle_Accel %.4f\n"
                                       "$Outer_Kp %.4f Outer_Ki %.4f Outer_Kd %.4f Outer_Setpoint %.2f Outer_PID_Output %.2f Outer_Out_D %.2f Outer_Out_I %.2f Outer_Out_P %.2f\n"
                                       "$Right_encoder %i Right_velocity %.4f Left_encoder %i Left_velocity %0.4f\n"
+                                      "$Turn_Kp %.2f Turn_Ki %.2f Turn_Kd %.2f Turn_Setpoint %.1f Turn_PID_Output %.1f\n"
                                       "$Speed %.4f Turning_Rate %.4f Theta %.4f Right_Angle_Rate %.4f Left_Angle_Rate %.4f X %.4f Y %.4f\n"
-                                      "$Ms %i",
+                                      "$Ms %u",
                                       innerPID.Kp, innerPID.Ki, innerPID.Kd, innerPID.setpoint, innerPID.output, innerPID.out_d, innerPID.out_i, innerPID.out_p,
                                       odom->rightMotor->currentPWM, odom->leftMotor->currentPWM,
                                       imu->angle, imu->angleRate, imu->angleAccel,
                                       outerPID.Kp, outerPID.Ki, outerPID.Kd, outerPID.setpoint, outerPID.output, outerPID.out_d, outerPID.out_i, outerPID.out_p,
                                       odom->rightMotor->enc_count, odom->rightMotor->enc_velocity, odom->leftMotor->enc_count, odom->leftMotor->enc_velocity,
+                                      turningPID.Kp, turningPID.Ki, turningPID.Kd, turningPID.setpoint, turningPID.output,
                                       odom->speed, odom->turningRate, odom->theta, odom->rightLinSpeed[0], odom->leftLinSpeed[0], odom->x, odom->y,
                                       ms);
     printLine(buffer, messageSize);

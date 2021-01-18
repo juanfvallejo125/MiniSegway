@@ -8,7 +8,9 @@
 
 #include "IMU.h"
 
-IMU::IMU(){}
+IMU::IMU(double dt){
+    this->dt = dt;
+}
 
 void SPI_Write(uint8_t byteCount, uint8_t* buffer);
 void SPI_Read(uint8_t byteCount, uint8_t* rx_buffer, uint8_t* tx_buffer);

@@ -25,12 +25,12 @@ public:
     double angleRate = 0;
     double angleAccel = 0;
     double alpha = 0.98;
-    double dt = 0.01;
+    double dt = 0.02;
     double accelOffset = 3;
     uint8_t TXDataBuffer[10];
     uint8_t RXDataBuffer[10];
 
-    IMU();
+    IMU(double dt);
     void configModule();
     void calibrate();
     void readAccelerometer();

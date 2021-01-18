@@ -36,7 +36,7 @@ const eUSCI_UART_Config UART_init =
 
 //Odometry, IMU Initialization
 Odometry odom = Odometry(wheelBase, wheelRadius, ticksPerRev, &rightMotor, &leftMotor, dt, odom_velocity_alpha);
-IMU imu = IMU();
+IMU imu = IMU(dt);
 
 // Controllers
 PID tiltController = PID(Kp_tilt, Ki_tilt, Kd_tilt, dt, windup_tilt);
@@ -96,7 +96,7 @@ void main(void)
 
     // Timed Loop
     while(true){
-        while(ms-last_ms < 10);
+        while(ms-last_ms < LOOP_TIME);
         last_ms = ms;
 
         // Poll RF Receiver
@@ -146,7 +146,7 @@ void main(void)
                 GPIO_setOutputLowOnPin(GPIO_PORT_P2, GPIO_PIN2);
             }
         if(sendData && ten_hz){
-            UARTHandler.dataLogTransfer(tiltController, velocityController);
+            UARTHandler.dataLogTransfer(tiltController, velocityController, turningController);
             ten_hz = false;
         }
         // Debugging Serial Transmissions

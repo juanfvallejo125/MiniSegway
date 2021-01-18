@@ -72,7 +72,7 @@ public:
 
     void RFToStream();
 
-    void dataLogTransfer(PID& innerPID, PID& outerPID);
+    void dataLogTransfer(PID& innerPID, PID& outerPID, PID& turningPID);
 
     char serialRead();
 

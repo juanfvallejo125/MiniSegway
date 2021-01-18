@@ -41,8 +41,7 @@ void Motor::backward(){
 }
 
 void Motor::calculateEncVelocity(){
-    enc_velocity = 100*(enc_count - previous_enc_count);
+    enc_velocity = (enc_count - previous_enc_count)*50; // 100 for 100 Hz, 50 for 50 Hz
     previous_enc_count = enc_count;
 }
-
 
