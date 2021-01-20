@@ -19,7 +19,8 @@ CPP_SRCS += \
 ../SerialProtocol.cpp \
 ../UART_Wrapper.cpp \
 ../initConfigs.cpp \
-../main.cpp 
+../main.cpp \
+../testingController.cpp 
 
 CMD_SRCS += \
 ../msp432p401r.cmd 
@@ -48,7 +49,8 @@ OBJS += \
 ./initConfigs.obj \
 ./main.obj \
 ./startup_msp432p401r_ccs.obj \
-./system_msp432p401r.obj 
+./system_msp432p401r.obj \
+./testingController.obj 
 
 CPP_DEPS += \
 ./IMU.d \
@@ -64,7 +66,8 @@ CPP_DEPS += \
 ./SerialProtocol.d \
 ./UART_Wrapper.d \
 ./initConfigs.d \
-./main.d 
+./main.d \
+./testingController.d 
 
 OBJS__QUOTED += \
 "IMU.obj" \
@@ -82,7 +85,8 @@ OBJS__QUOTED += \
 "initConfigs.obj" \
 "main.obj" \
 "startup_msp432p401r_ccs.obj" \
-"system_msp432p401r.obj" 
+"system_msp432p401r.obj" \
+"testingController.obj" 
 
 C_DEPS__QUOTED += \
 "startup_msp432p401r_ccs.d" \
@@ -102,7 +106,8 @@ CPP_DEPS__QUOTED += \
 "SerialProtocol.d" \
 "UART_Wrapper.d" \
 "initConfigs.d" \
-"main.d" 
+"main.d" \
+"testingController.d" 
 
 CPP_SRCS__QUOTED += \
 "../IMU.cpp" \
@@ -118,7 +123,8 @@ CPP_SRCS__QUOTED += \
 "../SerialProtocol.cpp" \
 "../UART_Wrapper.cpp" \
 "../initConfigs.cpp" \
-"../main.cpp" 
+"../main.cpp" \
+"../testingController.cpp" 
 
 C_SRCS__QUOTED += \
 "../startup_msp432p401r_ccs.c" \

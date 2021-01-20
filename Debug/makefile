@@ -26,6 +26,7 @@ ORDERED_OBJS += \
 "./main.obj" \
 "./startup_msp432p401r_ccs.obj" \
 "./system_msp432p401r.obj" \
+"./testingController.obj" \
 "../msp432p401r.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
@@ -170,9 +171,9 @@ MiniSegway.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "IMU.obj" "ISRs.obj" "LPF.obj" "Motor.obj" "MotorController.obj" "Odometry.obj" "OuterPID.obj" "PID.obj" "RFInterface.obj" "SPI.obj" "SerialProtocol.obj" "UART_Wrapper.obj" "initConfigs.obj" "main.obj" "startup_msp432p401r_ccs.obj" "system_msp432p401r.obj" 
+	-$(RM) "IMU.obj" "ISRs.obj" "LPF.obj" "Motor.obj" "MotorController.obj" "Odometry.obj" "OuterPID.obj" "PID.obj" "RFInterface.obj" "SPI.obj" "SerialProtocol.obj" "UART_Wrapper.obj" "initConfigs.obj" "main.obj" "startup_msp432p401r_ccs.obj" "system_msp432p401r.obj" "testingController.obj" 
 	-$(RM) "startup_msp432p401r_ccs.d" "system_msp432p401r.d" 
-	-$(RM) "IMU.d" "ISRs.d" "LPF.d" "Motor.d" "MotorController.d" "Odometry.d" "OuterPID.d" "PID.d" "RFInterface.d" "SPI.d" "SerialProtocol.d" "UART_Wrapper.d" "initConfigs.d" "main.d" 
+	-$(RM) "IMU.d" "ISRs.d" "LPF.d" "Motor.d" "MotorController.d" "Odometry.d" "OuterPID.d" "PID.d" "RFInterface.d" "SPI.d" "SerialProtocol.d" "UART_Wrapper.d" "initConfigs.d" "main.d" "testingController.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

@@ -18,22 +18,22 @@ enum ControlMode {velocityMode, angleMode};
 #define MAX_PWM 225
 const double dt = 0.01;
 
-const double Kp_tilt = 38;//18//35//38
+const double Kp_tilt = 25;//18//35//38 38 for low battery
 const double Kd_tilt = 0.02;//0.05//0.02
 const double Ki_tilt = 0;//0.005;//0.002;//0.1 // 0.02
 const double windup_tilt = 225;
 const double alpha_PWM = 1;//0.4;
 
-const double Kp_turning = 20;//17;
+const double Kp_turning = 25;//17;
 const double Kd_turning = 0.03;
 const double Ki_turning = 0;
 const double windup_turning = 225;
 
-const double Kp_velocity = 0.018;//0.015;
+const double Kp_velocity = 0.015;//0.015;
 const double Kd_velocity = 0.00;//0.005;
-const double Ki_velocity = 0;// 0.018//0.005;//0.015
+const double Ki_velocity = 0.0;// 0.018//0.005;//0.015
 const double windup_velocity = 225;
-const double alpha_velocity = 0;// 0.2//0.3; // 0.4
+const double alpha_velocity = 1;// 0.2//0.3; // 0.4
 
 const double odom_velocity_alpha = 0.1;// 0.2
 const double wheelRadius = 50.25;
@@ -46,14 +46,16 @@ const double ticksPerRev = 240;
 #include "LPF.h"
 #include "msp.h"
 #include <stdio.h>
-#include "UART_Wrapper.h"
-#include "initConfigs.h"
 #include "IMU.h"
 #include "SPI.h"
 #include "PID.h"
 #include "OuterPID.h"
 #include "RFInterface.h"
+#include "UART_Wrapper.h"
 #include "SerialProtocol.h"
+#include "initConfigs.h"
+#include "Odometry.h"
+#include "testingController.h"
 
 // Motor pins
 #define CW_1_PORT GPIO_PORT_P3
@@ -84,6 +86,7 @@ class PID;
 class OuterPID;
 class RFInterface;
 class SerialProtocol;
+class testingController;
 
 // Global variables
 extern Motor rightMotor;
@@ -96,6 +99,7 @@ extern PID turningController;
 extern OuterPID velocityController;
 extern RFInterface commandInterface;
 extern SerialProtocol protocol;
+extern testingController testController;
 extern ControlMode selectedMode;
 
 extern bool sendData;

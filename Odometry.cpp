@@ -24,12 +24,12 @@ void Odometry::updateOdometry(){
     y += delta_s*std::sin(theta+delta_theta/2);
     theta += delta_theta;
     //Filter and verify angular velocities
-    if((ms-rightMotor->prev_tick)>100) rightMotor->enc_velocity=0;
-    if((ms-leftMotor->prev_tick)>100) leftMotor->enc_velocity=0;
-    LPF(rightMotor->enc_velocity*2*M_PI*wheelRadius/ticksPerRev, rightAngRate, alpha);
-    LPF(leftMotor->enc_velocity*2*M_PI*wheelRadius/ticksPerRev, leftAngRate, alpha);
+//    if((ms-rightMotor->prev_tick)>100) rightMotor->enc_velocity=0;
+//    if((ms-leftMotor->prev_tick)>100) leftMotor->enc_velocity=0;
+    LPF(rightMotor->enc_velocity*2*M_PI*wheelRadius/ticksPerRev, rightLinSpeed, alpha);
+    LPF(leftMotor->enc_velocity*2*M_PI*wheelRadius/ticksPerRev, leftLinSpeed, alpha);
     //Calculate rates
-    turningRate = (rightAngRate[0]-leftAngRate[0])/wheelBase;
-    speed = (rightAngRate[0]+leftAngRate[0])/2;
+    turningRate = (rightLinSpeed[0]-leftLinSpeed[0])/wheelBase;
+    speed = (rightLinSpeed[0]+leftLinSpeed[0])/2;
 }
 

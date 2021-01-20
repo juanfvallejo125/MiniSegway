@@ -8,8 +8,7 @@
 #include "SerialProtocol.h"
 
 
-
-SerialProtocol::SerialProtocol(UART* uart, OuterPID* outerPID, PID* innerPID, IMU* imu) : uart(uart), outerPID(outerPID), innerPID(innerPID), imu(imu){
+SerialProtocol::SerialProtocol(UART* uart, OuterPID* outerPID, PID* innerPID, PID* turningPID, IMU* imu) : uart(uart), outerPID(outerPID), innerPID(innerPID), turningPID(turningPID), imu(imu){
     pid = outerPID; // Default the outer PID
 }
 
@@ -48,6 +47,11 @@ void SerialProtocol::parseLine(){
         else if(argument == "INNER"){
 //            uart->printLine(std::string("Pushed Back INNER"));
             commandVector.push_back(1);
+            valueVector.push_back(0);
+        }
+        else if(argument == "TURNING"){
+//            uart->printLine(std::string("Pushed Back INNER"));
+            commandVector.push_back(13);
             valueVector.push_back(0);
         }
         else if(argument == "SHOW-PID-CONFIG"){
@@ -173,6 +177,10 @@ void SerialProtocol::processCommand(){
             case 12:
                 sendData = false;
                 os << "Stopped sending data " ;
+                break;
+            case 13:
+                pid = turningPID;
+                acknowledgeMessage.append("Turning PID Mode ");
                 break;
             case 99:
                 os << "Unknown command ";

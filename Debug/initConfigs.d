@@ -64,8 +64,8 @@ initConfigs.obj: ../MiniSegway.h
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/stdio.h
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/stdio.h
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/stdarg.h
-initConfigs.obj: ../UART_Wrapper.h
-initConfigs.obj: ../Odometry.h
+initConfigs.obj: ../IMU.h
+initConfigs.obj: ../LSM6DSOX.h
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cmath
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/math.h
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/math.h
@@ -80,9 +80,8 @@ initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/float.h
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/float.h
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros
-initConfigs.obj: ../IMU.h
-initConfigs.obj: ../LSM6DSOX.h
 initConfigs.obj: ../SPI.h
+initConfigs.obj: ../PID.h
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/string
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/string_view
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__string
@@ -134,8 +133,7 @@ initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/xlocale/_ctype.h
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/wchar.h
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros
-initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/iomanip
-initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/istream
+initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/sstream
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/ostream
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/ios
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__locale
@@ -182,19 +180,23 @@ initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__bit_reference
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros
+initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/istream
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros
-initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/sstream
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros
-initConfigs.obj: ../initConfigs.h
-initConfigs.obj: ../PID.h
+initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/iomanip
 initConfigs.obj: ../OuterPID.h
 initConfigs.obj: ../RFInterface.h
+initConfigs.obj: ../UART_Wrapper.h
+initConfigs.obj: ../Odometry.h
 initConfigs.obj: ../SerialProtocol.h
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/iostream
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/vector
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__split_buffer
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros
 initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros
+initConfigs.obj: ../initConfigs.h
+initConfigs.obj: ../testingController.h
+initConfigs.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/array
 
 ../initConfigs.cpp: 
 ../initConfigs.h: 
@@ -260,8 +262,8 @@ C:/ti/msp432_driverlib_3_21_00_05/driverlib/MSP432P4xx/wdt_a.h:
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/stdio.h: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/stdio.h: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/stdarg.h: 
-../UART_Wrapper.h: 
-../Odometry.h: 
+../IMU.h: 
+../LSM6DSOX.h: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cmath: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/math.h: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/math.h: 
@@ -276,9 +278,8 @@ C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/support/ti
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/float.h: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/float.h: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros: 
-../IMU.h: 
-../LSM6DSOX.h: 
 ../SPI.h: 
+../PID.h: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/string: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/string_view: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__string: 
@@ -330,8 +331,7 @@ C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/wctype.h:
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/xlocale/_ctype.h: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/wchar.h: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros: 
-C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/iomanip: 
-C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/istream: 
+C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/sstream: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/ostream: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/ios: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__locale: 
@@ -378,16 +378,20 @@ C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/bitset:
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__bit_reference: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros: 
+C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/istream: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros: 
-C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/sstream: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros: 
-../initConfigs.h: 
-../PID.h: 
+C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/iomanip: 
 ../OuterPID.h: 
 ../RFInterface.h: 
+../UART_Wrapper.h: 
+../Odometry.h: 
 ../SerialProtocol.h: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/iostream: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/vector: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__split_buffer: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros: 
+../initConfigs.h: 
+../testingController.h: 
+C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/array: 

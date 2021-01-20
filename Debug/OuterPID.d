@@ -177,25 +177,27 @@ OuterPID.obj: ../MotorController.h
 OuterPID.obj: ../Motor.h
 OuterPID.obj: ../LPF.h
 OuterPID.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/stdio.h
-OuterPID.obj: ../UART_Wrapper.h
-OuterPID.obj: ../MiniSegway.h
-OuterPID.obj: ../Odometry.h
+OuterPID.obj: ../IMU.h
+OuterPID.obj: ../LSM6DSOX.h
 OuterPID.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cmath
 OuterPID.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/math.h
 OuterPID.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/math.h
 OuterPID.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/_defs.h
-OuterPID.obj: ../IMU.h
-OuterPID.obj: ../LSM6DSOX.h
 OuterPID.obj: ../SPI.h
-OuterPID.obj: ../initConfigs.h
+OuterPID.obj: ../MiniSegway.h
 OuterPID.obj: ../OuterPID.h
 OuterPID.obj: ../RFInterface.h
+OuterPID.obj: ../UART_Wrapper.h
+OuterPID.obj: ../Odometry.h
 OuterPID.obj: ../SerialProtocol.h
 OuterPID.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/iostream
 OuterPID.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/vector
 OuterPID.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__split_buffer
 OuterPID.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros
 OuterPID.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros
+OuterPID.obj: ../initConfigs.h
+OuterPID.obj: ../testingController.h
+OuterPID.obj: C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/array
 
 ../OuterPID.cpp: 
 ../OuterPID.h: 
@@ -374,22 +376,24 @@ C:/ti/msp432_driverlib_3_21_00_05/driverlib/MSP432P4xx/wdt_a.h:
 ../Motor.h: 
 ../LPF.h: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/stdio.h: 
-../UART_Wrapper.h: 
-../MiniSegway.h: 
-../Odometry.h: 
+../IMU.h: 
+../LSM6DSOX.h: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/cmath: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/math.h: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/math.h: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/_defs.h: 
-../IMU.h: 
-../LSM6DSOX.h: 
 ../SPI.h: 
-../initConfigs.h: 
+../MiniSegway.h: 
 ../OuterPID.h: 
 ../RFInterface.h: 
+../UART_Wrapper.h: 
+../Odometry.h: 
 ../SerialProtocol.h: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/iostream: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/vector: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__split_buffer: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros: 
 C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/__undef_macros: 
+../initConfigs.h: 
+../testingController.h: 
+C:/ti/ccs1011/ccs/tools/compiler/ti-cgt-arm_20.2.1.LTS/include/libcxx/array: 

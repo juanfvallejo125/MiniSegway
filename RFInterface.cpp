@@ -47,12 +47,15 @@ void RFInterface::pollrfReceiver(){
             }
         }
         else if(selectedMode == velocityMode){
-            if(rawVelocitySetpoint >= 80000) rawVelocitySetpoint = 800;
-            else rawVelocitySetpoint = 0.7*(commandInterface.pulseLength[1]-commandInterface.zeroValue[1]);
+            rawVelocitySetpoint = 0.7*(commandInterface.pulseLength[1]-commandInterface.zeroValue[1]);
+            if(rawVelocitySetpoint >= 800) rawVelocitySetpoint = 800;
+            else if(rawVelocitySetpoint <= -800) rawVelocitySetpoint = -800;
+
         }
+        rawOrientationSetpoint = 0.007*(commandInterface.pulseLength[0] - commandInterface.zeroValue[0]);
         if(rawOrientationSetpoint <= -300) rawOrientationSetpoint = -3;
         else if(rawOrientationSetpoint >= 300) rawOrientationSetpoint = 3;
-        else rawOrientationSetpoint = 0.007*(commandInterface.pulseLength[0] - commandInterface.zeroValue[0]);
+
         LPF(rawVelocitySetpoint, filteredVelocitySetpoint, alphaVelocitySetpoint);
         velocityController.setpoint = filteredVelocitySetpoint[0];
         LPF(rawOrientationSetpoint, filteredOrientationSetpoint, alphaOrientationSetpoint);

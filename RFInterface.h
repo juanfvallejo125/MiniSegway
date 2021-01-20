@@ -17,7 +17,7 @@ public:
     double filteredVelocitySetpoint[2] = {};
     double filteredOrientationSetpoint[2] = {};
 
-    double alphaVelocitySetpoint = 0.05;
+    double alphaVelocitySetpoint = 0.1;
     double alphaOrientationSetpoint = 1;
     double rawVelocitySetpoint = 0;
     double rawOrientationSetpoint = 0;

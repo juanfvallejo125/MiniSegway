@@ -51,7 +51,19 @@ UART UARTHandler = UART(UART_init, EUSCI_A2_BASE, &odom, &imu);
 RFInterface commandInterface;
 
 //Serial protocol
-SerialProtocol protocol = SerialProtocol(&UARTHandler, &velocityController, &tiltController, &imu);
+SerialProtocol protocol = SerialProtocol(&UARTHandler, &velocityController, &tiltController, &turningController, &imu);
+
+// Declare simple time, velocity and turn turn_sequences
+std::array<std::vector<long>, 10> millis;
+std::array<std::vector<double>, 10> vels;
+std::array<std::vector<double>, 10> turns;
+
+std::vector<long> milli_1 = {0, 1000, 1250, 2750, 3000, 4000};
+std::vector<double> vel_1 = {0, 0, 200, 200, 0, 0};
+std::vector<double> turn_1 = {0, 0, 1, 1, 0, 0};
+
+// Testing Controller
+testingController testController = testingController(&millis, &vels, &turns);
 
 void main(void)
    {
@@ -74,6 +86,12 @@ void main(void)
     imu.configModule();
     UARTHandler.UARTSetup();
     Interrupt_enableMaster();
+
+    // Testing controller initialization
+    millis[0] = milli_1;
+    vels[0] = vel_1;
+    turns[0] = turn_1;
+    testController = testingController(&millis, &vels, &turns);
 
     //Skip this section if we are in debug mode
     if(debugMode != true){
@@ -144,7 +162,7 @@ void main(void)
                 GPIO_setOutputLowOnPin(GPIO_PORT_P2, GPIO_PIN2);
             }
         if(sendData && ten_hz){
-            UARTHandler.dataLogTransfer(tiltController, velocityController);
+            UARTHandler.dataLogTransfer(tiltController, velocityController, turningController);
             ten_hz = false;
         }
         // Debugging Serial Transmissions

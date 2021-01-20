@@ -31,11 +31,12 @@ public:
     PID* pid = NULL;
     OuterPID* outerPID = NULL;
     PID* innerPID = NULL;
+    PID* turningPID = NULL;
     IMU* imu = NULL;
     std::string acknowledgeMessage = "";
     std::vector <uint8_t> commandVector;
     std::vector <double> valueVector;
-    SerialProtocol(UART* uart, OuterPID* outerPID, PID* innerPID, IMU* imu);
+    SerialProtocol(UART* uart, OuterPID* outerPID, PID* innerPID, PID* turningPID, IMU* imu);
     void executeProtocol();
     void parseLine();
     void processCommand();
