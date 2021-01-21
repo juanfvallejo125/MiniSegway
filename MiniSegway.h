@@ -24,7 +24,7 @@ const double Ki_tilt = 0;//0.005;//0.002;//0.1 // 0.02
 const double windup_tilt = 225;
 const double alpha_PWM = 1;//0.4;
 
-const double Kp_turning = 25;//17;
+const double Kp_turning = 35;//17;
 const double Kd_turning = 0.03;
 const double Ki_turning = 0;
 const double windup_turning = 225;
