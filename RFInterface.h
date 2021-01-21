@@ -28,6 +28,7 @@ public:
     uint16_t pulseLength[3] = {0};
     uint16_t zeroValue[3] = {0};
 
+    void pollMode();
     void pollrfReceiver();
     void calibrate();
 };

@@ -22,9 +22,10 @@ private:
     double wheelRadius;
     double ticksPerRev;
     double dt;
-    double alpha;
+
 
 public:
+    double alpha;
     double turningRate = 0;
     double speed = 0;
     double x = 0;

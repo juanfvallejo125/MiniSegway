@@ -104,6 +104,10 @@ void SerialProtocol::parseLine(){
                 commandVector.push_back(10);
                 validVariable = true;
             }
+            else if(variable == "TEST_NUM"){
+                commandVector.push_back(14);
+                validVariable = true;
+            }
             if(validVariable){
                 getline(argumentStream, valueStr, '=');
                 std::istringstream valueStream(valueStr);
@@ -167,8 +171,9 @@ void SerialProtocol::processCommand(){
                 os << "Setpoint: " << pid->setpoint << " ";
                 break;
             case 10:
-                outerPID->alpha = value;
-                os << "Alpha Vel: " << outerPID->alpha << " ";
+//                outerPID->alpha = value;
+                odom.alpha = value;
+                os << "Odom Alpha Vel: " << odom.alpha << " ";
                 break;
             case 11:
                 sendData = true;
@@ -181,6 +186,10 @@ void SerialProtocol::processCommand(){
             case 13:
                 pid = turningPID;
                 acknowledgeMessage.append("Turning PID Mode ");
+                break;
+            case 14:
+                testController.startTest(ms, value);
+                os << "Starting Test Num: " << value << " ";
                 break;
             case 99:
                 os << "Unknown command ";

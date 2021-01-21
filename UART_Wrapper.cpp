@@ -19,6 +19,7 @@ void UART::UARTSetup(){
     UART_enableModule(UARTModule);
     UART_enableInterrupt(UARTModule, EUSCI_A_UART_RECEIVE_INTERRUPT);
     Interrupt_enableInterrupt(INT_EUSCIA2);
+    Interrupt_enableInterrupt(INT_EUSCIA0);
     }
 
 void UART::printOdometry(){

@@ -45,7 +45,8 @@ OuterPID velocityController = OuterPID(Kp_velocity, Ki_velocity, Kd_velocity, dt
 
 
 // UART Initialization
-UART UARTHandler = UART(UART_init, EUSCI_A2_BASE, &odom, &imu);
+//UART UARTHandler = UART(UART_init, EUSCI_A2_BASE, &odom, &imu); // EUSCI_A2_BASE for bluetooth, A0 for usb cable serial
+UART UARTHandler = UART(UART_init, EUSCI_A0_BASE, &odom, &imu);
 
 //User interface
 RFInterface commandInterface;
@@ -58,9 +59,17 @@ std::array<std::vector<long>, 10> millis;
 std::array<std::vector<double>, 10> vels;
 std::array<std::vector<double>, 10> turns;
 
-std::vector<long> milli_1 = {0, 1000, 1250, 2750, 3000, 4000};
-std::vector<double> vel_1 = {0, 0, 200, 200, 0, 0};
-std::vector<double> turn_1 = {0, 0, 1, 1, 0, 0};
+std::vector<long> milli_1 = {0, 1000, 2000, 5000, 6000, 7000};
+std::vector<double> vel_1 = {0, 0, 400, 400, 0, 0};
+std::vector<double> turn_1 = {0, 0, 0, 0, 0, 0};
+
+std::vector<long> milli_2 = {0, 1000, 2000, 5000, 6000, 7000};
+std::vector<double> vel_2 = {0, 0, 0, 0, 0, 0};
+std::vector<double> turn_2 = {0, 0, 2, 2, 0, 0};
+
+std::vector<long> milli_3 = {0, 1000, 2000, 5000, 6000, 7000};
+std::vector<double> vel_3 = {0, 0, 400, 400, 0, 0};
+std::vector<double> turn_3 = {0, 0, 1, 1, 0, 0};
 
 // Testing Controller
 testingController testController = testingController(&millis, &vels, &turns);
@@ -91,16 +100,22 @@ void main(void)
     millis[0] = milli_1;
     vels[0] = vel_1;
     turns[0] = turn_1;
+    millis[1] = milli_2;
+    vels[1] = vel_2;
+    turns[1] = turn_2;
+    millis[2] = milli_3;
+    vels[2] = vel_3;
+    turns[2] = turn_3;
     testController = testingController(&millis, &vels, &turns);
 
     //Skip this section if we are in debug mode
     if(debugMode != true){
     //Wait for user to press channel 3 to start calibration
-    while(commandInterface.mode == 0) commandInterface.pollrfReceiver();
+    while(commandInterface.mode == 0) commandInterface.pollMode();
     imu.calibrate();
     commandInterface.calibrate();
     while(commandInterface.mode == 1){
-        commandInterface.pollrfReceiver();
+        commandInterface.pollMode();
     }
     }
     else{
@@ -117,8 +132,14 @@ void main(void)
         while(ms-last_ms < 10);
         last_ms = ms;
 
-        // Poll RF Receiver
-        commandInterface.pollrfReceiver();
+        commandInterface.pollMode();
+        // If a test is activated, poll the RF Receiver for setpoints, otherwise get them from the test controller
+        if(!testController.test_activated){
+            commandInterface.pollrfReceiver();
+        }else{
+            velocityController.setpoint = testController.getVelCommand(ms);
+            turningController.setpoint = testController.getTurnCommand(ms);
+        }
 
         //Poll Serial Commands
         protocol.executeProtocol();
@@ -163,7 +184,7 @@ void main(void)
             }
         if(sendData && ten_hz){
             UARTHandler.dataLogTransfer(tiltController, velocityController, turningController);
-            ten_hz = false;
+            ten_hz = false; // CHange this back
         }
         // Debugging Serial Transmissions
 //        UARTHandler.printEncoders();

@@ -21,7 +21,7 @@ void RFInterface::calibrate(){
     GPIO_setOutputHighOnPin(GPIO_PORT_P1, GPIO_PIN0);//Light up LED to indicate we are out of calibration
 }
 
-void RFInterface::pollrfReceiver(){
+void RFInterface::pollMode(){
     if(this->pulseLength[2] >= 1500){ // If the channel 3 is lit up, the system is in mode 1
         this->mode = 1;
     }
@@ -29,13 +29,13 @@ void RFInterface::pollrfReceiver(){
         this->mode = 0;
     }
     if(mode == 0){
-        //tiltController.Ki=Ki_tilt;
         tiltController.acumError = 0;
-        //velocityController.Ki=Ki_velocity;
         velocityController.acumError = 0;
-        //turningController.Ki = Ki_turning;
         turningController.acumError = 0;
     }
+}
+
+void RFInterface::pollrfReceiver(){
 
         //setPWM(PWM_increase_A, PWM_increase_B); //Motor testing
         if(selectedMode == angleMode){

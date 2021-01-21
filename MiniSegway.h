@@ -31,9 +31,9 @@ const double windup_turning = 225;
 
 const double Kp_velocity = 0.015;//0.015;
 const double Kd_velocity = 0.00;//0.005;
-const double Ki_velocity = 0.0;// 0.018//0.005;//0.015
+const double Ki_velocity = 0.00;// 0.018//0.005;//0.015
 const double windup_velocity = 225;
-const double alpha_velocity = 1;// 0.2//0.3; // 0.4
+const double alpha_velocity = 0.2;// 0.2//0.3; // 0.4
 
 const double odom_velocity_alpha = 0.1;// 0.2
 const double wheelRadius = 50.25;
